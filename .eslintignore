@@ -1,0 +1,10 @@
+node_modules
+dist
+build
+public
+.vite
+.vscode
+*.config.js
+*.config.cjs
+*.config.mjs
+*.d.ts
