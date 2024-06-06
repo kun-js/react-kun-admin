@@ -6,9 +6,9 @@ const Workbench = () => {
   return (
     <>
       <div>Workbench</div>
-      <div>{count}</div>
-      <button onClick={incrementCount}>+</button>
-      <button onClick={decrementCount}>-</button>
+      <div>count:{count}</div>
+      <button onClick={() => incrementCount(1)}>+</button>
+      <button onClick={() => decrementCount(1)}>-</button>
     </>
   );
 };
