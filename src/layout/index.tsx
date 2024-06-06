@@ -1,8 +1,8 @@
 import React from "react";
 import SideBar from "./sidebar";
 import MainHeader from "./header";
-import { Layout } from "antd";
 import MainContent from "./main";
+import { Layout } from "antd";
 
 const { Content } = Layout;
 

@@ -27,11 +27,15 @@
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
     "antd": "^5.17.4",
+    "axios": "^1.7.2",
     "less": "^4.2.0",
+    "mockjs": "^1.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.1",
-    "sass": "^1.77.3"
+    "sass": "^1.77.3",
+    "vite-plugin-mock": "2.9.6",
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

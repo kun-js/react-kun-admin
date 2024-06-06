@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, Outlet } from "react-router-dom";
 import { theme } from "antd";
 
 const MainContent: React.FC = () => {
@@ -9,12 +10,15 @@ const MainContent: React.FC = () => {
   return (
     <div
       style={{
+        width: "calc(100vw - 240px)",
         height: "calc(100vh - 104px)",
         background: colorBgContainer,
         borderRadius: borderRadiusLG,
       }}
     >
-      content
+      <Link to="/analysis">analysis</Link>
+      <Link to="/workbench">workbench</Link>
+      <Outlet />
     </div>
   );
 };
