@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SideBar from "./sidebar";
 import MainHeader from "./header";
 import MainContent from "./main";
@@ -7,13 +7,19 @@ import { Layout } from "antd";
 const { Content } = Layout;
 
 const MainLayout: React.FC = () => {
+  const [collapsed, setCollapsed] = useState(false);
+
+  const handleToCollapse = () => {
+    setCollapsed(!collapsed);
+  };
+
   return (
     <Layout>
-      <SideBar />
+      <SideBar collapsed={collapsed} />
       <Layout>
-        <MainHeader />
+        <MainHeader collapsed={collapsed} handleToCollapse={handleToCollapse} />
         <Content style={{ margin: "20px" }}>
-          <MainContent />
+          <MainContent collapsed={collapsed} />
         </Content>
       </Layout>
     </Layout>

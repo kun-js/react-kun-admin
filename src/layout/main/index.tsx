@@ -2,7 +2,11 @@ import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import { theme } from "antd";
 
-const MainContent: React.FC = () => {
+interface MainContentProps {
+  collapsed: boolean;
+}
+
+const MainContent: React.FC<MainContentProps> = ({ collapsed }) => {
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
@@ -10,7 +14,7 @@ const MainContent: React.FC = () => {
   return (
     <div
       style={{
-        width: "calc(100vw - 240px)",
+        width: collapsed ? "calc(100vw - 120px)" : "calc(100vw - 240px)",
         height: "calc(100vh - 104px)",
         background: colorBgContainer,
         borderRadius: borderRadiusLG,

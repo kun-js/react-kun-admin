@@ -10,18 +10,13 @@ const items = [UserOutlined, VideoCameraOutlined, UploadOutlined, UserOutlined].
   label: `nav ${index + 1}`,
 }));
 
-const SideBar = () => {
+interface SideBarProps {
+  collapsed: boolean;
+}
+
+const SideBar: React.FC<SideBarProps> = ({ collapsed }) => {
   return (
-    <Sider
-      breakpoint="lg"
-      collapsedWidth="0"
-      onBreakpoint={(broken) => {
-        console.log(broken);
-      }}
-      onCollapse={(collapsed, type) => {
-        console.log(collapsed, type);
-      }}
-    >
+    <Sider breakpoint="lg" collapsed={collapsed}>
       <div className="demo-logo-vertical" />
       <Menu theme="dark" mode="inline" defaultSelectedKeys={["4"]} items={items} />
     </Sider>
