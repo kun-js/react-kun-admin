@@ -1,30 +1,31 @@
-# React + TypeScript + Vite
+# 简介 📃
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+`react-kun-admin` 是一个中后台管理系统模板，采用 `React`、`TypeScript`、`Ant Design` 等最新主流前端技术进行开发，该系统仅用作个人学习参考 📚
 
-Currently, two official plugins are available:
+## 项目相关 🧭
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 项目仓库地址：https://github.com/kun-js/react-kun-admin
 
-## Expanding the ESLint configuration
+## 克隆仓库 🏠
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-};
+```
+# 从Github上拉取
+git clone https://github.com/kun-js/react-kun-admin.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## 安装依赖 🏀
+
+```
+cd react-kun-admin
+pnpm install
+```
+
+## 项目启动 🚀
+
+```
+pnpm dev
+```
+
+## 写在最后 💖
+
+开发不易，若喜欢此项目请留下您的 Star ⭐，感谢您的支持 🙏
