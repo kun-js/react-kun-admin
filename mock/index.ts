@@ -1,4 +1,5 @@
 import { loginInfo } from "./modules/login";
+import { menuList } from "./modules/menu";
 import { analysisCardList } from "./modules/dashboard";
 
 export default [
@@ -7,6 +8,13 @@ export default [
         method: "post",
         response: () => {
             return loginInfo;
+        },
+    },
+    {
+        url: "/api/menuList",
+        method: "get",
+        response: () => {
+            return menuList;
         },
     },
     {

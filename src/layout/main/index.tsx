@@ -15,13 +15,11 @@ const MainContent: React.FC<MainContentProps> = ({ collapsed }) => {
     <div
       style={{
         width: collapsed ? "calc(100vw - 120px)" : "calc(100vw - 240px)",
-        height: "calc(100vh - 104px)",
+        height: "calc(100vh - 88px)",
         background: colorBgContainer,
         borderRadius: borderRadiusLG,
       }}
     >
-      <Link to="/analysis">analysis</Link>
-      <Link to="/workbench">workbench</Link>
       <Outlet />
     </div>
   );

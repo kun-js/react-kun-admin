@@ -1,10 +1,50 @@
 .header-container {
-  padding-left: 0px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px;
   border-bottom: 1px solid #ececec;
 
-  .collapse-button {
-    width: 64px;
-    height: 64px;
-    font-size: 16px;
+  .left-action {
+    display: flex;
+    .collapse-button {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  .right-action {
+    display: flex;
+    .search-button {
+      width: 48px;
+      height: 48px;
+    }
+    .fullscreen-button {
+      width: 48px;
+      height: 48px;
+    }
+    .message-button {
+      width: 48px;
+      height: 48px;
+    }
+    .user-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 108px;
+      height: 48px;
+      .user-name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 78px;
+        height: 48px;
+      }
+    }
+    .setting-button {
+      width: 48px;
+      height: 48px;
+    }
   }
 }

@@ -15,7 +15,6 @@ const Analysis = () => {
       const result = await getAnalysisCardList();
       const list = result.analysisCardList;
       setCardList(list);
-      console.log("list: ", list);
     } catch (error) {
       console.log("error: ", error);
     }
