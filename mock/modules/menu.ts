@@ -33,6 +33,12 @@ export const menuList = Mock.mock({
             routeName: "page",
         },
         {
+            id: 1300,
+            title: "图表",
+            iconName: "PieChartOutlined",
+            routeName: "chart",
+        },
+        {
             id: 1900,
             title: "关于",
             iconName: "UserOutlined",

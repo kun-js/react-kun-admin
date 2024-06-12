@@ -6,7 +6,7 @@ interface CountInfo {
     decrementCount: (params: number) => void;
 }
 
-const useCountStore = create<CountInfo>((set) => ({
+const useCountStore = create<CountInfo>()((set) => ({
     count: 0,
     incrementCount: (params) => set((state) => ({ count: state.count + params })),
     decrementCount: (params) => set((state) => ({ count: state.count - params })),

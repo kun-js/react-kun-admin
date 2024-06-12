@@ -20,6 +20,10 @@
       width: 48px;
       height: 48px;
     }
+    .language-button {
+      width: 48px;
+      height: 48px;
+    }
     .fullscreen-button {
       width: 48px;
       height: 48px;
@@ -32,13 +36,20 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 108px;
       height: 48px;
+      border-radius: 6px;
+      padding: 4px 8px;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #f0f0f0;
+      }
+
       .user-name {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 78px;
+        margin-left: 12px;
         height: 48px;
       }
     }

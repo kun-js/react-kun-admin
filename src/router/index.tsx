@@ -2,8 +2,8 @@ import MainLayout from "@/layout/index";
 import Analysis from "@/views/dashboard/analysis/index";
 import Workbench from "@/views/dashboard/workbench/index";
 import Login from "@/views/login/index";
-
 import { createHashRouter, Navigate } from "react-router-dom";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createHashRouter([
   {
@@ -12,7 +12,11 @@ const router = createHashRouter([
   },
   {
     path: "/dashboard",
-    element: <MainLayout />,
+    element: (
+      <PrivateRoute>
+        <MainLayout />
+      </PrivateRoute>
+    ),
     children: [
       {
         path: "analysis",
@@ -30,6 +34,10 @@ const router = createHashRouter([
   },
   {
     path: "/page",
+    element: <MainLayout />,
+  },
+  {
+    path: "/chart",
     element: <MainLayout />,
   },
   {
