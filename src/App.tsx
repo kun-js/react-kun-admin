@@ -1,12 +1,12 @@
 import "./App.css";
 import MainLayout from "@/layout/index";
 
-function App() {
+const App = () => {
   return (
     <>
       <MainLayout />
     </>
   );
-}
+};
 
 export default App;

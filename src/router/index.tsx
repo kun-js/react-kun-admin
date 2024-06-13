@@ -1,9 +1,13 @@
-import MainLayout from "@/layout/index";
-import Analysis from "@/views/dashboard/analysis/index";
-import Workbench from "@/views/dashboard/workbench/index";
-import Login from "@/views/login/index";
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import PrivateRoute from "./PrivateRoute";
+import MainLayout from "@/layout/index";
+
+import { lazy } from "react";
+
+const Analysis = lazy(() => import("@/views/dashboard/analysis/index"));
+const Workbench = lazy(() => import("@/views/dashboard/workbench/index"));
+const Login = lazy(() => import("@/views/login/index"));
+const WaterMark = lazy(() => import("@/views/feature/watermark"));
 
 const router = createBrowserRouter([
   {
@@ -31,6 +35,12 @@ const router = createBrowserRouter([
   {
     path: "/feature",
     element: <MainLayout />,
+    children: [
+      {
+        path: "watermark",
+        element: <WaterMark />,
+      },
+    ],
   },
   {
     path: "/page",

@@ -17,14 +17,21 @@ export const menuList = Mock.mock({
                     id: 1002,
                     title: "工作台",
                     routeName: "workbench",
-                }
-            ]
+                },
+            ],
         },
         {
             id: 1100,
             title: "功能",
             iconName: "NodeIndexOutlined",
             routeName: "feature",
+            children: [
+                {
+                    id: 1101,
+                    title: "水印",
+                    routeName: "watermark",
+                },
+            ],
         },
         {
             id: 1200,

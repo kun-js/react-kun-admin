@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import { getAnalysisCardList } from "@/api/index";
 import CardDisplay from "./components/CardDisplay";
@@ -14,7 +15,7 @@ interface AnalysisCard {
   number: string;
 }
 
-const Analysis = () => {
+const Analysis: React.FC = () => {
   const [cardList, setCardList] = useState<AnalysisCard[]>([]);
 
   const fetchData = async () => {
