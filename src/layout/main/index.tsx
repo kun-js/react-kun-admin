@@ -1,23 +1,17 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { theme } from "antd";
 
 interface MainContentProps {
   collapsed: boolean;
 }
 
 const MainContent: React.FC<MainContentProps> = ({ collapsed }) => {
-  const {
-    token: { colorBgContainer, borderRadiusLG },
-  } = theme.useToken();
-
   return (
     <div
       style={{
-        width: collapsed ? "calc(100vw - 120px)" : "calc(100vw - 240px)",
-        height: "calc(100vh - 88px)",
-        background: colorBgContainer,
-        borderRadius: borderRadiusLG,
+        width: collapsed ? "calc(100vw - 80px)" : "calc(100vw - 200px)",
+        height: "calc(100vh - 48px)",
+        background: "#f5f5f5",
       }}
     >
       <Outlet />

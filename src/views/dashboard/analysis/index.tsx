@@ -1,10 +1,17 @@
 import { useState, useEffect } from "react";
 import { getAnalysisCardList } from "@/api/index";
+import CardDisplay from "./components/CardDisplay";
+import { Col, Row } from "antd";
+import "./analysis.scss";
 
 interface AnalysisCard {
   id: number;
   title: string;
-  // 这里可以根据实际数据结构添加更多字段
+  time: string;
+  text: string;
+  iconType: string;
+  total: string;
+  number: string;
 }
 
 const Analysis = () => {
@@ -26,11 +33,16 @@ const Analysis = () => {
 
   return (
     <>
-      <div>Analysis</div>
-      <div>
-        {cardList.map((item) => (
-          <div key={item.id}>{item.title}</div>
-        ))}
+      <div className="analysis-container">
+        <div className="card-container">
+          <Row gutter={16}>
+            {cardList.map((item) => (
+              <Col key={item.id} span={6}>
+                <CardDisplay item={item} />
+              </Col>
+            ))}
+          </Row>
+        </div>
       </div>
     </>
   );

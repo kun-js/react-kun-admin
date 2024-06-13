@@ -1,0 +1,48 @@
+.card {
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 38px;
+
+    &-title {
+      font-size: 14px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+  }
+
+  &-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+
+    &-text {
+      font-size: 28px;
+    }
+
+    &-icon {
+      .icon {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  &-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 38px;
+
+    &-total {
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    &-number {
+      font-size: 14px;
+    }
+  }
+}
