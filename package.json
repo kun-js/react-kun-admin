@@ -34,6 +34,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.1",
     "sass": "^1.77.3",
+    "terser": "^5.31.1",
     "vite-plugin-mock": "2.9.6",
     "zustand": "^4.5.2"
   },
@@ -55,6 +56,7 @@
     "lint-staged": "^15.2.5",
     "prettier": "^3.2.5",
     "typescript": "^5.2.2",
-    "vite": "^5.2.0"
+    "vite": "^5.2.0",
+    "vite-plugin-imagemin": "^0.6.1"
   }
 }
