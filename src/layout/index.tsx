@@ -35,10 +35,15 @@ const MainLayout: React.FC = () => {
           {contextHolder}
           <Layout>
             <SideBar collapsed={collapsed} />
-            <Layout>
+            <Layout
+              style={{
+                marginLeft: collapsed ? "80px" : "200px",
+                transition: "0.28s",
+              }}
+            >
               <MainHeader collapsed={collapsed} handleToCollapse={handleToCollapse} />
-              <Content style={{ width: "100%", backgroundColor: "#f5f5f5" }}>
-                <MainContent collapsed={collapsed} />
+              <Content style={{ width: "100%" }}>
+                <MainContent />
               </Content>
             </Layout>
           </Layout>

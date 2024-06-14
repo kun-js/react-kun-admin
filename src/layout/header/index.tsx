@@ -66,7 +66,7 @@ const MainHeader: React.FC<MainHeaderProps> = ({ collapsed, handleToCollapse }) 
     const path = location.pathname;
     const result = transformPathToTitleArray(path);
     setBreadcrumbList(result);
-  });
+  }, []);
 
   useEffect(() => {
     const result = JSON.parse(localStorage.getItem("userStore")!).state.userInfo;
@@ -75,7 +75,7 @@ const MainHeader: React.FC<MainHeaderProps> = ({ collapsed, handleToCollapse }) 
 
   const userContent = (
     <div style={{ padding: 0 }}>
-      <Button style={{ width: "100%" }} type="text" onClick={handleToExit}>
+      <Button type="text" onClick={handleToExit}>
         退出系统
       </Button>
     </div>
@@ -85,7 +85,12 @@ const MainHeader: React.FC<MainHeaderProps> = ({ collapsed, handleToCollapse }) 
     <Header
       className="header-container"
       style={{
-        width: collapsed ? "calc(100vw - 80px)" : "calc(100vw - 200px)",
+        width: "100%",
+        position: "sticky",
+        top: 0,
+        zIndex: 10,
+        display: "flex",
+        alignItems: "center",
         background: colorBgContainer,
       }}
     >

@@ -96,7 +96,11 @@ const SideBar: React.FC<SideBarProps> = ({ collapsed }) => {
   };
 
   return (
-    <Sider breakpoint="lg" collapsed={collapsed}>
+    <Sider
+      style={{ overflow: "auto", height: "100vh", position: "fixed", left: 0, top: 0, bottom: 0 }}
+      breakpoint="xs"
+      collapsed={collapsed}
+    >
       <div className="logo">
         <div className="logo-pic"></div>
         {!collapsed && <div className="logo-title">Kun Admin</div>}
