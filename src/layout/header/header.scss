@@ -8,6 +8,7 @@
 
   .left-action {
     display: flex;
+    align-items: center;
     .collapse-button {
       width: 48px;
       height: 48px;
@@ -16,6 +17,7 @@
 
   .right-action {
     display: flex;
+    align-items: center;
     .search-button {
       width: 48px;
       height: 48px;

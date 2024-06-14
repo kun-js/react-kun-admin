@@ -8,6 +8,9 @@ const Analysis = lazy(() => import("@/views/dashboard/analysis/index"));
 const Workbench = lazy(() => import("@/views/dashboard/workbench/index"));
 const Login = lazy(() => import("@/views/login/index"));
 const WaterMark = lazy(() => import("@/views/feature/watermark"));
+const Detail = lazy(() => import("@/views/page/detail"));
+const Form = lazy(() => import("@/views/page/form"));
+const About = lazy(() => import("@/views/about"));
 
 const router = createBrowserRouter([
   {
@@ -45,6 +48,16 @@ const router = createBrowserRouter([
   {
     path: "/page",
     element: <MainLayout />,
+    children: [
+      {
+        path: "form",
+        element: <Form />,
+      },
+      {
+        path: "detail",
+        element: <Detail />,
+      },
+    ],
   },
   {
     path: "/chart",
@@ -53,6 +66,12 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <MainLayout />,
+    children: [
+      {
+        path: "index",
+        element: <About />,
+      },
+    ],
   },
   {
     path: "/login",

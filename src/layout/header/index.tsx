@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, Avatar, Layout, Popover, theme } from "antd";
+import { Breadcrumb, Button, Avatar, Layout, Popover, theme } from "antd";
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
@@ -12,9 +12,11 @@ import {
 } from "@ant-design/icons";
 import "./header.scss";
 
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const { Header } = Layout;
+
+type TitleObject = { title: string };
 
 interface MainHeaderProps {
   collapsed: boolean;
@@ -32,12 +34,14 @@ const MainHeader: React.FC<MainHeaderProps> = ({ collapsed, handleToCollapse }) 
   } = theme.useToken();
 
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleToExit = () => {
     localStorage.removeItem("userStore");
     navigate("/login");
   };
 
+  const [breadcrumbList, setBreadcrumbList] = useState<TitleObject[]>([]);
   const [fullScreen, setFullScreen] = useState(false);
   const [userInfo, setUserInfo] = useState<UserInfo>({ avatar: "", name: "" });
 
@@ -49,6 +53,20 @@ const MainHeader: React.FC<MainHeaderProps> = ({ collapsed, handleToCollapse }) 
     }
     setFullScreen(!fullScreen);
   };
+
+  const transformPathToTitleArray = (path: string): TitleObject[] => {
+    // 将路径按 '/' 分割成段，并过滤掉空字符串
+    const segments = path.split("/").filter((segment) => segment.length > 0);
+    // 使用 map 函数将每个段转换成一个具有 title 属性的对象
+    const titleArray = segments.map((segment) => ({ title: segment }));
+    return titleArray;
+  };
+
+  useEffect(() => {
+    const path = location.pathname;
+    const result = transformPathToTitleArray(path);
+    setBreadcrumbList(result);
+  });
 
   useEffect(() => {
     const result = JSON.parse(localStorage.getItem("userStore")!).state.userInfo;
@@ -78,6 +96,7 @@ const MainHeader: React.FC<MainHeaderProps> = ({ collapsed, handleToCollapse }) 
           icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
           onClick={handleToCollapse}
         />
+        <Breadcrumb className="breadcrumb" items={breadcrumbList} />
       </div>
 
       <div className="right-action">

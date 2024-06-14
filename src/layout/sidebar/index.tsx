@@ -85,7 +85,14 @@ const SideBar: React.FC<SideBarProps> = ({ collapsed }) => {
     setDefaultSelectedKey([info.key]);
     setDefaultOpenKey(info.keyPath.slice(-1));
     const path = arrayToPath(info.keyPath);
-    navigate(path);
+    // 检查点击的菜单项是否是 'about'
+    if (info.key === "about") {
+      // 如果是 'about'，拼接 'index' 子路径
+      navigate(`${path}/index`);
+    } else {
+      // 否则，直接导航到菜单项的路径
+      navigate(path);
+    }
   };
 
   return (
@@ -97,8 +104,8 @@ const SideBar: React.FC<SideBarProps> = ({ collapsed }) => {
       <Menu
         theme="dark"
         mode="inline"
-        defaultSelectedKeys={defaultSelectedKey}
         defaultOpenKeys={defaultOpenKey}
+        defaultSelectedKeys={defaultSelectedKey}
         onClick={handleMenuClick}
         items={menuList}
       />

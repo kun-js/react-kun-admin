@@ -38,18 +38,37 @@ export const menuList = Mock.mock({
             title: "页面",
             iconName: "PictureOutlined",
             routeName: "page",
+            children: [
+                {
+                    id: 1201,
+                    title: "表单页",
+                    routeName: "form",
+                },
+                {
+                    id: 1202,
+                    title: "详情页",
+                    routeName: "detail",
+                },
+            ],
         },
-        {
-            id: 1300,
-            title: "图表",
-            iconName: "PieChartOutlined",
-            routeName: "chart",
-        },
+        // {
+        //     id: 1300,
+        //     title: "图表",
+        //     iconName: "PieChartOutlined",
+        //     routeName: "chart",
+        // },
         {
             id: 1900,
             title: "关于",
             iconName: "UserOutlined",
             routeName: "about",
+            // children: [
+            //     {
+            //         id: 1901,
+            //         title: "关于",
+            //         routeName: "index",
+            //     },
+            // ],
         },
     ],
 });
