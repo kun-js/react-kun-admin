@@ -1,5 +1,5 @@
-import { Card } from "antd";
 import "./CardDisplay.scss";
+import { Card } from "antd";
 import VisitNumber from "@/assets/imgs/VisitNumber.png";
 import Download from "@/assets/imgs/Download.png";
 import DealAmount from "@/assets/imgs/DealAmount.png";

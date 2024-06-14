@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import SideBar from "./sidebar";
 import MainHeader from "./header";
 import MainContent from "./main";
@@ -12,9 +12,9 @@ const MainLayout: React.FC = () => {
   const [messageApi, contextHolder] = message.useMessage();
   const { watermarkVisible } = useWatermarkStore();
 
-  const handleToCollapse = () => {
+  const handleToCollapse = useCallback(() => {
     setCollapsed(!collapsed);
-  };
+  }, [collapsed]);
 
   useEffect(() => {
     const message = localStorage.getItem("loginMessage");
