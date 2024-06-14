@@ -3,25 +3,25 @@ import { menuList } from "./modules/menu";
 import { analysisCardList } from "./modules/dashboard";
 
 export default [
-    {
-        url: "/api/login",
-        method: "post",
-        response: () => {
-            return loginInfo;
-        },
+  {
+    url: "/api/login",
+    method: "post",
+    response: () => {
+      return loginInfo;
     },
-    {
-        url: "/api/menuList",
-        method: "get",
-        response: () => {
-            return menuList;
-        },
+  },
+  {
+    url: "/api/menuList",
+    method: "get",
+    response: () => {
+      return menuList;
     },
-    {
-        url: "/api/analysisCardList",
-        method: "get",
-        response: () => {
-            return analysisCardList;
-        },
+  },
+  {
+    url: "/api/analysisCardList",
+    method: "get",
+    response: () => {
+      return analysisCardList;
     },
-]
+  },
+];
