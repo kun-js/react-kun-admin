@@ -13,7 +13,7 @@ const WaterMark: React.FC = () => {
   return (
     <>
       <div className="watermark-container">
-        <Card title="水印功能示例" bordered={false} style={{ width: "100%", height: "100%" }}>
+        <Card className="card-container" title="水印功能示例" bordered={false}>
           <Space>
             <Button type="primary" onClick={toggleWatermark} disabled={watermarkVisible}>
               显示水印

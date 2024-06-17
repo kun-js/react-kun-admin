@@ -1,4 +1,7 @@
-.detail-container {
+.line-chart-container {
+  .ant-card-body {
+    height: 90%;
+  }
   padding: 20px;
   .card-container {
     height: var(--card-height);

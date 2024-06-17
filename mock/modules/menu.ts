@@ -63,24 +63,29 @@ export const menuList = Mock.mock({
         },
       ],
     },
-    // {
-    //     id: 1300,
-    //     title: "图表",
-    //     iconName: "PieChartOutlined",
-    //     routeName: "chart",
-    // },
+    {
+      id: 1300,
+      title: "图表",
+      iconName: "PieChartOutlined",
+      routeName: "chart",
+      children: [
+        {
+          id: 1301,
+          title: "柱状图",
+          routeName: "bar",
+        },
+        {
+          id: 1302,
+          title: "线性图",
+          routeName: "line",
+        },
+      ],
+    },
     {
       id: 1900,
       title: "关于",
       iconName: "UserOutlined",
       routeName: "about",
-      // children: [
-      //     {
-      //         id: 1901,
-      //         title: "关于",
-      //         routeName: "index",
-      //     },
-      // ],
     },
   ],
 });
