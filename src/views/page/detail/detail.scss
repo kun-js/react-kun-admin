@@ -1,6 +1,6 @@
 .detail-container {
   padding: 20px;
   .card-container {
-    height: calc(100vh - 88px);
+    height: $card-height;
   }
 }

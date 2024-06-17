@@ -43,6 +43,18 @@ export default defineConfig({
       },
     }),
   ],
+  css: {
+    // CSS 预处理器
+    preprocessorOptions: {
+      // 定义全局 SCSS 变量
+      scss: {
+        javascriptEnabled: true,
+        additionalData: `
+          @use "./src/styles/variables.scss" as *;
+        `,
+      },
+    },
+  },
   build: {
     minify: "terser", // 启用 terser 压缩
     terserOptions: {
