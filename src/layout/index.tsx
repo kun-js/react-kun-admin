@@ -30,7 +30,7 @@ const MainLayout: React.FC = () => {
 
   return (
     <>
-      <Watermark zIndex={watermarkVisible ? 9 : -1} content={["CAIXUKUN", "JINITAIMEI"]}>
+      <Watermark zIndex={watermarkVisible ? 99 : -1} content={["CAIXUKUN", "JINITAIMEI"]}>
         <div style={{ width: "100vw", height: "100vh" }}>
           {contextHolder}
           <Layout>

@@ -43,9 +43,21 @@ export const menuList = Mock.mock({
           id: 1201,
           title: "表单页",
           routeName: "form",
+          children: [
+            {
+              id: 1202,
+              title: "基础表单",
+              routeName: "basic",
+            },
+            {
+              id: 1203,
+              title: "分布表单",
+              routeName: "step",
+            },
+          ],
         },
         {
-          id: 1202,
+          id: 1204,
           title: "详情页",
           routeName: "detail",
         },

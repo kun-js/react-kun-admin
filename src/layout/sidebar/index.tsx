@@ -12,18 +12,24 @@ interface SideBarProps {
   collapsed: boolean;
 }
 
+// 菜单项接口，包括子菜单
 interface MenuItem {
   id: number;
   title: string;
-  routeName: string;
   iconName: string;
+  routeName: string;
   children?: SubMenuItem[];
 }
 
-interface SubMenuItem {
-  id: number;
-  title: string;
-  routeName: string;
+// 子菜单项接口，与 MenuItem 相同结构
+interface SubMenuItem extends MenuItem {}
+
+// 用于 Ant Design Menu 的菜单项类型
+interface MenuListItem {
+  key: string;
+  label: string;
+  icon?: React.ReactElement;
+  children?: MenuListItem[];
 }
 
 // 定义图标映射类型，用于映射图标名称到图标组件
@@ -34,7 +40,7 @@ type IconMap = {
 const SideBar: React.FC<SideBarProps> = ({ collapsed }) => {
   const navigate = useNavigate();
   const { setDefaultSelectedKey, setDefaultOpenKey } = useMenuStore();
-  const [menuList, setMenuList] = useState([]);
+  const [menuList, setMenuList] = useState<MenuListItem[]>([]);
 
   const iconMap: IconMap = {
     HomeOutlined: HomeOutlined,
@@ -65,15 +71,33 @@ const SideBar: React.FC<SideBarProps> = ({ collapsed }) => {
         key: item.routeName,
         label: item.title,
         icon: item.iconName ? React.createElement(iconMap[item.iconName]) : null,
-        children: item.children?.map((child: SubMenuItem) => ({
-          key: child.routeName,
-          label: child.title,
-        })),
+        // 只有当存在子菜单时才添加 children 属性
+        children: item.children ? item.children.map((child) => transformMenuItem(child)) : null,
       }));
+
       setMenuList(list);
     } catch (error) {
-      console.log("error: ", error);
+      console.error("error: ", error);
     }
+  };
+
+  // 递归转换函数
+  const transformMenuItem = (item: MenuItem): MenuListItem => {
+    // 确定图标组件是否存在，使用 React.createElement 创建图标元素
+    const iconElement = item.iconName ? React.createElement(iconMap[item.iconName]) : undefined;
+
+    const menu: MenuListItem = {
+      key: item.routeName,
+      label: item.title,
+      icon: iconElement, // 使用 iconElement 而不是直接从 iconMap 获取的组件
+    };
+
+    // 如果存在子菜单，递归处理
+    if (item.children && item.children.length > 0) {
+      menu.children = item.children.map(transformMenuItem);
+    }
+
+    return menu;
   };
 
   useEffect(() => {
