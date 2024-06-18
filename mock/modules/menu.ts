@@ -22,60 +22,73 @@ export const menuList = Mock.mock({
     },
     {
       id: 1100,
+      title: "组件",
+      iconName: "BookOutlined",
+      routeName: "component",
+      children: [
+        {
+          id: 1101,
+          title: "按钮",
+          routeName: "button",
+        },
+      ],
+    },
+    {
+      id: 1200,
       title: "功能",
       iconName: "NodeIndexOutlined",
       routeName: "feature",
       children: [
         {
-          id: 1101,
+          id: 1201,
           title: "水印",
           routeName: "watermark",
         },
       ],
     },
     {
-      id: 1200,
+      id: 1300,
       title: "页面",
       iconName: "PictureOutlined",
       routeName: "page",
       children: [
         {
-          id: 1201,
+          id: 1301,
           title: "表单页",
           routeName: "form",
           children: [
             {
-              id: 1202,
+              id: 1302,
               title: "基础表单",
               routeName: "basic",
             },
             {
-              id: 1203,
+              id: 1303,
               title: "分布表单",
               routeName: "step",
             },
           ],
         },
         {
-          id: 1204,
+          id: 1304,
           title: "详情页",
           routeName: "detail",
         },
       ],
     },
     {
-      id: 1300,
+      id: 1400,
       title: "图表",
       iconName: "PieChartOutlined",
       routeName: "chart",
       children: [
         {
-          id: 1301,
+          id: 1401,
           title: "柱状图",
           routeName: "bar",
         },
         {
-          id: 1302,
+          id: 1402,
           title: "线性图",
           routeName: "line",
         },

@@ -6,10 +6,12 @@ import featureRoutes from "./routes/featureRoutes";
 import pageRoutes from "./routes/pageRoutes";
 import chartRoutes from "./routes/chartRoutes";
 import aboutRoutes from "./routes/aboutRoutes";
+import componentRoutes from "./routes/componentRoutes";
 
 const router = createBrowserRouter([
   ...baseRoutes,
   ...dashboardRoutes,
+  ...componentRoutes,
   ...featureRoutes,
   ...pageRoutes,
   ...chartRoutes,

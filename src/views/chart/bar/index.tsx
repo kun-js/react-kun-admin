@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import ReactECharts from "echarts-for-react";
 import * as echarts from "echarts";
 import { Card } from "antd";
@@ -32,7 +32,7 @@ const BarChart: React.FC = () => {
 
   return (
     <div className="bar-chart-container">
-      <Card className="card-container" title="柱状图示例" bordered={true}>
+      <Card className="card-container" bordered={true}>
         <ReactECharts echarts={echarts} option={option} style={{ width: "100%", height: "100%" }} />
       </Card>
     </div>

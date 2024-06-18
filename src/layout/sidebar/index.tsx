@@ -2,7 +2,14 @@ import "./sidebar.scss";
 import React, { useEffect, useState } from "react";
 import { Layout, Menu } from "antd";
 import { getMenuList } from "@/api/index";
-import { HomeOutlined, NodeIndexOutlined, PictureOutlined, PieChartOutlined, UserOutlined } from "@ant-design/icons";
+import {
+  HomeOutlined,
+  BookOutlined,
+  NodeIndexOutlined,
+  PictureOutlined,
+  PieChartOutlined,
+  UserOutlined,
+} from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 import useMenuStore from "@/store/menu";
 
@@ -44,6 +51,7 @@ const SideBar: React.FC<SideBarProps> = ({ collapsed }) => {
 
   const iconMap: IconMap = {
     HomeOutlined: HomeOutlined,
+    BookOutlined: BookOutlined,
     NodeIndexOutlined: NodeIndexOutlined,
     PictureOutlined: PictureOutlined,
     PieChartOutlined: PieChartOutlined,
