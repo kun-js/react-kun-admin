@@ -89,8 +89,13 @@ export const menuList = Mock.mock({
         },
         {
           id: 1402,
-          title: "线性图",
+          title: "折线图",
           routeName: "line",
+        },
+        {
+          id: 1403,
+          title: "饼图",
+          routeName: "pie",
         },
       ],
     },

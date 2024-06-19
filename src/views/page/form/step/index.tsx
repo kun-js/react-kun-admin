@@ -59,7 +59,7 @@ const StepForm: React.FC = () => {
                     <Form.Item name="age" label="年龄:">
                       <InputNumber min={1} max={100} defaultValue={20} />
                     </Form.Item>
-                    <Form.Item name="gender" label="年龄:">
+                    <Form.Item name="gender" label="性别:">
                       <Radio.Group onChange={onRadioChange} value={gender}>
                         <Radio value={"male"}>男</Radio>
                         <Radio value={"female"}>女</Radio>

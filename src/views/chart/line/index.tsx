@@ -27,7 +27,7 @@ const getOption = () => {
   };
 };
 
-const BarChart: React.FC = () => {
+const LineChart: React.FC = () => {
   const option = getOption();
 
   return (
@@ -39,4 +39,4 @@ const BarChart: React.FC = () => {
   );
 };
 
-export default BarChart;
+export default LineChart;
