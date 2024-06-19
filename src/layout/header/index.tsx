@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Breadcrumb, Button, Avatar, Layout, Popover, theme } from "antd";
+import { Breadcrumb, Button, Avatar, Layout, Popover } from "antd";
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
@@ -13,7 +13,6 @@ import {
 import "./header.scss";
 
 import { useNavigate, useLocation } from "react-router-dom";
-
 const { Header } = Layout;
 
 type TitleObject = { title: string };
@@ -29,21 +28,16 @@ interface UserInfo {
 }
 
 const MainHeader: React.FC<MainHeaderProps> = ({ collapsed, handleToCollapse }) => {
-  const {
-    token: { colorBgContainer },
-  } = theme.useToken();
-
   const navigate = useNavigate();
   const location = useLocation();
+  const [breadcrumbList, setBreadcrumbList] = useState<TitleObject[]>([]);
+  const [fullScreen, setFullScreen] = useState(false);
+  const [userInfo, setUserInfo] = useState<UserInfo>({ avatar: "", name: "" });
 
   const handleToExit = () => {
     localStorage.removeItem("userStore");
     navigate("/login");
   };
-
-  const [breadcrumbList, setBreadcrumbList] = useState<TitleObject[]>([]);
-  const [fullScreen, setFullScreen] = useState(false);
-  const [userInfo, setUserInfo] = useState<UserInfo>({ avatar: "", name: "" });
 
   const handleToFullScreen = () => {
     if (!fullScreen) {
@@ -64,14 +58,12 @@ const MainHeader: React.FC<MainHeaderProps> = ({ collapsed, handleToCollapse }) 
 
   useEffect(() => {
     const path = location.pathname;
-    const result = transformPathToTitleArray(path);
-    setBreadcrumbList(result);
-  }, []);
+    const titleArray = transformPathToTitleArray(path);
+    setBreadcrumbList(titleArray);
 
-  useEffect(() => {
-    const result = JSON.parse(localStorage.getItem("userStore")!).state.userInfo;
+    const result = JSON.parse(localStorage.getItem("userStore") || "{}").state.userInfo;
     setUserInfo(result);
-  }, []);
+  }, [location.pathname]);
 
   const userContent = (
     <div style={{ padding: 0 }}>
@@ -91,7 +83,7 @@ const MainHeader: React.FC<MainHeaderProps> = ({ collapsed, handleToCollapse }) 
         zIndex: 10,
         display: "flex",
         alignItems: "center",
-        background: colorBgContainer,
+        background: "#fff",
       }}
     >
       <div className="left-action">

@@ -117,7 +117,6 @@ const SideBar: React.FC<SideBarProps> = ({ collapsed }) => {
     const openKey = info.keyPath.length === 2 ? [info.keyPath[1]] : [info.keyPath[1], info.keyPath[2]];
     setDefaultSelectedKey(selectKey);
     setDefaultOpenKey(openKey);
-    console.log("info.keyPath: ", info.keyPath);
     const path = arrayToPath(info.keyPath);
     if (info.key === "about") {
       navigate(`${path}/index`);
