@@ -113,16 +113,15 @@ const SideBar: React.FC<SideBarProps> = ({ collapsed }) => {
   }, []);
 
   const handleMenuClick = (info: { key: string; keyPath: string[] }) => {
-    // console.log("info: ", info);
-    setDefaultSelectedKey([info.key]);
-    setDefaultOpenKey(info.keyPath.slice(-1));
+    const selectKey = [info.key];
+    const openKey = info.keyPath.length === 2 ? [info.keyPath[1]] : [info.keyPath[1], info.keyPath[2]];
+    setDefaultSelectedKey(selectKey);
+    setDefaultOpenKey(openKey);
+    console.log("info.keyPath: ", info.keyPath);
     const path = arrayToPath(info.keyPath);
-    // 检查点击的菜单项是否是 'about'
     if (info.key === "about") {
-      // 如果是 'about'，拼接 'index' 子路径
       navigate(`${path}/index`);
     } else {
-      // 否则，直接导航到菜单项的路径
       navigate(path);
     }
   };

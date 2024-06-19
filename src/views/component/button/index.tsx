@@ -29,6 +29,7 @@ const ButtonComponent: React.FC = () => {
         <Card className="card-container" title="按钮组件" bordered={false}>
           <Space direction="vertical">
             <div>
+              <span style={{ marginRight: "18px" }}>按钮类型:</span>
               <Radio.Group onChange={onTypeChange} value={type}>
                 <Radio value={"default"}>default</Radio>
                 <Radio value={"primary"}>primary</Radio>
@@ -38,6 +39,7 @@ const ButtonComponent: React.FC = () => {
               </Radio.Group>
             </div>
             <div>
+              <span style={{ marginRight: "18px" }}>按钮大小:</span>
               <Radio.Group onChange={onSizeChange} value={size}>
                 <Radio value={"large"}>large</Radio>
                 <Radio value={"middle"}>middle</Radio>
@@ -45,6 +47,7 @@ const ButtonComponent: React.FC = () => {
               </Radio.Group>
             </div>
             <div>
+              <span style={{ marginRight: "18px" }}>按钮形状:</span>
               <Radio.Group onChange={onShapeChange} value={shape}>
                 <Radio value={"default"}>default</Radio>
                 <Radio value={"circle"}>circle</Radio>
@@ -54,35 +57,14 @@ const ButtonComponent: React.FC = () => {
           </Space>
           <div style={{ marginTop: "38px" }}>
             <Space>
-              <Button type={type} size={size} shape={shape}>
-                {shape === "circle" ? (
-                  <SearchOutlined />
-                ) : (
-                  <>
-                    <SearchOutlined />
-                    Button
-                  </>
-                )}
+              <Button type={type} size={size} shape={shape} icon={<SearchOutlined />}>
+                {shape === "circle" ? "" : "Button"}
               </Button>
-              <Button type={type} size={size} shape={shape}>
-                {shape === "circle" ? (
-                  <DownloadOutlined />
-                ) : (
-                  <>
-                    <DownloadOutlined />
-                    Button
-                  </>
-                )}
+              <Button type={type} size={size} shape={shape} icon={<DownloadOutlined />}>
+                {shape === "circle" ? "" : "Button"}
               </Button>
-              <Button type={type} size={size} shape={shape}>
-                {shape === "circle" ? (
-                  <PoweroffOutlined />
-                ) : (
-                  <>
-                    <PoweroffOutlined />
-                    Button
-                  </>
-                )}
+              <Button type={type} size={size} shape={shape} icon={<PoweroffOutlined />}>
+                {shape === "circle" ? "" : "Button"}
               </Button>
             </Space>
           </div>

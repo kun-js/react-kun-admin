@@ -64,7 +64,7 @@ export const menuList = Mock.mock({
             },
             {
               id: 1303,
-              title: "分布表单",
+              title: "分步表单",
               routeName: "step",
             },
           ],
