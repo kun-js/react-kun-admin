@@ -98,7 +98,7 @@ const BasicForm: React.FC = () => {
   return (
     <>
       <div className="basic-form-container">
-        <Card className="card-container" title="详情页示例" bordered={true}>
+        <Card className="card-container" title="基础表单示例" bordered={true}>
           <Form layout="horizontal">
             <Row gutter={[16, 24]}>
               <Col span={8}>
