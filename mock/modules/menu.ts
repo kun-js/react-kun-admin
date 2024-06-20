@@ -79,6 +79,23 @@ export const menuList = Mock.mock({
           title: "列表页",
           routeName: "list",
         },
+        {
+          id: 1306,
+          title: "结果页",
+          routeName: "result",
+          children: [
+            {
+              id: 1307,
+              title: "成功页",
+              routeName: "success",
+            },
+            {
+              id: 1308,
+              title: "失败页",
+              routeName: "fail",
+            },
+          ],
+        },
       ],
     },
     {
