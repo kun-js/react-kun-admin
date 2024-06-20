@@ -2,11 +2,12 @@ import { createBrowserRouter } from "react-router-dom";
 
 import baseRoutes from "./routes/baseRoutes";
 import dashboardRoutes from "./routes/dashboardRoutes";
+import componentRoutes from "./routes/componentRoutes";
 import featureRoutes from "./routes/featureRoutes";
 import pageRoutes from "./routes/pageRoutes";
 import chartRoutes from "./routes/chartRoutes";
+import externalRoutes from "./routes/externalRoutes";
 import aboutRoutes from "./routes/aboutRoutes";
-import componentRoutes from "./routes/componentRoutes";
 
 const router = createBrowserRouter([
   ...baseRoutes,
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
   ...featureRoutes,
   ...pageRoutes,
   ...chartRoutes,
+  ...externalRoutes,
   ...aboutRoutes,
 ]);
 

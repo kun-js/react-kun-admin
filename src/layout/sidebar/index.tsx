@@ -8,6 +8,7 @@ import {
   NodeIndexOutlined,
   PictureOutlined,
   PieChartOutlined,
+  DesktopOutlined,
   UserOutlined,
 } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
@@ -55,6 +56,7 @@ const SideBar: React.FC<SideBarProps> = ({ collapsed }) => {
     NodeIndexOutlined: NodeIndexOutlined,
     PictureOutlined: PictureOutlined,
     PieChartOutlined: PieChartOutlined,
+    DesktopOutlined: DesktopOutlined,
     UserOutlined: UserOutlined,
   };
 

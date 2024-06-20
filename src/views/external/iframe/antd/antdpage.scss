@@ -1,0 +1,9 @@
+.antd-page-container {
+  .card-container {
+    height: calc(100vh - 48px);
+    .ant-card-body {
+      padding: 0;
+      height: 99%;
+    }
+  }
+}

@@ -100,6 +100,48 @@ export const menuList = Mock.mock({
       ],
     },
     {
+      id: 1500,
+      title: "外部页面",
+      iconName: "DesktopOutlined",
+      routeName: "external",
+      children: [
+        {
+          id: 1501,
+          title: "文档内嵌",
+          routeName: "iframe",
+          children: [
+            {
+              id: 1502,
+              title: "Ant Design",
+              routeName: "antd-iframe",
+            },
+            {
+              id: 1503,
+              title: "React",
+              routeName: "react-iframe",
+            },
+          ],
+        },
+        {
+          id: 1504,
+          title: "文档外链",
+          routeName: "outerchain",
+          children: [
+            {
+              id: 1505,
+              title: "Ant Design",
+              routeName: "antd-outerchain",
+            },
+            {
+              id: 1506,
+              title: "React",
+              routeName: "react-outerchain",
+            },
+          ],
+        },
+      ],
+    },
+    {
       id: 1900,
       title: "关于",
       iconName: "UserOutlined",
