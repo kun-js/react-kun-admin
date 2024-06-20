@@ -1,6 +1,8 @@
 import { loginInfo } from "./modules/login";
 import { menuList } from "./modules/menu";
 import { analysisCardList } from "./modules/dashboard";
+import { userList } from "./modules/list";
+
 
 export default [
   {
@@ -22,6 +24,13 @@ export default [
     method: "get",
     response: () => {
       return analysisCardList;
+    },
+  },
+  {
+    url: "/api/userList",
+    method: "get",
+    response: () => {
+      return userList;
     },
   },
 ];
