@@ -96,6 +96,28 @@ export const menuList = Mock.mock({
             },
           ],
         },
+        {
+          id: 1309,
+          title: "异常页",
+          routeName: "exception",
+          children: [
+            {
+              id: 1310,
+              title: "403",
+              routeName: "403",
+            },
+            {
+              id: 1311,
+              title: "404",
+              routeName: "404",
+            },
+            {
+              id: 1312,
+              title: "500",
+              routeName: "500",
+            },
+          ],
+        },
       ],
     },
     {

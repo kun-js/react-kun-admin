@@ -8,6 +8,9 @@ const Detail = lazy(() => import("@/views/page/detail"));
 const ListPage = lazy(() => import("@/views/page/list"));
 const SuccessPage = lazy(() => import("@/views/page/result/success"));
 const FailPage = lazy(() => import("@/views/page/result/fail"));
+const Page403 = lazy(() => import("@/views/page/exception/403"));
+const Page404 = lazy(() => import("@/views/page/exception/404"));
+const Page500 = lazy(() => import("@/views/page/exception/500"));
 
 const pageRoutes = [
   {
@@ -59,6 +62,30 @@ const pageRoutes = [
         element: (
           <Suspense fallback={<LoadingComponent />}>
             <FailPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: "exception/403",
+        element: (
+          <Suspense fallback={<LoadingComponent />}>
+            <Page403 />
+          </Suspense>
+        ),
+      },
+      {
+        path: "exception/404",
+        element: (
+          <Suspense fallback={<LoadingComponent />}>
+            <Page404 />
+          </Suspense>
+        ),
+      },
+      {
+        path: "exception/500",
+        element: (
+          <Suspense fallback={<LoadingComponent />}>
+            <Page500 />
           </Suspense>
         ),
       },
