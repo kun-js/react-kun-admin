@@ -1,9 +1,52 @@
 import React from "react";
+import "./workbench.scss";
+import { Avatar, Card, Space, Typography } from "antd";
+import { AntDesignOutlined } from "@ant-design/icons";
+const { Text } = Typography;
 
 const Workbench: React.FC = () => {
   return (
     <>
-      <div>Workbench</div>
+      <div className="workbench-container">
+        <div className="personal">
+          <Card className="personal-card-container" bordered={false}>
+            <div className="personal-info">
+              <div className="left">
+                <Avatar size={80} icon={<AntDesignOutlined />} />
+                <div className="info">
+                  <div className="greeting">
+                    <Text strong style={{ fontSize: "22px" }}>
+                      你好,XX,祝您今天工作愉快
+                    </Text>
+                  </div>
+                  <div className="weather">
+                    <Text style={{ fontSize: "14px" }}>偶像练习生 | 当前天气: 晴, 温度: 31°C</Text>
+                  </div>
+                </div>
+              </div>
+              <div className="right">
+                <div className="task-info">
+                  <Space size={18}>
+                    <div className="task-info-item">
+                      <div className="task-info-item-title">待办事项</div>
+                      <div className="task-info-item-number">0/10</div>
+                    </div>
+                    <div className="task-info-item">
+                      <div className="task-info-item-title">未读消息</div>
+                      <div className="task-info-item-number">18</div>
+                    </div>
+                    <div className="task-info-item">
+                      <div className="task-info-item-title">团队人数</div>
+                      <div className="task-info-item-number">30</div>
+                    </div>
+                  </Space>
+                </div>
+                .
+              </div>
+            </div>
+          </Card>
+        </div>
+      </div>
     </>
   );
 };
