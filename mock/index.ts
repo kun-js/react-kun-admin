@@ -3,7 +3,6 @@ import { menuList } from "./modules/menu";
 import { analysisCardList } from "./modules/dashboard";
 import { userList } from "./modules/list";
 
-
 export default [
   {
     url: "/api/login",

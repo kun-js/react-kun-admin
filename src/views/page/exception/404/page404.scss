@@ -1,7 +1,6 @@
 .page-exception-container {
-  width: 100vw;
-  height: calc(100vh - 48px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
