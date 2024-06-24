@@ -2,6 +2,8 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { getAnalysisCardList } from "@/api/index";
 import CardDisplay from "./components/CardDisplay";
+import AnalysisChart from "./components/AnalysisChart";
+import Complete from "./components/Complete";
 import { Col, Row } from "antd";
 import "./analysis.scss";
 
@@ -42,6 +44,16 @@ const Analysis: React.FC = () => {
                 <CardDisplay item={item} />
               </Col>
             ))}
+          </Row>
+        </div>
+        <div className="progress-container">
+          <Row gutter={16}>
+            <Col span={18}>
+              <AnalysisChart />
+            </Col>
+            <Col span={6}>
+              <Complete />
+            </Col>
           </Row>
         </div>
       </div>
