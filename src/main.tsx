@@ -2,6 +2,7 @@
 import ReactDOM from "react-dom/client";
 import "./index.scss";
 import "@/styles/index.scss";
+import "@/locales/index";
 
 import { RouterProvider } from "react-router-dom";
 

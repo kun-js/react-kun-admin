@@ -14,6 +14,8 @@ import {
 import { useNavigate } from "react-router-dom";
 import useMenuStore from "@/store/menu";
 
+import { useTranslation } from "react-i18next";
+
 const { Sider } = Layout;
 
 interface SideBarProps {
@@ -46,6 +48,7 @@ type IconMap = {
 };
 
 const SideBar: React.FC<SideBarProps> = ({ collapsed }) => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const { setDefaultSelectedKey, setDefaultOpenKey } = useMenuStore();
   const [menuList, setMenuList] = useState<MenuListItem[]>([]);
@@ -79,7 +82,8 @@ const SideBar: React.FC<SideBarProps> = ({ collapsed }) => {
       const result = await getMenuList();
       const list = result.menus.map((item: MenuItem) => ({
         key: item.routeName,
-        label: item.title,
+        // label: item.title,
+        label: t(`menu.${item.routeName}`),
         icon: item.iconName ? React.createElement(iconMap[item.iconName]) : null,
         // 只有当存在子菜单时才添加 children 属性
         children: item.children ? item.children.map((child) => transformMenuItem(child)) : null,
@@ -98,7 +102,8 @@ const SideBar: React.FC<SideBarProps> = ({ collapsed }) => {
 
     const menu: MenuListItem = {
       key: item.routeName,
-      label: item.title,
+      // label: item.title,
+      label: t(`menu.${item.routeName}`),
       icon: iconElement, // 使用 iconElement 而不是直接从 iconMap 获取的组件
     };
 

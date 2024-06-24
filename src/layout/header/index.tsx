@@ -10,6 +10,7 @@ import {
   BellOutlined,
   SettingOutlined,
 } from "@ant-design/icons";
+import { useTranslation } from "react-i18next";
 import "./header.scss";
 
 import { useNavigate, useLocation } from "react-router-dom";
@@ -28,11 +29,19 @@ interface UserInfo {
 }
 
 const MainHeader: React.FC<MainHeaderProps> = ({ collapsed, handleToCollapse }) => {
+  const { i18n } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
   const [breadcrumbList, setBreadcrumbList] = useState<TitleObject[]>([]);
   const [fullScreen, setFullScreen] = useState(false);
   const [userInfo, setUserInfo] = useState<UserInfo>({ avatar: "", name: "" });
+
+  const handleToChangeLangZH = () => {
+    i18n.changeLanguage("zh");
+  };
+  const handleToChangeLangEN = () => {
+    i18n.changeLanguage("en");
+  };
 
   const handleToExit = () => {
     localStorage.removeItem("userStore");
@@ -65,12 +74,23 @@ const MainHeader: React.FC<MainHeaderProps> = ({ collapsed, handleToCollapse }) 
     setUserInfo(result);
   }, [location.pathname]);
 
+  const langContent = (
+    <>
+      <div style={{ display: "flex", flexDirection: "column" }}>
+        <Button type="text" onClick={handleToChangeLangZH}>
+          简体中文
+        </Button>
+        <Button type="text" onClick={handleToChangeLangEN}>
+          English
+        </Button>
+      </div>
+    </>
+  );
+
   const userContent = (
-    <div style={{ padding: 0 }}>
-      <Button type="text" onClick={handleToExit}>
-        退出系统
-      </Button>
-    </div>
+    <Button type="text" onClick={handleToExit}>
+      退出系统
+    </Button>
   );
 
   return (
@@ -99,7 +119,9 @@ const MainHeader: React.FC<MainHeaderProps> = ({ collapsed, handleToCollapse }) 
       <div className="right-action">
         <Button className="search-button" type="text" icon={<SearchOutlined />} disabled />
 
-        <Button className="language-button" type="text" icon={<TranslationOutlined />} disabled />
+        <Popover content={langContent} trigger="click">
+          <Button className="language-button" type="text" icon={<TranslationOutlined />} disabled />
+        </Popover>
 
         <Button
           className="fullscreen-button"

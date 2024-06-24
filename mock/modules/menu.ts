@@ -70,12 +70,12 @@ export const menuList = Mock.mock({
             {
               id: 1302,
               title: "基础表单",
-              routeName: "basic",
+              routeName: "basic-form",
             },
             {
               id: 1303,
               title: "分步表单",
-              routeName: "step",
+              routeName: "step-form",
             },
           ],
         },

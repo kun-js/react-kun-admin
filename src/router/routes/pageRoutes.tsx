@@ -18,7 +18,7 @@ const pageRoutes = [
     element: <MainLayout />,
     children: [
       {
-        path: "form/basic",
+        path: "form/basic-form",
         element: (
           <Suspense fallback={<LoadingComponent />}>
             <BasicForm />
@@ -26,7 +26,7 @@ const pageRoutes = [
         ),
       },
       {
-        path: "form/step",
+        path: "form/step-form",
         element: (
           <Suspense fallback={<LoadingComponent />}>
             <StepForm />
