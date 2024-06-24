@@ -44,6 +44,11 @@ export const menuList = Mock.mock({
           title: "水印",
           routeName: "watermark",
         },
+        {
+          id: 1202,
+          title: "剪贴板",
+          routeName: "clipboard",
+        },
       ],
     },
     {

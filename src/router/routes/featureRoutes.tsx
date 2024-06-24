@@ -3,6 +3,7 @@ import { Suspense, lazy } from "react";
 import LoadingComponent from "./LoadingComponent";
 
 const WaterMark = lazy(() => import("@/views/feature/watermark"));
+const Clipboard = lazy(() => import("@/views/feature/clipboard"));
 
 const featureRoutes = [
   {
@@ -14,6 +15,14 @@ const featureRoutes = [
         element: (
           <Suspense fallback={<LoadingComponent />}>
             <WaterMark />
+          </Suspense>
+        ),
+      },
+      {
+        path: "clipboard",
+        element: (
+          <Suspense fallback={<LoadingComponent />}>
+            <Clipboard />
           </Suspense>
         ),
       },

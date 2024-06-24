@@ -97,9 +97,9 @@ const MainHeader: React.FC<MainHeaderProps> = ({ collapsed, handleToCollapse }) 
       </div>
 
       <div className="right-action">
-        <Button className="search-button" type="text" icon={<SearchOutlined />} />
+        <Button className="search-button" type="text" icon={<SearchOutlined />} disabled />
 
-        <Button className="language-button" type="text" icon={<TranslationOutlined />} />
+        <Button className="language-button" type="text" icon={<TranslationOutlined />} disabled />
 
         <Button
           className="fullscreen-button"
@@ -108,7 +108,7 @@ const MainHeader: React.FC<MainHeaderProps> = ({ collapsed, handleToCollapse }) 
           onClick={handleToFullScreen}
         />
 
-        <Button className="message-button" type="text" icon={<BellOutlined />} />
+        <Button className="message-button" type="text" icon={<BellOutlined />} disabled />
 
         <Popover content={userContent} trigger="hover">
           <div className="user-button">
@@ -117,7 +117,7 @@ const MainHeader: React.FC<MainHeaderProps> = ({ collapsed, handleToCollapse }) 
           </div>
         </Popover>
 
-        <Button className="setting-button" type="text" icon={<SettingOutlined />} />
+        <Button className="setting-button" type="text" icon={<SettingOutlined />} disabled />
       </div>
     </Header>
   );
