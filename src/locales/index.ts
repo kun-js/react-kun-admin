@@ -5,6 +5,8 @@ import zh from "./lang/zh.json";
 //英文语言包
 import en from "./lang/en.json";
 
+const lng = JSON.parse(localStorage.getItem("languageStore")!).state.lang || "zh";
+
 const resources = {
     en: {
         translation: en,
@@ -16,7 +18,7 @@ const resources = {
 
 i18n.use(initReactI18next).init({
     resources,
-    lng: "zh", //设置默认语言（可用三元表达式进行动态切换）
+    lng,
     interpolation: {
         escapeValue: false,
     },

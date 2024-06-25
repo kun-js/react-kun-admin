@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Breadcrumb, Button, Avatar, Layout, Popover } from "antd";
+import { useNavigate, useLocation } from "react-router-dom";
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
@@ -10,10 +11,10 @@ import {
   BellOutlined,
   SettingOutlined,
 } from "@ant-design/icons";
-import { useTranslation } from "react-i18next";
+
+import useLanguageStore from "@/store/language";
 import "./header.scss";
 
-import { useNavigate, useLocation } from "react-router-dom";
 const { Header } = Layout;
 
 type TitleObject = { title: string };
@@ -29,19 +30,19 @@ interface UserInfo {
 }
 
 const MainHeader: React.FC<MainHeaderProps> = ({ collapsed, handleToCollapse }) => {
-  const { i18n } = useTranslation();
+  const { changeLanguage } = useLanguageStore();
   const navigate = useNavigate();
   const location = useLocation();
   const [breadcrumbList, setBreadcrumbList] = useState<TitleObject[]>([]);
   const [fullScreen, setFullScreen] = useState(false);
   const [userInfo, setUserInfo] = useState<UserInfo>({ avatar: "", name: "" });
 
-  const handleToChangeLangZH = () => {
-    i18n.changeLanguage("zh");
+  const handleToChangeLang = (lang: string) => {
+    changeLanguage(lang);
+    window.location.reload();
   };
-  const handleToChangeLangEN = () => {
-    i18n.changeLanguage("en");
-  };
+
+  const langButtonDisabled = JSON.parse(localStorage.getItem("languageStore")!).state.lang === "zh";
 
   const handleToExit = () => {
     localStorage.removeItem("userStore");
@@ -77,10 +78,10 @@ const MainHeader: React.FC<MainHeaderProps> = ({ collapsed, handleToCollapse }) 
   const langContent = (
     <>
       <div style={{ display: "flex", flexDirection: "column" }}>
-        <Button type="text" onClick={handleToChangeLangZH}>
+        <Button type="text" onClick={() => handleToChangeLang("zh")} disabled={langButtonDisabled}>
           简体中文
         </Button>
-        <Button type="text" onClick={handleToChangeLangEN}>
+        <Button type="text" onClick={() => handleToChangeLang("en")} disabled={!langButtonDisabled}>
           English
         </Button>
       </div>
@@ -120,7 +121,7 @@ const MainHeader: React.FC<MainHeaderProps> = ({ collapsed, handleToCollapse }) 
         <Button className="search-button" type="text" icon={<SearchOutlined />} disabled />
 
         <Popover content={langContent} trigger="click">
-          <Button className="language-button" type="text" icon={<TranslationOutlined />} disabled />
+          <Button className="language-button" type="text" icon={<TranslationOutlined />} />
         </Popover>
 
         <Button
