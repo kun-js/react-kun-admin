@@ -4,6 +4,7 @@ import LoadingComponent from "./LoadingComponent";
 
 const ButtonComponent = lazy(() => import("@/views/component/button"));
 const TagComponent = lazy(() => import("@/views/component/tag"));
+const ColorPickerComponent = lazy(() => import("@/views/component/color-picker"));
 
 const chartRoutes = [
   {
@@ -23,6 +24,14 @@ const chartRoutes = [
         element: (
           <Suspense fallback={<LoadingComponent />}>
             <TagComponent />
+          </Suspense>
+        ),
+      },
+      {
+        path: "color-picker",
+        element: (
+          <Suspense fallback={<LoadingComponent />}>
+            <ColorPickerComponent />
           </Suspense>
         ),
       },

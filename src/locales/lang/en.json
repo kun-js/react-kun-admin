@@ -6,6 +6,7 @@
         "component": "Component",
         "button": "Button",
         "tag": "Tag",
+        "color-picker": "Color Picker",
         "feature": "Feature",
         "watermark": "Watermark",
         "clipboard": "Clipboard",

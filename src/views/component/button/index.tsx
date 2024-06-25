@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { Card, Button, Radio, Space } from "antd";
 import { SearchOutlined, DownloadOutlined, PoweroffOutlined } from "@ant-design/icons";
 import type { RadioChangeEvent } from "antd";
-import i18n from "@/locales";
 
 type ButtonType = "default" | "link" | "text" | "primary" | "dashed" | undefined;
 type ButtonSize = "small" | "middle" | "large";
