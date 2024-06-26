@@ -1,5 +1,5 @@
 import Login from "@/views/login";
-import Page404 from "@/views/page/exception/404";
+import NotFound from "./NotFound";
 import { Navigate } from "react-router-dom";
 
 const baseRoutes = [
@@ -13,7 +13,7 @@ const baseRoutes = [
   },
   {
     path: "*",
-    element: <Page404 />,
+    element: <NotFound />,
   },
 ];
 

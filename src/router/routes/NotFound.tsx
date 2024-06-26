@@ -1,20 +1,25 @@
-import React from "react";
+import useMenuStore from "@/store/menu";
 import { Button, Result } from "antd";
 import { useNavigate } from "react-router-dom";
-import useMenuStore from "@/store/menu";
-import "./page500.scss";
 
-const Page500: React.FC = () => {
+const NotFound: React.FC = () => {
   const navigate = useNavigate();
   const { setDefaultSelectedKey, setDefaultOpenKey } = useMenuStore();
 
   return (
     <>
-      <div className="page-exception-container">
+      <div
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+        }}
+      >
         <Result
-          status="500"
-          title="500"
-          subTitle="抱歉,服务器出现错误!"
+          status="404"
+          title="404"
+          subTitle="抱歉,你访问的页面不存在!"
           extra={
             <Button
               type="primary"
@@ -33,4 +38,4 @@ const Page500: React.FC = () => {
   );
 };
 
-export default Page500;
+export default NotFound;
