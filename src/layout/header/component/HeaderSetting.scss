@@ -5,6 +5,11 @@
   height: 100%;
   .top-action {
     width: 100%;
+    &-item {
+      display: flex;
+      padding: 0 18px;
+      justify-content: space-between;
+    }
   }
   .bottom-action {
     width: 100%;

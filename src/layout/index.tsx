@@ -5,16 +5,24 @@ import MainContent from "./main";
 import { Layout, message, Watermark } from "antd";
 import useWatermarkStore from "@/store/watermark";
 
-const { Content } = Layout;
+const { Content, Footer } = Layout;
 
 const MainLayout: React.FC = () => {
   const [collapsed, setCollapsed] = useState(false);
+  const [showFooter, setShowFooter] = useState(false);
   const [messageApi, contextHolder] = message.useMessage();
   const { watermarkVisible } = useWatermarkStore();
 
   const handleToCollapse = useCallback(() => {
     setCollapsed(!collapsed);
   }, [collapsed]);
+
+  const handleToShowFooter = useCallback(
+    (value: boolean) => {
+      setShowFooter(value);
+    },
+    [showFooter]
+  );
 
   useEffect(() => {
     const message = localStorage.getItem("loginMessage");
@@ -41,10 +49,19 @@ const MainLayout: React.FC = () => {
                 transition: "0.28s",
               }}
             >
-              <MainHeader collapsed={collapsed} handleToCollapse={handleToCollapse} />
+              <MainHeader
+                handleToShowFooter={handleToShowFooter}
+                collapsed={collapsed}
+                handleToCollapse={handleToCollapse}
+              />
               <Content style={{ width: "100%" }}>
-                <MainContent />
+                <MainContent showFooter={showFooter} />
               </Content>
+              {showFooter && (
+                <Footer style={{ textAlign: "center" }}>
+                  Kun Admin ©{new Date().getFullYear()} Created by Xiao Hei Zi
+                </Footer>
+              )}
             </Layout>
           </Layout>
         </div>

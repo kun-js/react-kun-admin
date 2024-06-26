@@ -1,9 +1,13 @@
 import { SettingOutlined } from "@ant-design/icons";
-import { Button, Divider, Drawer } from "antd";
+import { Button, Divider, Drawer, Switch } from "antd";
 import React, { useState } from "react";
 import "./HeaderSetting.scss";
 
-const HeaderSetting: React.FC = () => {
+interface HeaderSettingProps {
+  handleToShowFooter: (value: boolean) => void;
+}
+
+const HeaderSetting: React.FC<HeaderSettingProps> = ({ handleToShowFooter }) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const showDrawer = () => {
@@ -20,6 +24,10 @@ const HeaderSetting: React.FC = () => {
     window.location.reload();
   };
 
+  const onClick = (checked: boolean) => {
+    handleToShowFooter(checked);
+  };
+
   return (
     <>
       <Button className="setting-button" type="text" icon={<SettingOutlined />} onClick={showDrawer} />
@@ -28,6 +36,9 @@ const HeaderSetting: React.FC = () => {
         <div className="drawer-container">
           <div className="top-action">
             <Divider>界面展示</Divider>
+            <div className="top-action-item">
+              <span>页脚</span> <Switch checkedChildren="开" unCheckedChildren="关" onClick={onClick} />
+            </div>
           </div>
           <div className="bottom-action">
             <Divider />

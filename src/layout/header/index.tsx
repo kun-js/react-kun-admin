@@ -17,11 +17,12 @@ const { Header } = Layout;
 type TitleObject = { title: string };
 
 interface MainHeaderProps {
+  handleToShowFooter: (value: boolean) => void;
   collapsed: boolean;
   handleToCollapse: () => void;
 }
 
-const MainHeader: React.FC<MainHeaderProps> = ({ collapsed, handleToCollapse }) => {
+const MainHeader: React.FC<MainHeaderProps> = ({ handleToShowFooter, collapsed, handleToCollapse }) => {
   const location = useLocation();
   const [breadcrumbList, setBreadcrumbList] = useState<TitleObject[]>([]);
 
@@ -68,7 +69,7 @@ const MainHeader: React.FC<MainHeaderProps> = ({ collapsed, handleToCollapse }) 
         <FullScreen />
         <HeaderMessage />
         <UserButton />
-        <HeaderSetting />
+        <HeaderSetting handleToShowFooter={handleToShowFooter} />
       </div>
     </Header>
   );
