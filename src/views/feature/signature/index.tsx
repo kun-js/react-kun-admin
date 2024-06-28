@@ -22,13 +22,11 @@ const Signature: React.FC = () => {
 
   const downloadCanvas = () => {
     if (signatureRef.current) {
-      const result = (signatureRef.current as SignatureCanvas).isEmpty();
-      console.log("result: ", result);
-      //   const base64Img = (signatureRef.current as SignatureCanvas).getTrimmedCanvas().toDataURL();
-      //   const link = document.createElement("a");
-      //   link.download = "signature.png";
-      //   link.href = base64Img;
-      //   link.click();
+      const base64Img = (signatureRef.current as SignatureCanvas).getTrimmedCanvas().toDataURL();
+      const link = document.createElement("a");
+      link.download = "signature.png";
+      link.href = base64Img;
+      link.click();
     }
   };
 

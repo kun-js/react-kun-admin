@@ -26,7 +26,7 @@ const ColorPickerComponent: React.FC = () => {
               </Radio.Group>
             </div>
           </Space>
-          <div style={{ marginTop: "38px" }}>
+          <div style={{ marginTop: "18px" }}>
             <ColorPicker defaultValue="#1677ff" size={size} />
           </div>
         </Card>

@@ -7,6 +7,7 @@
         "button": "Button",
         "tag": "Tag",
         "color-picker": "Color Picker",
+        "description": "Description",
         "feature": "Feature",
         "watermark": "Watermark",
         "clipboard": "Clipboard",

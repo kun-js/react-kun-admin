@@ -41,6 +41,11 @@ export const menuList = Mock.mock({
           title: "取色器",
           routeName: "color-picker",
         },
+        {
+          id: 1104,
+          title: "描述列表",
+          routeName: "description",
+        },
       ],
     },
     {
