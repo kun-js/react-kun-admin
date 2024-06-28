@@ -10,6 +10,7 @@
         "feature": "Feature",
         "watermark": "Watermark",
         "clipboard": "Clipboard",
+        "signature": "Signature",
         "page": "Page",
         "form": "Form",
         "basic-form": "Basic Form",

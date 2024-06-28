@@ -1,0 +1,21 @@
+.signature-container {
+  padding: 20px;
+  .card-container {
+    height: var(--card-height);
+  }
+  .action-container {
+    display: flex;
+    align-items: center;
+    .title {
+      margin-right: 18px;
+      white-space: nowrap;
+    }
+  }
+}
+
+.signature-canvas {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 600px;
+  height: 350px;
+}
