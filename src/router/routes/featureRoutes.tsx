@@ -5,6 +5,7 @@ import LoadingComponent from "./LoadingComponent";
 const WaterMark = lazy(() => import("@/views/feature/watermark"));
 const Clipboard = lazy(() => import("@/views/feature/clipboard"));
 const Signature = lazy(() => import("@/views/feature/signature"));
+const PDFPreview = lazy(() => import("@/views/feature/pdf"));
 
 const featureRoutes = [
   {
@@ -32,6 +33,14 @@ const featureRoutes = [
         element: (
           <Suspense fallback={<LoadingComponent />}>
             <Signature />
+          </Suspense>
+        ),
+      },
+      {
+        path: "pdf",
+        element: (
+          <Suspense fallback={<LoadingComponent />}>
+            <PDFPreview />
           </Suspense>
         ),
       },

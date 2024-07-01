@@ -69,6 +69,11 @@ export const menuList = Mock.mock({
           title: "签名",
           routeName: "signature",
         },
+        {
+          id: 1204,
+          title: "PDF预览",
+          routeName: "pdf",
+        },
       ],
     },
     {

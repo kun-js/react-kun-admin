@@ -39,6 +39,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^14.1.2",
+    "react-pdf": "^9.0.0",
     "react-router-dom": "^6.23.1",
     "react-signature-canvas": "^1.0.6",
     "sass": "^1.77.3",
