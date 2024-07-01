@@ -7,9 +7,19 @@ type ColorPickerType = "small" | "middle" | "large";
 
 const ColorPickerComponent: React.FC = () => {
   const [size, setSize] = useState<ColorPickerType>("middle");
+  const [disabled, setDisabled] = useState<boolean>(false);
+  const [showText, setShowText] = useState<boolean>(true);
 
   const onSizeChange = (e: RadioChangeEvent) => {
     setSize(e.target.value);
+  };
+
+  const onDisabledChange = (e: RadioChangeEvent) => {
+    setDisabled(e.target.value);
+  };
+
+  const onShowTextChange = (e: RadioChangeEvent) => {
+    setShowText(e.target.value);
   };
 
   return (
@@ -25,9 +35,23 @@ const ColorPickerComponent: React.FC = () => {
                 <Radio value={"small"}>small</Radio>
               </Radio.Group>
             </div>
+            <div>
+              <span style={{ marginRight: "18px" }}>是否禁用:</span>
+              <Radio.Group onChange={onDisabledChange} value={disabled}>
+                <Radio value={false}>否</Radio>
+                <Radio value={true}>是</Radio>
+              </Radio.Group>
+            </div>
+            <div>
+              <span style={{ marginRight: "18px" }}>是否显示颜色值:</span>
+              <Radio.Group onChange={onShowTextChange} value={showText}>
+                <Radio value={false}>否</Radio>
+                <Radio value={true}>是</Radio>
+              </Radio.Group>
+            </div>
           </Space>
           <div style={{ marginTop: "18px" }}>
-            <ColorPicker defaultValue="#1677ff" size={size} />
+            <ColorPicker defaultValue="#1677ff" size={size} disabled={disabled} showText={showText} />
           </div>
         </Card>
       </div>
