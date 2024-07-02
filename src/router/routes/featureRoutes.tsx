@@ -1,6 +1,6 @@
 import MainLayout from "@/layout";
 import { Suspense, lazy } from "react";
-import LoadingComponent from "./LoadingComponent";
+import LoadingComponent from "@/components/LoadingComponent";
 
 const WaterMark = lazy(() => import("@/views/feature/watermark"));
 const Clipboard = lazy(() => import("@/views/feature/clipboard"));

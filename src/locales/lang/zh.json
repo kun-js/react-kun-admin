@@ -3,6 +3,8 @@
         "dashboard": "首页",
         "analysis": "分析页",
         "workbench": "工作台",
+        "permission": "权限管理",
+        "button-permission": "按钮权限",
         "component": "组件",
         "button": "按钮",
         "tag": "标签",

@@ -3,6 +3,8 @@
         "dashboard": "Home",
         "analysis": "Analysis",
         "workbench": "Workbench",
+        "permission": "Permission",
+        "button-permission": "Button Permission",
         "component": "Component",
         "button": "Button",
         "tag": "Tag",

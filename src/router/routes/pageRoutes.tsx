@@ -1,6 +1,6 @@
 import MainLayout from "@/layout";
 import { Suspense, lazy } from "react";
-import LoadingComponent from "./LoadingComponent";
+import LoadingComponent from "@/components/LoadingComponent";
 
 const BasicForm = lazy(() => import("@/views/page/form/basic"));
 const StepForm = lazy(() => import("@/views/page/form/step"));

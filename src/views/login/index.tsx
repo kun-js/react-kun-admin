@@ -5,6 +5,7 @@ import { Card, Button, Form, Input, Space, message } from "antd";
 import { getLoginInfo } from "@/api/index";
 import { useNavigate } from "react-router-dom";
 import useUserStore from "@/store/user";
+import usePermissionStore from "@/store/permission";
 
 type FieldType = {
   username: string;
@@ -15,18 +16,16 @@ const Login: React.FC = () => {
   const [form] = Form.useForm();
   const [messageApi, contextHolder] = message.useMessage();
   const { setToken, setUserInfo } = useUserStore();
+  const { setPermission } = usePermissionStore();
   const navigate = useNavigate();
 
   const onFinish: FormProps<FieldType>["onFinish"] = async (values) => {
     const result = await getLoginInfo(values.username, values.password);
     if (result) {
-      messageApi.open({
-        type: "success",
-        content: "登陆成功!正在条状!",
-      });
       localStorage.setItem("loginMessage", "Login Successful");
       setToken(result.token);
       setUserInfo(result.userInfo);
+      setPermission(result.permission);
       navigate("/dashboard/analysis");
     } else {
       messageApi.open({

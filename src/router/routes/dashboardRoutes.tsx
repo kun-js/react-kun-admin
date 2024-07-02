@@ -1,4 +1,4 @@
-import PrivateRoute from "./PrivateRoute";
+import PrivateRoute from "@/components/PrivateRoute";
 import MainLayout from "@/layout/index";
 
 import Analysis from "@/views/dashboard/analysis/index";

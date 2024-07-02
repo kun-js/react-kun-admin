@@ -4,6 +4,7 @@ import { Layout, Menu } from "antd";
 import { getMenuList } from "@/api/index";
 import {
   HomeOutlined,
+  KeyOutlined,
   BookOutlined,
   NodeIndexOutlined,
   PictureOutlined,
@@ -55,6 +56,7 @@ const SideBar: React.FC<SideBarProps> = ({ collapsed }) => {
 
   const iconMap: IconMap = {
     HomeOutlined: HomeOutlined,
+    KeyOutlined: KeyOutlined,
     BookOutlined: BookOutlined,
     NodeIndexOutlined: NodeIndexOutlined,
     PictureOutlined: PictureOutlined,

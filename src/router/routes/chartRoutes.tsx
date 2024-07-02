@@ -1,6 +1,6 @@
 import MainLayout from "@/layout";
 import { Suspense, lazy } from "react";
-import LoadingComponent from "./LoadingComponent";
+import LoadingComponent from "@/components/LoadingComponent";
 
 const BarChart = lazy(() => import("@/views/chart/bar"));
 const LineChart = lazy(() => import("@/views/chart/line"));
