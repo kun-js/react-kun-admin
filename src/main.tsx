@@ -7,9 +7,18 @@ import "@/locales/index";
 import { RouterProvider } from "react-router-dom";
 
 import router from "@/router/index";
+import { ConfigProvider } from "antd";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   // <React.StrictMode>
-  <RouterProvider router={router} />
+  <ConfigProvider
+    theme={{
+      token: {
+        fontFamily: "PingFang",
+      },
+    }}
+  >
+    <RouterProvider router={router} />
+  </ConfigProvider>
   // </React.StrictMode>
 );

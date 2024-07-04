@@ -5,7 +5,7 @@ import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
 
 import "./header.scss";
 
-import HeaderSearch from "./component/HeaderMessage";
+import HeaderSearch from "./component/HeaderSearch";
 import FullScreen from "./component/FullScreen";
 import Language from "./component/Language";
 import HeaderMessage from "./component/HeaderMessage";
@@ -65,9 +65,9 @@ const MainHeader: React.FC<MainHeaderProps> = ({ handleToShowFooter, collapsed, 
 
       <div className="right-action">
         <HeaderSearch />
+        <HeaderMessage />
         <Language />
         <FullScreen />
-        <HeaderMessage />
         <UserButton />
         <HeaderSetting handleToShowFooter={handleToShowFooter} />
       </div>

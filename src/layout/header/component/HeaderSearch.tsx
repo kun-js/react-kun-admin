@@ -1,12 +1,12 @@
-import { BellOutlined } from "@ant-design/icons";
+import { SearchOutlined } from "@ant-design/icons";
 import { Button } from "antd";
 
-const HeaderMessage: React.FC = () => {
+const HeaderSearch: React.FC = () => {
   return (
     <>
-      <Button className="message-button" type="text" icon={<BellOutlined />} disabled />
+      <Button className="search-button" type="text" icon={<SearchOutlined />} disabled />
     </>
   );
 };
 
-export default HeaderMessage;
+export default HeaderSearch;

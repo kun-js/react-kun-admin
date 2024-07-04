@@ -23,7 +23,7 @@ export const menuList = Mock.mock({
     {
       id: 1100,
       title: "权限管理",
-      iconName: "HomeOutlined",
+      iconName: "KeyOutlined",
       routeName: "permission",
       children: [
         {
