@@ -115,7 +115,7 @@ const HeaderSearch: React.FC = () => {
 
   const content = (
     <div>
-      <Tabs className="message-tabs" defaultActiveKey="1" items={items} />
+      <Tabs className="message-tabs" defaultActiveKey="1" centered items={items} />
     </div>
   );
 

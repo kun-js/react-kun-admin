@@ -1,38 +1,3 @@
 .workbench-container {
-  .personal {
-    &-card-container {
-      .personal-info {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        .left {
-          display: flex;
-          align-items: center;
-          .info {
-            justify-content: space-between;
-            .greeting,
-            .weather {
-              margin: 6px 0 6px 18px;
-            }
-          }
-        }
-        .right {
-          display: flex;
-          align-items: center;
-          .task-info {
-            &-item {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: space-between;
-            }
-          }
-        }
-      }
-      .ant-card-body {
-        height: 128px;
-      }
-    }
-  }
+  padding: 20px;
 }
