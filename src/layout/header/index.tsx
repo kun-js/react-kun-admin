@@ -9,6 +9,7 @@ import HeaderSearch from "./component/HeaderSearch";
 import FullScreen from "./component/FullScreen";
 import Language from "./component/Language";
 import HeaderMessage from "./component/HeaderMessage";
+import HeaderTour from "./component/HeaderTour";
 import UserButton from "./component/UserButton";
 import HeaderSetting from "./component/HeaderSetting";
 
@@ -66,6 +67,7 @@ const MainHeader: React.FC<MainHeaderProps> = ({ handleToShowFooter, collapsed, 
       <div className="right-action">
         <HeaderSearch />
         <HeaderMessage />
+        <HeaderTour />
         <Language />
         <FullScreen />
         <UserButton />
