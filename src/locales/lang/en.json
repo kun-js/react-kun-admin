@@ -15,6 +15,7 @@
     "clipboard": "Clipboard",
     "signature": "Signature",
     "pdf": "PDF Preview",
+    "debounce": "Debounce",
     "page": "Page",
     "form": "Form",
     "basic-form": "Basic Form",

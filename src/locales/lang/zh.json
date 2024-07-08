@@ -15,6 +15,7 @@
     "clipboard": "剪贴板",
     "signature": "签名",
     "pdf": "PDF预览",
+    "debounce": "防抖节流",
     "page": "页面",
     "form": "表单页",
     "basic-form": "基础表单",
