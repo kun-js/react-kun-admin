@@ -16,6 +16,7 @@
     "signature": "签名",
     "pdf": "PDF预览",
     "debounce": "防抖节流",
+    "sensitive": "敏感词过滤",
     "page": "页面",
     "form": "表单页",
     "basic-form": "基础表单",

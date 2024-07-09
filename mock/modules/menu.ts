@@ -92,6 +92,11 @@ export const menuList = Mock.mock({
           title: "防抖节流",
           routeName: "debounce",
         },
+        {
+          id: 1321,
+          title: "敏感词过滤",
+          routeName: "sensitive",
+        },
       ],
     },
     {

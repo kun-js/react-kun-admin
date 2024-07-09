@@ -7,6 +7,7 @@ const Clipboard = lazy(() => import("@/views/feature/clipboard"));
 const Signature = lazy(() => import("@/views/feature/signature"));
 const PDFPreview = lazy(() => import("@/views/feature/pdf"));
 const Debounce = lazy(() => import("@/views/feature/debounce"));
+const Sensitive = lazy(() => import("@/views/feature/sensitive"));
 
 const featureRoutes = [
   {
@@ -50,6 +51,14 @@ const featureRoutes = [
         element: (
           <Suspense fallback={<LoadingComponent />}>
             <Debounce />
+          </Suspense>
+        ),
+      },
+      {
+        path: "sensitive",
+        element: (
+          <Suspense fallback={<LoadingComponent />}>
+            <Sensitive />
           </Suspense>
         ),
       },
