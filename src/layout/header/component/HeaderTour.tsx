@@ -20,7 +20,7 @@ const HeaderTour: React.FC = () => {
 
   return (
     <>
-      <Button className="tour-button" type="text" icon={<FlagOutlined />} onClick={() => setTourOpen(true)} />
+      <Button className="tour-button" type="text" icon={<FlagOutlined />} onClick={() => setTourOpen(true)} disabled />
       <Tour open={tourOpen} onClose={() => setTourOpen(false)} steps={steps} />
     </>
   );

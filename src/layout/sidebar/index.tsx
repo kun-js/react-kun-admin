@@ -79,6 +79,12 @@ const SideBar: React.FC<SideBarProps> = ({ collapsed }) => {
     return "/" + array.reverse().join("/");
   };
 
+  const backToDashboard = () => {
+    navigate("/dashboard/analysis");
+    setDefaultSelectedKey(["analysis"]);
+    setDefaultOpenKey(["dashboard"]);
+  };
+
   const fetchData = async () => {
     try {
       const result = await getMenuList();
@@ -140,7 +146,7 @@ const SideBar: React.FC<SideBarProps> = ({ collapsed }) => {
       breakpoint="xs"
       collapsed={collapsed}
     >
-      <div className="logo">
+      <div className="logo" onClick={backToDashboard}>
         <div className="logo-pic"></div>
         {!collapsed && <div className="logo-title">Kun Admin</div>}
       </div>
