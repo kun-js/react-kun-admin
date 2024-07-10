@@ -8,6 +8,7 @@ import featureRoutes from "./routes/featureRoutes";
 import pageRoutes from "./routes/pageRoutes";
 import chartRoutes from "./routes/chartRoutes";
 import externalRoutes from "./routes/externalRoutes";
+import systemRoutes from "./routes/systemRoutes";
 import aboutRoutes from "./routes/aboutRoutes";
 
 const router = createBrowserRouter([
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
   ...pageRoutes,
   ...chartRoutes,
   ...externalRoutes,
+  ...systemRoutes,
   ...aboutRoutes,
 ]);
 

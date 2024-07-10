@@ -239,6 +239,19 @@ export const menuList = Mock.mock({
       ],
     },
     {
+      id: 1800,
+      title: "系统管理",
+      iconName: "SettingOutlined",
+      routeName: "system",
+      children: [
+        {
+          id: 1801,
+          title: "账号管理",
+          routeName: "account",
+        },
+      ],
+    },
+    {
       id: 1900,
       title: "关于",
       iconName: "UserOutlined",

@@ -67,7 +67,7 @@ const List: React.FC = () => {
     <>
       <div className="list-container">
         <Card className="card-container" title="列表页示例" bordered={true}>
-          <Table columns={columns} dataSource={data} />
+          <Table columns={columns} dataSource={data} pagination={false} />
         </Card>
       </div>
     </>

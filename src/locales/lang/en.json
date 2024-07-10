@@ -41,6 +41,8 @@
     "outerchain": "External Link",
     "antd-outerchain": "Ant Design External Link",
     "react-outerchain": "React External Link",
+    "system": "System Management",
+    "account": "Account Management",
     "about": "About"
   }
 }

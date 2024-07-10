@@ -41,6 +41,8 @@
     "outerchain": "文档外链",
     "antd-outerchain": "Antd",
     "react-outerchain": "React",
+    "system": "系统管理",
+    "account": "账号管理",
     "about": "关于"
   }
 }
