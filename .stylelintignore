@@ -1,0 +1,12 @@
+dist
+node_modules
+public
+/dist/*
+/public/*
+.husky
+.vscode
+.idea
+*.sh
+*.md
+
+src/assets
