@@ -1,8 +1,8 @@
 .card {
   &-header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     height: 38px;
 
     &-title {
@@ -14,8 +14,8 @@
 
   &-body {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     height: 68px;
 
     &-text {
@@ -32,8 +32,8 @@
 
   &-footer {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     height: 38px;
 
     &-total {

@@ -1,12 +1,6 @@
 module.exports = {
   // 继承推荐规范配置
-  extends: [
-    "stylelint-config-standard",
-    "stylelint-config-recommended-scss",
-    "stylelint-config-recess-order",
-    "stylelint-config-prettier",
-    "stylelint-config-prettier-scss",
-  ],
+  extends: ["stylelint-config-standard", "stylelint-config-recommended-scss", "stylelint-config-recess-order"],
   // 指定不同文件对应的解析器
   overrides: [
     {

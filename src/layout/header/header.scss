@@ -1,14 +1,15 @@
 .header-container {
-  height: 48px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 0px;
+  align-items: center;
+  padding: 0;
+  height: 48px;
   border-bottom: 1px solid #ececec;
 
   .left-action {
     display: flex;
     align-items: center;
+
     .collapse-button {
       width: 48px;
       height: 48px;
@@ -18,33 +19,39 @@
   .right-action {
     display: flex;
     align-items: center;
+
     .search-button {
       width: 48px;
       height: 48px;
     }
+
     .language-button {
       width: 48px;
       height: 48px;
     }
+
     .fullscreen-button {
       width: 48px;
       height: 48px;
     }
+
     .message-button {
       width: 48px;
       height: 48px;
     }
+
     .tour-button {
       width: 48px;
       height: 48px;
     }
+
     .user-button {
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      padding: 4px 8px;
       height: 48px;
       border-radius: 6px;
-      padding: 4px 8px;
 
       &:hover {
         cursor: pointer;
@@ -53,12 +60,13 @@
 
       .user-name {
         display: flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
         margin-left: 12px;
         height: 48px;
       }
     }
+
     .setting-button {
       width: 48px;
       height: 48px;

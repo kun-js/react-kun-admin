@@ -1,16 +1,19 @@
 .project-container {
   margin-bottom: 20px;
+
   .project-card {
     .ant-card-body {
       padding: 0;
     }
   }
+
   .project-item-card {
     .ant-card-body {
       padding: 20px;
     }
   }
 }
+
 .project {
   display: flex;
   flex-direction: column;
@@ -28,8 +31,8 @@
   }
 
   &-introduce {
-    height: 45px;
     margin-bottom: 18px;
+    height: 45px;
     font-size: 14px;
   }
 

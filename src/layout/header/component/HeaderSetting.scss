@@ -3,19 +3,22 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+
   .top-action {
     width: 100%;
+
     &-item {
       display: flex;
-      padding: 0 18px;
       justify-content: space-between;
+      padding: 0 18px;
     }
   }
+
   .bottom-action {
-    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
   }
 }

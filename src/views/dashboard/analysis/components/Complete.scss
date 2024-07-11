@@ -1,10 +1,12 @@
 .complete-container {
   .card-container {
     height: 360px;
+
     .progress-item {
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+
       &-text {
         margin-top: 4px;
         margin-right: 8px;

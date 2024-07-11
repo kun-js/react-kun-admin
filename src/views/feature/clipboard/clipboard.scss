@@ -1,11 +1,14 @@
 .clipboard-container {
   padding: 20px;
+
   .card-container {
     height: var(--card-height);
+
     .copy-input,
     .paste-input {
       width: 300px;
     }
+
     .action-button {
       margin-left: 18px;
     }
