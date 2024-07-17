@@ -97,7 +97,7 @@ const Account: React.FC = () => {
     setKeyWord("");
   };
 
-  const titleColumn = (
+  const titleContent = (
     <>
       <Space>
         <Input placeholder="输入姓名以查询" value={keyWord} onChange={inputChange} />
@@ -125,7 +125,7 @@ const Account: React.FC = () => {
   return (
     <>
       <div className="account-container">
-        <Card className="card-container" title={titleColumn} bordered={false}>
+        <Card className="card-container" title={titleContent} bordered={false}>
           <Table
             columns={columns.map((item) => ({ ...item, ellipsis }))}
             dataSource={data}

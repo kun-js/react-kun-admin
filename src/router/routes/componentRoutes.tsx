@@ -6,6 +6,7 @@ const ButtonComponent = lazy(() => import("@/views/component/button"));
 const TagComponent = lazy(() => import("@/views/component/tag"));
 const ColorPickerComponent = lazy(() => import("@/views/component/color-picker"));
 const DescriptionComponent = lazy(() => import("@/views/component/description"));
+const StatisticComponent = lazy(() => import("@/views/component/statistic"));
 
 const chartRoutes = [
   {
@@ -41,6 +42,14 @@ const chartRoutes = [
         element: (
           <Suspense fallback={<LoadingComponent />}>
             <DescriptionComponent />
+          </Suspense>
+        ),
+      },
+      {
+        path: "statistic",
+        element: (
+          <Suspense fallback={<LoadingComponent />}>
+            <StatisticComponent />
           </Suspense>
         ),
       },

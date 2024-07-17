@@ -1,0 +1,17 @@
+.statistic-container {
+  padding: 20px;
+
+  .card-container {
+    height: var(--card-height);
+
+    .statistic-container {
+      padding: 0 40px;
+    }
+  }
+
+  .ant-statistic-title,
+  .ant-statistic-content {
+    display: flex;
+    justify-content: center;
+  }
+}
