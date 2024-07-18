@@ -15,6 +15,7 @@
     "watermark": "Watermark",
     "clipboard": "Clipboard",
     "signature": "Signature",
+    "draggable": "Draggable",
     "pdf": "PDF Preview",
     "debounce": "Debounce",
     "sensitive": "Sensitive",

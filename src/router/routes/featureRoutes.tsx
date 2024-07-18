@@ -5,6 +5,7 @@ import LoadingComponent from "@/components/LoadingComponent";
 const WaterMark = lazy(() => import("@/views/feature/watermark"));
 const Clipboard = lazy(() => import("@/views/feature/clipboard"));
 const Signature = lazy(() => import("@/views/feature/signature"));
+const DraggableFeature = lazy(() => import("@/views/feature/draggable"));
 const PDFPreview = lazy(() => import("@/views/feature/pdf"));
 const Debounce = lazy(() => import("@/views/feature/debounce"));
 const Sensitive = lazy(() => import("@/views/feature/sensitive"));
@@ -35,6 +36,14 @@ const featureRoutes = [
         element: (
           <Suspense fallback={<LoadingComponent />}>
             <Signature />
+          </Suspense>
+        ),
+      },
+      {
+        path: "draggable",
+        element: (
+          <Suspense fallback={<LoadingComponent />}>
+            <DraggableFeature />
           </Suspense>
         ),
       },
