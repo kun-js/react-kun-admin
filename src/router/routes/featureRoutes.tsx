@@ -7,6 +7,8 @@ const Clipboard = lazy(() => import("@/views/feature/clipboard"));
 const Signature = lazy(() => import("@/views/feature/signature"));
 const DraggableFeature = lazy(() => import("@/views/feature/draggable"));
 const PDFPreview = lazy(() => import("@/views/feature/pdf"));
+const WordPreview = lazy(() => import("@/views/feature/word"));
+const ExcelPreview = lazy(() => import("@/views/feature/excel"));
 const Debounce = lazy(() => import("@/views/feature/debounce"));
 const Sensitive = lazy(() => import("@/views/feature/sensitive"));
 
@@ -52,6 +54,22 @@ const featureRoutes = [
         element: (
           <Suspense fallback={<LoadingComponent />}>
             <PDFPreview />
+          </Suspense>
+        ),
+      },
+      {
+        path: "word",
+        element: (
+          <Suspense fallback={<LoadingComponent />}>
+            <WordPreview />
+          </Suspense>
+        ),
+      },
+      {
+        path: "excel",
+        element: (
+          <Suspense fallback={<LoadingComponent />}>
+            <ExcelPreview />
           </Suspense>
         ),
       },

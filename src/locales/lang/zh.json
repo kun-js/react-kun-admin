@@ -17,6 +17,8 @@
     "signature": "签名",
     "draggable": "拖拽",
     "pdf": "PDF预览",
+    "word": "Word预览",
+    "excel": "Excel预览",
     "debounce": "防抖节流",
     "sensitive": "敏感词过滤",
     "page": "页面",

@@ -17,6 +17,8 @@
     "signature": "Signature",
     "draggable": "Draggable",
     "pdf": "PDF Preview",
+    "word": "Word Preview",
+    "excel": "Excel Preview",
     "debounce": "Debounce",
     "sensitive": "Sensitive",
     "page": "Page",

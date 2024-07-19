@@ -98,6 +98,16 @@ export const menuList = Mock.mock({
           routeName: "pdf",
         },
         {
+          id: 1306,
+          title: "Word预览",
+          routeName: "word",
+        },
+        {
+          id: 1307,
+          title: "Excel预览",
+          routeName: "excel",
+        },
+        {
           id: 1320,
           title: "防抖节流",
           routeName: "debounce",

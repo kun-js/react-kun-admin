@@ -56,6 +56,8 @@ export default defineConfig({
     },
   },
   build: {
+    assetsDir: "assets", // 构建输出的静态资源目录
+    assetsInlineLimit: 0, // 将所有文件作为静态资源包含
     minify: "terser", // 启用 terser 压缩
     terserOptions: {
       compress: {
@@ -82,4 +84,5 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  assetsInclude: ["**/*.docx", "**/*.xlsx"],
 });
