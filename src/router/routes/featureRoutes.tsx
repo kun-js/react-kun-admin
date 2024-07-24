@@ -10,6 +10,7 @@ const PDFPreview = lazy(() => import("@/views/feature/pdf-preview"));
 const WordPreview = lazy(() => import("@/views/feature/word-preview"));
 const ExcelPreview = lazy(() => import("@/views/feature/excel-preview"));
 const MarkDownEditor = lazy(() => import("@/views/feature/markdown-editor"));
+const TextEditor = lazy(() => import("@/views/feature/text-editor"));
 const Debounce = lazy(() => import("@/views/feature/debounce"));
 const Sensitive = lazy(() => import("@/views/feature/sensitive"));
 
@@ -51,7 +52,7 @@ const featureRoutes = [
         ),
       },
       {
-        path: "pdf",
+        path: "pdf-preview",
         element: (
           <Suspense fallback={<LoadingComponent />}>
             <PDFPreview />
@@ -59,7 +60,7 @@ const featureRoutes = [
         ),
       },
       {
-        path: "word",
+        path: "word-preview",
         element: (
           <Suspense fallback={<LoadingComponent />}>
             <WordPreview />
@@ -67,7 +68,7 @@ const featureRoutes = [
         ),
       },
       {
-        path: "excel",
+        path: "excel-preview",
         element: (
           <Suspense fallback={<LoadingComponent />}>
             <ExcelPreview />
@@ -75,10 +76,18 @@ const featureRoutes = [
         ),
       },
       {
-        path: "markdown",
+        path: "markdown-editor",
         element: (
           <Suspense fallback={<LoadingComponent />}>
             <MarkDownEditor />
+          </Suspense>
+        ),
+      },
+      {
+        path: "text-editor",
+        element: (
+          <Suspense fallback={<LoadingComponent />}>
+            <TextEditor />
           </Suspense>
         ),
       },

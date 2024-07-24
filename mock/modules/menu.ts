@@ -95,22 +95,27 @@ export const menuList = Mock.mock({
         {
           id: 1305,
           title: "PDF预览",
-          routeName: "pdf",
+          routeName: "pdf-preview",
         },
         {
           id: 1306,
           title: "Word预览",
-          routeName: "word",
+          routeName: "word-preview",
         },
         {
           id: 1307,
           title: "Excel预览",
-          routeName: "excel",
+          routeName: "excel-preview",
         },
         {
           id: 1308,
           title: "MarkDown编辑器",
-          routeName: "markdown",
+          routeName: "markdown-editor",
+        },
+        {
+          id: 1309,
+          title: "文本编辑器",
+          routeName: "text-editor",
         },
         {
           id: 1320,
