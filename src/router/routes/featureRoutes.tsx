@@ -6,9 +6,10 @@ const WaterMark = lazy(() => import("@/views/feature/watermark"));
 const Clipboard = lazy(() => import("@/views/feature/clipboard"));
 const Signature = lazy(() => import("@/views/feature/signature"));
 const DraggableFeature = lazy(() => import("@/views/feature/draggable"));
-const PDFPreview = lazy(() => import("@/views/feature/pdf"));
-const WordPreview = lazy(() => import("@/views/feature/word"));
-const ExcelPreview = lazy(() => import("@/views/feature/excel"));
+const PDFPreview = lazy(() => import("@/views/feature/pdf-preview"));
+const WordPreview = lazy(() => import("@/views/feature/word-preview"));
+const ExcelPreview = lazy(() => import("@/views/feature/excel-preview"));
+const MarkDownEditor = lazy(() => import("@/views/feature/markdown-editor"));
 const Debounce = lazy(() => import("@/views/feature/debounce"));
 const Sensitive = lazy(() => import("@/views/feature/sensitive"));
 
@@ -70,6 +71,14 @@ const featureRoutes = [
         element: (
           <Suspense fallback={<LoadingComponent />}>
             <ExcelPreview />
+          </Suspense>
+        ),
+      },
+      {
+        path: "markdown",
+        element: (
+          <Suspense fallback={<LoadingComponent />}>
+            <MarkDownEditor />
           </Suspense>
         ),
       },

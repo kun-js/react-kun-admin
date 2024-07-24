@@ -139,7 +139,7 @@ const BasicForm: React.FC = () => {
                   <RangePicker placeholder={["开始日期", "结束日期"]} />
                 </Form.Item>
               </Col>
-              <Col span={8}>
+              <Col span={24}>
                 <Form.Item name="language" label="语言:">
                   <Checkbox.Group options={languageOptions} defaultValue={["Apple"]} />
                 </Form.Item>

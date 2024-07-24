@@ -108,6 +108,11 @@ export const menuList = Mock.mock({
           routeName: "excel",
         },
         {
+          id: 1308,
+          title: "MarkDown编辑器",
+          routeName: "markdown",
+        },
+        {
           id: 1320,
           title: "防抖节流",
           routeName: "debounce",
