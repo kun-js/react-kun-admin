@@ -4,6 +4,8 @@ import "./index.scss";
 import "@/styles/index.scss";
 import "@/locales/index";
 
+import "@/types/declaretions.d.ts";
+
 import { RouterProvider } from "react-router-dom";
 
 import router from "@/router/index";
