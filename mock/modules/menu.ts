@@ -118,6 +118,11 @@ export const menuList = Mock.mock({
           routeName: "text-editor",
         },
         {
+          id: 1310,
+          title: "JSON编辑器",
+          routeName: "json-editor",
+        },
+        {
           id: 1320,
           title: "防抖节流",
           routeName: "debounce",
