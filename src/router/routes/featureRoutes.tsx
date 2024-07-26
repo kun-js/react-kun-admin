@@ -12,6 +12,7 @@ const ExcelPreview = lazy(() => import("@/views/feature/excel-preview"));
 const MarkDownEditor = lazy(() => import("@/views/feature/markdown-editor"));
 const TextEditor = lazy(() => import("@/views/feature/text-editor"));
 const JSONEditor = lazy(() => import("@/views/feature/json-editor"));
+const ImageCropper = lazy(() => import("@/views/feature/image-cropper"));
 const Debounce = lazy(() => import("@/views/feature/debounce"));
 const Sensitive = lazy(() => import("@/views/feature/sensitive"));
 
@@ -97,6 +98,14 @@ const featureRoutes = [
         element: (
           <Suspense fallback={<LoadingComponent />}>
             <JSONEditor />
+          </Suspense>
+        ),
+      },
+      {
+        path: "image-cropper",
+        element: (
+          <Suspense fallback={<LoadingComponent />}>
+            <ImageCropper />
           </Suspense>
         ),
       },

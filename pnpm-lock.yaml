@@ -23,6 +23,12 @@ importers:
       '@iconify/react':
         specifier: ^5.0.1
         version: 5.0.1(react@18.3.1)
+      '@pqina/pintura':
+        specifier: ^8.82.15
+        version: 8.82.15
+      '@pqina/react-pintura':
+        specifier: ^9.0.3
+        version: 9.0.3(@pqina/pintura@8.82.15)
       '@types/react-beautiful-dnd':
         specifier: ^13.1.8
         version: 13.1.8
@@ -77,12 +83,18 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.3.1(react@18.3.1)
+      react-easy-crop:
+        specifier: ^5.0.7
+        version: 5.0.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-file-viewer:
         specifier: ^1.2.1
         version: 1.2.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(webpack@4.47.0)
       react-i18next:
         specifier: ^14.1.2
         version: 14.1.2(i18next@23.11.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react-image-crop:
+        specifier: ^11.0.6
+        version: 11.0.6(react@18.3.1)
       react-json-view:
         specifier: ^1.21.3
         version: 1.21.3(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -665,6 +677,14 @@ packages:
   '@pkgr/core@0.1.1':
     resolution: {integrity: sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
+
+  '@pqina/pintura@8.82.15':
+    resolution: {integrity: sha512-IhCHnNeJOE2bnD9d1G+CQFe6hz8TWJElcyT9/3bAAOBEQaSeh3aNeAczCZ0uCZ+NXKEYqQrBVV4IGEeBjpKJUQ==}
+
+  '@pqina/react-pintura@9.0.3':
+    resolution: {integrity: sha512-AYeiUUO1NFBBLH72XlMSX9gt9uGOGIkl0MysveH5Zg4GpXIAgyl4YMoNo7GQ/KvuY98lIxx1X+abF3vaeWAAPQ==}
+    peerDependencies:
+      '@pqina/pintura': ^8.x
 
   '@rc-component/async-validator@5.0.4':
     resolution: {integrity: sha512-qgGdcVIF604M9EqjNF0hbUTz42bz/RDtxWdWuU5EQe3hi7M8ob54B6B35rOsvX5eSvIHIzT9iH1R3n+hk3CGfg==}
@@ -4229,6 +4249,9 @@ packages:
     resolution: {integrity: sha512-D6MUW4K/VzoJ4rJ01JFKxDrtY1v9wrgzCX5f2qj/lzH1m/lW6MhUZFKerVsnyjOhOsYzI9Kqqak+10l4LvLpMw==}
     engines: {node: '>=4'}
 
+  normalize-wheel@1.0.1:
+    resolution: {integrity: sha512-1OnlAPZ3zgrk8B91HyRj+eVv+kS5u+Z0SCsak6Xil/kmgEia50ga7zfkumayonZrImffAxPU/5WcyGhzetHNPA==}
+
   not@0.1.0:
     resolution: {integrity: sha512-5PDmaAsVfnWUgTUbJ3ERwn7u79Z0dYxN9ErxCpVJJqe2RK0PJ3z+iFUxuqjwtlDDegXvtWoxD/3Fzxox7tFGWA==}
 
@@ -4995,6 +5018,12 @@ packages:
     peerDependencies:
       react: ^18.3.1
 
+  react-easy-crop@5.0.7:
+    resolution: {integrity: sha512-6d5IUt09M3HwdDGwrcjPVgfrOfYWAOku8sCTn/xU7b1vkEg+lExMLwW8UbR39L8ybQi0hJZTU57yprF9h5Q5Ig==}
+    peerDependencies:
+      react: '>=16.4.0'
+      react-dom: '>=16.4.0'
+
   react-file-viewer@1.2.1:
     resolution: {integrity: sha512-Hq9irsKkmXNGUOk7FBH/z/Lph4mpp3R4ySnGzhs3UEFVvHExuKhp9qPfoXUJjt/kQI5Qtrj1Y5r/fpDGkSrFyQ==}
     peerDependencies:
@@ -5013,6 +5042,11 @@ packages:
         optional: true
       react-native:
         optional: true
+
+  react-image-crop@11.0.6:
+    resolution: {integrity: sha512-T+/RPBhwFxdf8PjD/uoWk+tBkS0Xf2XW0lY5mnsmClvnAujO81EEjDwj0M2pcHX3seXVgKOr/yIiL+Sx4evMNw==}
+    peerDependencies:
+      react: '>=16.13.1'
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
@@ -6850,6 +6884,12 @@ snapshots:
       fastq: 1.17.1
 
   '@pkgr/core@0.1.1': {}
+
+  '@pqina/pintura@8.82.15': {}
+
+  '@pqina/react-pintura@9.0.3(@pqina/pintura@8.82.15)':
+    dependencies:
+      '@pqina/pintura': 8.82.15
 
   '@rc-component/async-validator@5.0.4':
     dependencies:
@@ -11331,6 +11371,8 @@ snapshots:
       query-string: 5.1.1
       sort-keys: 2.0.0
 
+  normalize-wheel@1.0.1: {}
+
   not@0.1.0: {}
 
   npm-conf@1.1.3:
@@ -12173,6 +12215,13 @@ snapshots:
       react: 18.3.1
       scheduler: 0.23.2
 
+  react-easy-crop@5.0.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+    dependencies:
+      normalize-wheel: 1.0.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      tslib: 2.6.2
+
   react-file-viewer@1.2.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(webpack@4.47.0):
     dependencies:
       comma-separated-values: 3.6.4
@@ -12196,6 +12245,10 @@ snapshots:
       react: 18.3.1
     optionalDependencies:
       react-dom: 18.3.1(react@18.3.1)
+
+  react-image-crop@11.0.6(react@18.3.1):
+    dependencies:
+      react: 18.3.1
 
   react-is@16.13.1: {}
 

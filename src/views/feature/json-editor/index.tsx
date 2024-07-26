@@ -18,18 +18,7 @@ const JSONEditor: React.FC = () => {
   return (
     <div className="json-container">
       <Card className="card-container" title="JSON编辑器示例" bordered={false}>
-        <ReactJson
-          src={JsonFile}
-          onEdit={(key) => {
-            console.log(key);
-          }}
-          onAdd={(key) => {
-            console.log(key);
-          }}
-          onDelete={(key) => {
-            console.log(key);
-          }}
-        />
+        <ReactJson src={JsonFile} onEdit={() => {}} onAdd={() => {}} onDelete={() => {}} />
       </Card>
     </div>
   );

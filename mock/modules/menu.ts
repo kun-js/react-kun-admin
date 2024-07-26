@@ -123,6 +123,11 @@ export const menuList = Mock.mock({
           routeName: "json-editor",
         },
         {
+          id: 1311,
+          title: "图片裁剪",
+          routeName: "image-cropper",
+        },
+        {
           id: 1320,
           title: "防抖节流",
           routeName: "debounce",
