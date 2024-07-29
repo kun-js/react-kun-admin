@@ -12,6 +12,7 @@
     "description": "Description",
     "statistic": "Statistic",
     "message": "Message",
+    "notification": "Notification",
     "feature": "Feature",
     "watermark": "Watermark",
     "clipboard": "Clipboard",

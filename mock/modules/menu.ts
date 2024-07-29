@@ -69,6 +69,11 @@ export const menuList = Mock.mock({
           title: "消息提示",
           routeName: "message",
         },
+        {
+          id: 1207,
+          title: "通知提醒",
+          routeName: "notification",
+        },
       ],
     },
     {

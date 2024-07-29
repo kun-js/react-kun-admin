@@ -8,6 +8,7 @@ const ColorPickerComponent = lazy(() => import("@/views/component/color-picker")
 const DescriptionComponent = lazy(() => import("@/views/component/description"));
 const StatisticComponent = lazy(() => import("@/views/component/statistic"));
 const MessageComponent = lazy(() => import("@/views/component/message"));
+const NotificationComponent = lazy(() => import("@/views/component/notification"));
 
 const chartRoutes = [
   {
@@ -59,6 +60,14 @@ const chartRoutes = [
         element: (
           <Suspense fallback={<LoadingComponent />}>
             <MessageComponent />
+          </Suspense>
+        ),
+      },
+      {
+        path: "notification",
+        element: (
+          <Suspense fallback={<LoadingComponent />}>
+            <NotificationComponent />
           </Suspense>
         ),
       },
