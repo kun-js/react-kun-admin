@@ -4,6 +4,13 @@ import "./index.scss";
 import "@/styles/index.scss";
 import "@/locales/index";
 
+import locale from "antd/locale/zh_CN";
+import dayjs from "dayjs";
+
+import "dayjs/locale/zh-cn";
+
+dayjs.locale("zh-cn");
+
 import "@/types/declaretions.d.ts";
 
 import { RouterProvider } from "react-router-dom";
@@ -19,6 +26,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         fontFamily: "PingFang",
       },
     }}
+    locale={locale}
   >
     <RouterProvider router={router} />
   </ConfigProvider>

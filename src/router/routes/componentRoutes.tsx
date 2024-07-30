@@ -9,6 +9,7 @@ const DescriptionComponent = lazy(() => import("@/views/component/description"))
 const StatisticComponent = lazy(() => import("@/views/component/statistic"));
 const MessageComponent = lazy(() => import("@/views/component/message"));
 const NotificationComponent = lazy(() => import("@/views/component/notification"));
+const DataPickerComponent = lazy(() => import("@/views/component/date-picker"));
 
 const chartRoutes = [
   {
@@ -68,6 +69,14 @@ const chartRoutes = [
         element: (
           <Suspense fallback={<LoadingComponent />}>
             <NotificationComponent />
+          </Suspense>
+        ),
+      },
+      {
+        path: "date-picker",
+        element: (
+          <Suspense fallback={<LoadingComponent />}>
+            <DataPickerComponent />
           </Suspense>
         ),
       },

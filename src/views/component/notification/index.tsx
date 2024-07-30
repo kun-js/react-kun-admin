@@ -1,6 +1,6 @@
 import "./notification.scss";
 import React, { useState } from "react";
-import { Card, Button, notification, Space, Radio, RadioChangeEvent } from "antd";
+import { Card, Button, notification, Space, Radio, RadioChangeEvent, Divider } from "antd";
 
 type NotificationType = "success" | "info" | "warning" | "error";
 
@@ -38,6 +38,7 @@ const NotificationComponent: React.FC = () => {
               <Radio value={"bottomRight"}>bottomRight</Radio>
             </Radio.Group>
           </div>
+          <Divider />
           <div>
             <Space>
               <Button

@@ -1,6 +1,6 @@
 import "./button.scss";
 import React, { useState } from "react";
-import { Card, Button, Radio, Space } from "antd";
+import { Card, Button, Divider, Radio, Space } from "antd";
 import { SearchOutlined, DownloadOutlined, PoweroffOutlined } from "@ant-design/icons";
 import type { RadioChangeEvent } from "antd";
 
@@ -55,6 +55,7 @@ const ButtonComponent: React.FC = () => {
               </Radio.Group>
             </div>
           </Space>
+          <Divider />
           <div style={{ marginTop: "38px" }}>
             <Space>
               <Button type={type} size={size} shape={shape} icon={<SearchOutlined />}>

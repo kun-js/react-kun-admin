@@ -1,6 +1,6 @@
 import "./tag.scss";
 import React, { useState } from "react";
-import { Card, Radio, Space, Tag, Flex } from "antd";
+import { Card, Divider, Radio, Space, Tag, Flex } from "antd";
 import {
   CheckCircleOutlined,
   ClockCircleOutlined,
@@ -53,6 +53,7 @@ const TagComponent: React.FC = () => {
               </Radio.Group>
             </div>
           </Space>
+          <Divider />
           <div style={{ marginTop: "38px" }}>
             <Flex gap="4px 0" wrap>
               <Tag closeIcon={closeIcon} bordered={border} icon={icon && <CheckCircleOutlined />} color="success">

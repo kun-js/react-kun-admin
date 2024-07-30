@@ -74,6 +74,11 @@ export const menuList = Mock.mock({
           title: "通知提醒",
           routeName: "notification",
         },
+        {
+          id: 1208,
+          title: "时间选择器",
+          routeName: "date-picker",
+        },
       ],
     },
     {

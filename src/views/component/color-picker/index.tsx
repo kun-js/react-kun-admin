@@ -1,6 +1,6 @@
 import "./colorpicker.scss";
 import React, { useState } from "react";
-import { Card, ColorPicker, Radio, Space } from "antd";
+import { Card, ColorPicker, Divider, Radio, Space } from "antd";
 import type { RadioChangeEvent } from "antd";
 
 type ColorPickerType = "small" | "middle" | "large";
@@ -50,6 +50,7 @@ const ColorPickerComponent: React.FC = () => {
               </Radio.Group>
             </div>
           </Space>
+          <Divider />
           <div style={{ marginTop: "18px" }}>
             <ColorPicker defaultValue="#1677ff" size={size} disabled={disabled} showText={showText} />
           </div>

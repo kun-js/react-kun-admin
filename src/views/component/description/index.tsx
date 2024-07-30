@@ -1,6 +1,6 @@
 import "./description.scss";
 import React, { useState } from "react";
-import { Card, Descriptions, Radio, Space } from "antd";
+import { Card, Descriptions, Divider, Radio, Space } from "antd";
 import type { RadioChangeEvent } from "antd";
 import type { DescriptionsProps } from "antd";
 
@@ -46,16 +46,15 @@ const DescriptionComponent: React.FC = () => {
     <>
       <div className="description-container">
         <Card className="card-container" title="描述列表组件" bordered={false}>
-          <Space direction="vertical">
-            <div>
-              <span style={{ marginRight: "18px" }}>尺寸大小(仅在有边框列表生效):</span>
-              <Radio.Group onChange={onSizeChange} value={size}>
-                <Radio value={"large"}>large</Radio>
-                <Radio value={"middle"}>middle</Radio>
-                <Radio value={"small"}>small</Radio>
-              </Radio.Group>
-            </div>
-          </Space>
+          <div>
+            <span style={{ marginRight: "18px" }}>尺寸大小(仅在有边框列表生效):</span>
+            <Radio.Group onChange={onSizeChange} value={size}>
+              <Radio value={"large"}>large</Radio>
+              <Radio value={"middle"}>middle</Radio>
+              <Radio value={"small"}>small</Radio>
+            </Radio.Group>
+          </div>
+          <Divider />
           <div style={{ marginTop: "18px" }}>
             <Space direction="vertical" size={18}>
               <Descriptions title="水平列表" size={size} items={items} bordered />
