@@ -104,36 +104,41 @@ export const menuList = Mock.mock({
         },
         {
           id: 1305,
+          title: "打印",
+          routeName: "print",
+        },
+        {
+          id: 1306,
           title: "PDF预览",
           routeName: "pdf-preview",
         },
         {
-          id: 1306,
+          id: 1307,
           title: "Word预览",
           routeName: "word-preview",
         },
         {
-          id: 1307,
+          id: 1308,
           title: "Excel预览",
           routeName: "excel-preview",
         },
         {
-          id: 1308,
+          id: 1309,
           title: "MarkDown编辑器",
           routeName: "markdown-editor",
         },
         {
-          id: 1309,
+          id: 1310,
           title: "文本编辑器",
           routeName: "text-editor",
         },
         {
-          id: 1310,
+          id: 1311,
           title: "JSON编辑器",
           routeName: "json-editor",
         },
         {
-          id: 1311,
+          id: 1312,
           title: "图片裁剪",
           routeName: "image-cropper",
         },

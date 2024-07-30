@@ -18,6 +18,7 @@
     "clipboard": "Clipboard",
     "signature": "Signature",
     "draggable": "Draggable",
+    "print": "Print",
     "pdf-preview": "PDF Preview",
     "word-preview": "Word Preview",
     "excel-preview": "Excel Preview",
