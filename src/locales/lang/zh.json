@@ -20,6 +20,8 @@
     "signature": "签名",
     "draggable": "拖拽",
     "print": "打印",
+    "barcode": "条形码",
+    "qrcode": "二维码",
     "pdf-preview": "PDF预览",
     "word-preview": "Word预览",
     "excel-preview": "Excel预览",

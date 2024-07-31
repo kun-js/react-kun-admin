@@ -1,0 +1,14 @@
+.barcode-container {
+  padding: 20px;
+
+  .card-container {
+    height: var(--card-height);
+
+    .barcode-item {
+      .ant-card-body {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}

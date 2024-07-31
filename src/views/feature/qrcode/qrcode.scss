@@ -1,0 +1,21 @@
+.qrcode-container {
+  padding: 20px;
+
+  .card-container {
+    height: var(--card-height);
+
+    .qrcode-item {
+      span {
+        margin-top: 8px;
+        font-size: 16px;
+      }
+
+      .ant-card-body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+    }
+  }
+}

@@ -7,6 +7,8 @@ const Clipboard = lazy(() => import("@/views/feature/clipboard"));
 const Signature = lazy(() => import("@/views/feature/signature"));
 const DraggableFeature = lazy(() => import("@/views/feature/draggable"));
 const PrintFeature = lazy(() => import("@/views/feature/print"));
+const BarcodeFeature = lazy(() => import("@/views/feature/barcode"));
+const QRcodeFeature = lazy(() => import("@/views/feature/qrcode"));
 const PDFPreview = lazy(() => import("@/views/feature/pdf-preview"));
 const WordPreview = lazy(() => import("@/views/feature/word-preview"));
 const ExcelPreview = lazy(() => import("@/views/feature/excel-preview"));
@@ -59,6 +61,22 @@ const featureRoutes = [
         element: (
           <Suspense fallback={<LoadingComponent />}>
             <PrintFeature />
+          </Suspense>
+        ),
+      },
+      {
+        path: "barcode",
+        element: (
+          <Suspense fallback={<LoadingComponent />}>
+            <BarcodeFeature />
+          </Suspense>
+        ),
+      },
+      {
+        path: "qrcode",
+        element: (
+          <Suspense fallback={<LoadingComponent />}>
+            <QRcodeFeature />
           </Suspense>
         ),
       },

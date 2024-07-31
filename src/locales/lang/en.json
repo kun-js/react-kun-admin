@@ -20,6 +20,8 @@
     "signature": "Signature",
     "draggable": "Draggable",
     "print": "Print",
+    "barcode": "Barcode",
+    "qrcode": "QRCode",
     "pdf-preview": "PDF Preview",
     "word-preview": "Word Preview",
     "excel-preview": "Excel Preview",

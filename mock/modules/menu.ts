@@ -114,36 +114,46 @@ export const menuList = Mock.mock({
         },
         {
           id: 1306,
+          title: "条形码",
+          routeName: "barcode",
+        },
+        {
+          id: 1307,
+          title: "二维码",
+          routeName: "qrcode",
+        },
+        {
+          id: 1308,
           title: "PDF预览",
           routeName: "pdf-preview",
         },
         {
-          id: 1307,
+          id: 1309,
           title: "Word预览",
           routeName: "word-preview",
         },
         {
-          id: 1308,
+          id: 1310,
           title: "Excel预览",
           routeName: "excel-preview",
         },
         {
-          id: 1309,
+          id: 1311,
           title: "MarkDown编辑器",
           routeName: "markdown-editor",
         },
         {
-          id: 1310,
+          id: 1312,
           title: "文本编辑器",
           routeName: "text-editor",
         },
         {
-          id: 1311,
+          id: 1313,
           title: "JSON编辑器",
           routeName: "json-editor",
         },
         {
-          id: 1312,
+          id: 1314,
           title: "图片裁剪",
           routeName: "image-cropper",
         },
