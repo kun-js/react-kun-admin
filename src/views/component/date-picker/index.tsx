@@ -57,7 +57,7 @@ const DatePickerComponent: React.FC = () => {
           </Space>
           <Divider />
           <Row>
-            <Col span="12">
+            <Col span={12}>
               <Space direction="vertical">
                 <span>基本选择器:</span>
                 <DatePicker size={size} placement={placement} picker="date" disabled={disabled} />
@@ -67,7 +67,7 @@ const DatePickerComponent: React.FC = () => {
                 <DatePicker size={size} placement={placement} picker="year" disabled={disabled} />
               </Space>
             </Col>
-            <Col span="12">
+            <Col span={12}>
               <Space direction="vertical">
                 <span>范围选择器:</span>
                 <RangePicker size={size} placement={placement} disabled={disabled} />

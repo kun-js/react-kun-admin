@@ -2,6 +2,7 @@ import MainLayout from "@/layout";
 import { Suspense, lazy } from "react";
 import LoadingComponent from "@/components/LoadingComponent";
 
+const DownloadFeature = lazy(() => import("@/views/feature/download"));
 const WaterMark = lazy(() => import("@/views/feature/watermark"));
 const Clipboard = lazy(() => import("@/views/feature/clipboard"));
 const Signature = lazy(() => import("@/views/feature/signature"));
@@ -24,6 +25,14 @@ const featureRoutes = [
     path: "/feature",
     element: <MainLayout />,
     children: [
+      {
+        path: "download",
+        element: (
+          <Suspense fallback={<LoadingComponent />}>
+            <DownloadFeature />
+          </Suspense>
+        ),
+      },
       {
         path: "watermark",
         element: (
