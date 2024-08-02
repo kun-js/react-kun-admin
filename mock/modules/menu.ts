@@ -27,7 +27,7 @@ export const menuList = Mock.mock({
       routeName: "permission",
       children: [
         {
-          id: 1001,
+          id: 1101,
           title: "按钮权限",
           routeName: "button-permission",
         },
@@ -76,6 +76,11 @@ export const menuList = Mock.mock({
         },
         {
           id: 1208,
+          title: "树形组件",
+          routeName: "tree",
+        },
+        {
+          id: 1209,
           title: "时间选择器",
           routeName: "date-picker",
         },

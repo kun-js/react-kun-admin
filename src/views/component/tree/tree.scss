@@ -1,0 +1,12 @@
+.tree-container {
+  padding: 20px;
+
+  .card-container {
+    height: var(--card-height);
+
+    .ant-card-body {
+      overflow-y: auto;
+      height: calc(100vh - 144px);
+    }
+  }
+}
