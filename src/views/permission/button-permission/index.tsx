@@ -34,13 +34,13 @@ const ButtonPermission: React.FC = () => {
 
   const renderAuthButtons = (permissionType: string, type: "primary" | "default", label: string) => {
     return (
-      <Space>
+      <>
         {new Array(3).fill(null).map((_, index) => (
           <AuthButton key={index} requiredPermission={permissionType} type={type}>
             {label}
           </AuthButton>
         ))}
-      </Space>
+      </>
     );
   };
 
@@ -58,8 +58,12 @@ const ButtonPermission: React.FC = () => {
           </Space>
           <Divider />
           <div>
-            {renderAuthButtons("admin", "primary", "管理员可见")}
-            {renderAuthButtons("user", "default", "用户可见")}
+            <Space>
+              {renderAuthButtons("admin", "primary", "管理员可见")}
+              {renderAuthButtons("user", "default", "用户可见")}
+              <Button danger>共同可见按钮</Button>
+              <Button danger>共同可见按钮</Button>
+            </Space>
           </div>
         </Card>
       </div>
