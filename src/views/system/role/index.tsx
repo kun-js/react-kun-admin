@@ -6,13 +6,10 @@ import { getRoleList } from "@/api";
 
 interface DataType {
   id: number;
-  username: string;
-  name: string;
-  createTime: string;
   role: string;
-  email: string;
-  tel: string;
-  department: string;
+  roleValue: string;
+  status: boolean;
+  createTime: string;
   remark: string;
 }
 
@@ -69,16 +66,10 @@ const RoleManagement: React.FC = () => {
   const [data, setData] = useState([]);
   const [ellipsis] = useState(true);
 
-  const titleContent = (
-    <>
-      <span>角色管理示例</span>
-    </>
-  );
-
   const fetchData = async () => {
     try {
       const result = await getRoleList();
-      console.log("result: ", result);
+      // console.log("result: ", result);
       setData(result.roleList);
     } catch (error) {
       console.error("数据获取失败：", error);
@@ -92,7 +83,7 @@ const RoleManagement: React.FC = () => {
   return (
     <>
       <div className="role-container">
-        <Card className="card-container" title={titleContent} bordered={false}>
+        <Card className="card-container" title="角色管理示例" bordered={false}>
           <Table columns={columns.map((item) => ({ ...item, ellipsis }))} dataSource={data} pagination={false} />
         </Card>
       </div>

@@ -2,8 +2,13 @@ import { TranslationOutlined } from "@ant-design/icons";
 import { Button, Popover } from "antd";
 import useLanguageStore from "@/store/language";
 import "./Language.scss";
+import { RefObject } from "react";
 
-const HeaderSetting: React.FC = () => {
+interface HeaderLanguageProps {
+  fullScreenButtonRef: RefObject<HTMLButtonElement>;
+}
+
+const HeaderSetting: React.FC<HeaderLanguageProps> = ({ fullScreenButtonRef }) => {
   const { changeLanguage } = useLanguageStore();
 
   const langButtonDisabled = JSON.parse(localStorage.getItem("languageStore")!).state.lang === "zh";
@@ -29,7 +34,7 @@ const HeaderSetting: React.FC = () => {
   return (
     <>
       <Popover content={langContent} trigger="click">
-        <Button className="language-button" type="text" icon={<TranslationOutlined />} />
+        <Button ref={fullScreenButtonRef} className="language-button" type="text" icon={<TranslationOutlined />} />
       </Popover>
     </>
   );

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Breadcrumb, Button, Layout } from "antd";
 import { useLocation } from "react-router-dom";
 import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
@@ -24,6 +24,8 @@ interface MainHeaderProps {
 }
 
 const MainHeader: React.FC<MainHeaderProps> = ({ handleToShowFooter, collapsed, handleToCollapse }) => {
+  const collapseButtonRef = useRef(null);
+  const fullScreenButtonRef = useRef(null);
   const location = useLocation();
   const [breadcrumbList, setBreadcrumbList] = useState<TitleObject[]>([]);
 
@@ -56,6 +58,7 @@ const MainHeader: React.FC<MainHeaderProps> = ({ handleToShowFooter, collapsed, 
     >
       <div className="left-action">
         <Button
+          ref={collapseButtonRef}
           className="collapse-button"
           type="text"
           icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
@@ -67,8 +70,8 @@ const MainHeader: React.FC<MainHeaderProps> = ({ handleToShowFooter, collapsed, 
       <div className="right-action">
         <HeaderSearch />
         <HeaderMessage />
-        <HeaderTour />
-        <Language />
+        <HeaderTour collapseButtonRef={collapseButtonRef} fullScreenButtonRef={fullScreenButtonRef} />
+        <Language fullScreenButtonRef={fullScreenButtonRef} />
         <FullScreen />
         <UserButton />
         <HeaderSetting handleToShowFooter={handleToShowFooter} />
