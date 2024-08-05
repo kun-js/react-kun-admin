@@ -1,8 +1,9 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const ExternalLink: React.FC = () => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     // 确保 window 对象存在
@@ -24,9 +25,9 @@ const ExternalLink: React.FC = () => {
           }
         }
       };
-
       openExternalLink();
     }
+    navigate(-1);
   }, [location]);
 
   return null;
