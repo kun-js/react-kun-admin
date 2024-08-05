@@ -4,6 +4,7 @@ import { analysisCardList } from "./modules/dashboard";
 import { userList } from "./modules/list";
 import { messageList } from "./modules/message";
 import { accountList } from "./modules/account";
+import { roleList } from "./modules/role";
 
 export default [
   {
@@ -46,6 +47,13 @@ export default [
     method: "get",
     response: () => {
       return accountList;
+    },
+  },
+  {
+    url: "/api/roleList",
+    method: "get",
+    response: () => {
+      return roleList;
     },
   },
 ];

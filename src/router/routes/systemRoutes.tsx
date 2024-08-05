@@ -2,7 +2,8 @@ import MainLayout from "@/layout";
 import { Suspense, lazy } from "react";
 import LoadingComponent from "../../components/LoadingComponent";
 
-const Account = lazy(() => import("@/views/system/account"));
+const AccountManagement = lazy(() => import("@/views/system/account"));
+const RoleManagement = lazy(() => import("@/views/system/role"));
 
 const systemRoutes = [
   {
@@ -13,7 +14,15 @@ const systemRoutes = [
         path: "account",
         element: (
           <Suspense fallback={<LoadingComponent />}>
-            <Account />
+            <AccountManagement />
+          </Suspense>
+        ),
+      },
+      {
+        path: "role",
+        element: (
+          <Suspense fallback={<LoadingComponent />}>
+            <RoleManagement />
           </Suspense>
         ),
       },

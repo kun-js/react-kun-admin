@@ -59,6 +59,7 @@
     "react-outerchain": "React External Link",
     "system": "System Management",
     "account": "Account Management",
+    "role": "Role Management",
     "about": "About"
   }
 }

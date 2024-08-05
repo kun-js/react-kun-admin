@@ -81,7 +81,7 @@ const columns: TableColumnsType<DataType> = [
   },
 ];
 
-const Account: React.FC = () => {
+const AccountManagement: React.FC = () => {
   const [keyWord, setKeyWord] = useState("");
   const [data, setData] = useState([]);
   const [ellipsis] = useState(true);
@@ -142,11 +142,6 @@ const Account: React.FC = () => {
                 setPage(newPage);
                 setPageSize(newPageSize);
               },
-              locale: {
-                items_per_page: "页",
-                jump_to: "跳至",
-                page: "页",
-              },
             }}
             scroll={{ y: 670 }}
           />
@@ -156,4 +151,4 @@ const Account: React.FC = () => {
   );
 };
 
-export default Account;
+export default AccountManagement;

@@ -329,6 +329,11 @@ export const menuList = Mock.mock({
           title: "账号管理",
           routeName: "account",
         },
+        {
+          id: 1802,
+          title: "角色管理",
+          routeName: "role",
+        },
       ],
     },
     {

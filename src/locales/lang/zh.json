@@ -59,6 +59,7 @@
     "react-outerchain": "React",
     "system": "系统管理",
     "account": "账号管理",
+    "role": "角色管理",
     "about": "关于"
   }
 }

@@ -7,6 +7,7 @@ const Api = {
   userList: "/api/userList",
   messageList: "/api/messageList",
   accountList: "/api/accountList",
+  roleList: "/api/roleList",
 };
 
 export const getLoginInfo = async (username: string, password: string) => {
@@ -56,4 +57,9 @@ export const getAccountList = async (page: number = 1, pageSize: number = 10, ke
     accountList: slicedData,
     total: total,
   };
+};
+
+export const getRoleList = async () => {
+  const { data } = await axios.get(Api.roleList);
+  return data;
 };
