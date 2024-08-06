@@ -164,6 +164,11 @@ export const menuList = Mock.mock({
         },
         {
           id: 1315,
+          title: "流程图",
+          routeName: "flow-chart",
+        },
+        {
+          id: 1316,
           title: "图片裁剪",
           routeName: "image-cropper",
         },

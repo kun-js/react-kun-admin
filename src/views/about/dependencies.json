@@ -5,6 +5,8 @@
     "@commitlint/config-conventional": "^19.2.2",
     "@cyntler/react-doc-viewer": "^1.16.6",
     "@iconify/react": "^5.0.1",
+    "@logicflow/core": "1.2.26",
+    "@logicflow/extension": "1.2.26",
     "@pqina/pintura": "^8.82.15",
     "@pqina/react-pintura": "^9.0.3",
     "@types/react-beautiful-dnd": "^13.1.8",
@@ -50,7 +52,7 @@
   "devDependencies": {
     "@types/node": "^20.14.11",
     "@types/react": "^18.2.66",
-    "@types/react-dom": "^18.2.22",
+    "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.11.0",
     "@typescript-eslint/parser": "^7.11.0",
     "@vitejs/plugin-react": "^4.2.1",
