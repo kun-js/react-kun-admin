@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Breadcrumb, Button, Layout } from "antd";
 import { useLocation } from "react-router-dom";
 import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
+import { useTranslation } from "react-i18next";
 
 import "./header.scss";
 
@@ -24,16 +25,21 @@ interface MainHeaderProps {
 }
 
 const MainHeader: React.FC<MainHeaderProps> = ({ handleToShowFooter, collapsed, handleToCollapse }) => {
+  const { t } = useTranslation();
   const collapseButtonRef = useRef(null);
   const fullScreenButtonRef = useRef(null);
   const location = useLocation();
   const [breadcrumbList, setBreadcrumbList] = useState<TitleObject[]>([]);
 
   const transformPathToTitleArray = (path: string): TitleObject[] => {
+    let currentPath = path;
+    if (path === "/about/index") {
+      currentPath = "/about";
+    }
     // 将路径按 '/' 分割成段，并过滤掉空字符串
-    const segments = path.split("/").filter((segment) => segment.length > 0);
+    const segments = currentPath.split("/").filter((segment) => segment.length > 0);
     // 使用 map 函数将每个段转换成一个具有 title 属性的对象
-    const titleArray = segments.map((segment) => ({ title: segment }));
+    const titleArray = segments.map((segment) => ({ title: t(`menu.${segment}`) }));
     return titleArray;
   };
 
