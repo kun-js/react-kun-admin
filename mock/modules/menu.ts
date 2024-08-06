@@ -81,6 +81,11 @@ export const menuList = Mock.mock({
         },
         {
           id: 1209,
+          title: "折叠面板",
+          routeName: "collapse-panel",
+        },
+        {
+          id: 1210,
           title: "时间选择器",
           routeName: "date-picker",
         },

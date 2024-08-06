@@ -115,7 +115,7 @@ const FlowChart: React.FC = () => {
       nodeMenu: [
         {
           text: "属性",
-          callback(node: { id: number; type: string; x: number; y: number }) {
+          callback(node: { id: string; type: string; x: number; y: number }) {
             alert(`
             节点id：${node.id}
             节点类型：${node.type}
@@ -127,12 +127,12 @@ const FlowChart: React.FC = () => {
         {
           text: "属性",
           callback(edge: {
-            id: number;
+            id: string;
             type: string;
             x: number;
             y: number;
-            sourceNodeId: number;
-            targetNodeId: number;
+            sourceNodeId: string;
+            targetNodeId: string;
           }) {
             alert(`
             边id：${edge.id}

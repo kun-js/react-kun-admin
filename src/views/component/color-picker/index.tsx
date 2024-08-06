@@ -30,9 +30,9 @@ const ColorPickerComponent: React.FC = () => {
             <div>
               <span style={{ marginRight: "18px" }}>尺寸大小:</span>
               <Radio.Group onChange={onSizeChange} value={size}>
-                <Radio value={"large"}>large</Radio>
-                <Radio value={"middle"}>middle</Radio>
-                <Radio value={"small"}>small</Radio>
+                <Radio value={"large"}>大</Radio>
+                <Radio value={"middle"}>中</Radio>
+                <Radio value={"small"}>小</Radio>
               </Radio.Group>
             </div>
             <div>
