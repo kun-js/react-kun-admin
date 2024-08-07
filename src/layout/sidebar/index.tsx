@@ -146,11 +146,15 @@ const SideBar: React.FC<SideBarProps> = ({ collapsed }) => {
     <Sider
       style={{ overflow: "auto", height: "100vh", position: "fixed", left: 0, top: 0, bottom: 0 }}
       breakpoint="xs"
+      trigger={null}
+      collapsible
       collapsed={collapsed}
     >
       <div className="logo" onClick={backToDashboard}>
-        <div className="logo-pic"></div>
-        {!collapsed && <div className="logo-title">Kun Admin</div>}
+        <div className="logo-container">
+          <div className="logo-pic"></div>
+          {!collapsed && <span className="logo-text">Kun Admin</span>}
+        </div>
       </div>
       <Menu
         theme="dark"

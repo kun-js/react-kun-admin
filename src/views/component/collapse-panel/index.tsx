@@ -23,7 +23,7 @@ const CollapsePanel: React.FC = () => {
   const itemsNest: CollapseProps["items"] = [
     {
       key: "1",
-      label: "这是签到进去的面板",
+      label: "这是嵌套进去的折叠面板",
       children: <p>{text}</p>,
     },
   ];

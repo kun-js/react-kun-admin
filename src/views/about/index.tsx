@@ -69,19 +69,21 @@ const About: React.FC = () => {
 
   return (
     <>
-      <Card title="关于" bordered={false} style={{ borderRadius: 0 }}>
-        <Tag color="processing">react-kun-admin</Tag>是一款基于React18、Ant Design、TypeScript的中后台解决方案。
-      </Card>
       <div className="about-container">
-        <Card>
-          <Descriptions title="项目信息" bordered={true} size={"small"} column={2} items={projectInfoItems} />
+        <Card title="关于" bordered={false} style={{ borderRadius: 0 }}>
+          <Tag color="processing">react-kun-admin</Tag>是一款基于React18、Ant Design、TypeScript的中后台解决方案。
         </Card>
-        <Card style={{ marginTop: "20px" }}>
-          <Descriptions title="生产环境依赖" bordered={true} size={"small"} column={3} items={dependencies} />
-        </Card>
-        <Card style={{ marginTop: "20px" }}>
-          <Descriptions title="开发环境依赖" bordered={true} size={"small"} column={3} items={devDependencies} />
-        </Card>
+        <div className="project-info-container">
+          <Card>
+            <Descriptions title="项目信息" bordered={true} size={"small"} column={2} items={projectInfoItems} />
+          </Card>
+          <Card style={{ marginTop: "20px" }}>
+            <Descriptions title="生产环境依赖" bordered={true} size={"small"} column={3} items={dependencies} />
+          </Card>
+          <Card style={{ marginTop: "20px" }}>
+            <Descriptions title="开发环境依赖" bordered={true} size={"small"} column={3} items={devDependencies} />
+          </Card>
+        </div>
       </div>
     </>
   );

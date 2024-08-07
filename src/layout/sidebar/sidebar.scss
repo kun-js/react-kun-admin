@@ -6,21 +6,27 @@
   height: 64px;
   cursor: pointer;
 
-  &-pic {
-    margin-left: 8px;
-    width: 40px;
-    height: 40px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("@/assets/imgs/KunLogo.png");
-  }
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  &-title {
-    overflow: hidden;
-    margin-left: 16px;
-    font-size: 18px;
-    white-space: nowrap;
-    color: #fff;
+    .logo-pic {
+      margin-left: 8px;
+      width: 40px;
+      height: 40px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url("@/assets/imgs/KunLogo.png");
+    }
+
+    .logo-text {
+      overflow: hidden;
+      margin-left: 16px;
+      font-size: 18px;
+      white-space: nowrap;
+      color: #fff;
+    }
   }
 }

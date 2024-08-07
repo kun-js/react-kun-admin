@@ -36,23 +36,6 @@ body {
   place-items: center;
 }
 
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #f5f5f5; /* 轨道颜色 */
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #d6d6d6; /* 滑块颜色 */
-  border-radius: 6px; /* 滑块圆角 */
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #a8a8a8; /* 鼠标悬停时滚动条颜色变深 */
-}
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;

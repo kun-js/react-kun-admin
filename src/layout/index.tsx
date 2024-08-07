@@ -41,12 +41,12 @@ const MainLayout: React.FC = () => {
       <Watermark zIndex={watermarkVisible ? 99 : -1} content={["CAIXUKUN", "JINITAIMEI"]}>
         <div style={{ width: "100vw", height: "100vh" }}>
           {contextHolder}
-          <Layout>
+          <Layout hasSider>
             <SideBar collapsed={collapsed} />
             <Layout
               style={{
                 marginLeft: collapsed ? "80px" : "200px",
-                transition: "0.28s",
+                transition: collapsed ? "0.35s" : "0.2s",
               }}
             >
               <MainHeader
@@ -54,7 +54,7 @@ const MainLayout: React.FC = () => {
                 collapsed={collapsed}
                 handleToCollapse={handleToCollapse}
               />
-              <Content style={{ width: "100%" }}>
+              <Content>
                 <MainContent showFooter={showFooter} />
               </Content>
               {showFooter && (
