@@ -1,13 +1,21 @@
 import { SettingOutlined } from "@ant-design/icons";
-import { Button, Divider, Drawer, Switch } from "antd";
+import { Button, Divider, Drawer, Flex, Switch } from "antd";
 import React, { useState } from "react";
 import "./HeaderSetting.scss";
 
 interface HeaderSettingProps {
+  showFooter: boolean;
   handleToShowFooter: (value: boolean) => void;
+  showMenuLogo: boolean;
+  handleToShowMenuLogo: (value: boolean) => void;
 }
 
-const HeaderSetting: React.FC<HeaderSettingProps> = ({ handleToShowFooter }) => {
+const HeaderSetting: React.FC<HeaderSettingProps> = ({
+  showFooter,
+  handleToShowFooter,
+  showMenuLogo,
+  handleToShowMenuLogo,
+}) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const showDrawer = () => {
@@ -24,8 +32,12 @@ const HeaderSetting: React.FC<HeaderSettingProps> = ({ handleToShowFooter }) => 
     window.location.reload();
   };
 
-  const onClick = (checked: boolean) => {
+  const onClickToShowFooter = (checked: boolean) => {
     handleToShowFooter(checked);
+  };
+
+  const onClickToShowMenuLogo = (checked: boolean) => {
+    handleToShowMenuLogo(checked);
   };
 
   return (
@@ -36,9 +48,21 @@ const HeaderSetting: React.FC<HeaderSettingProps> = ({ handleToShowFooter }) => 
         <div className="drawer-container">
           <div className="top-action">
             <Divider>界面展示</Divider>
-            <div className="top-action-item">
-              <span>页脚</span> <Switch checkedChildren="开" unCheckedChildren="关" onClick={onClick} />
-            </div>
+            <Flex gap="middle" vertical>
+              <div className="top-action-item">
+                <span>页脚</span>{" "}
+                <Switch checkedChildren="开" unCheckedChildren="关" value={showFooter} onClick={onClickToShowFooter} />
+              </div>
+              <div className="top-action-item">
+                <span>Logo</span>{" "}
+                <Switch
+                  checkedChildren="开"
+                  unCheckedChildren="关"
+                  value={showMenuLogo}
+                  onClick={onClickToShowMenuLogo}
+                />
+              </div>
+            </Flex>
           </div>
           <div className="bottom-action">
             <Divider />

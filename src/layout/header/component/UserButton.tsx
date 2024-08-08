@@ -12,8 +12,8 @@ const UserButton: React.FC = () => {
   const [userInfo, setUserInfo] = useState<UserInfo>({ avatar: "", name: "" });
 
   const handleToExit = () => {
+    navigate("/");
     localStorage.removeItem("userStore");
-    navigate("/login");
   };
 
   const userContent = (

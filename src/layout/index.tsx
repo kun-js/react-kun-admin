@@ -10,6 +10,7 @@ const { Content, Footer } = Layout;
 const MainLayout: React.FC = () => {
   const [collapsed, setCollapsed] = useState(false);
   const [showFooter, setShowFooter] = useState(false);
+  const [showMenuLogo, setShowMenuLogo] = useState(true);
   const [messageApi, contextHolder] = message.useMessage();
   const { watermarkVisible } = useWatermarkStore();
 
@@ -22,6 +23,13 @@ const MainLayout: React.FC = () => {
       setShowFooter(value);
     },
     [showFooter]
+  );
+
+  const handleToShowMenuLogo = useCallback(
+    (value: boolean) => {
+      setShowMenuLogo(value);
+    },
+    [showMenuLogo]
   );
 
   useEffect(() => {
@@ -42,7 +50,7 @@ const MainLayout: React.FC = () => {
         <div style={{ width: "100vw", height: "100vh" }}>
           {contextHolder}
           <Layout hasSider>
-            <SideBar collapsed={collapsed} />
+            <SideBar collapsed={collapsed} showMenuLogo={showMenuLogo} />
             <Layout
               style={{
                 marginLeft: collapsed ? "80px" : "200px",
@@ -50,9 +58,12 @@ const MainLayout: React.FC = () => {
               }}
             >
               <MainHeader
-                handleToShowFooter={handleToShowFooter}
                 collapsed={collapsed}
                 handleToCollapse={handleToCollapse}
+                showFooter={showFooter}
+                handleToShowFooter={handleToShowFooter}
+                showMenuLogo={showMenuLogo}
+                handleToShowMenuLogo={handleToShowMenuLogo}
               />
               <Content>
                 <MainContent showFooter={showFooter} />

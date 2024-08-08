@@ -19,12 +19,22 @@ const { Header } = Layout;
 type TitleObject = { title: string };
 
 interface MainHeaderProps {
-  handleToShowFooter: (value: boolean) => void;
   collapsed: boolean;
   handleToCollapse: () => void;
+  showFooter: boolean;
+  handleToShowFooter: (value: boolean) => void;
+  showMenuLogo: boolean;
+  handleToShowMenuLogo: (value: boolean) => void;
 }
 
-const MainHeader: React.FC<MainHeaderProps> = ({ handleToShowFooter, collapsed, handleToCollapse }) => {
+const MainHeader: React.FC<MainHeaderProps> = ({
+  collapsed,
+  handleToCollapse,
+  showFooter,
+  handleToShowFooter,
+  showMenuLogo,
+  handleToShowMenuLogo,
+}) => {
   const { t } = useTranslation();
   const collapseButtonRef = useRef(null);
   const fullScreenButtonRef = useRef(null);
@@ -80,7 +90,12 @@ const MainHeader: React.FC<MainHeaderProps> = ({ handleToShowFooter, collapsed, 
         <Language fullScreenButtonRef={fullScreenButtonRef} />
         <FullScreen />
         <UserButton />
-        <HeaderSetting handleToShowFooter={handleToShowFooter} />
+        <HeaderSetting
+          showFooter={showFooter}
+          handleToShowFooter={handleToShowFooter}
+          showMenuLogo={showMenuLogo}
+          handleToShowMenuLogo={handleToShowMenuLogo}
+        />
       </div>
     </Header>
   );

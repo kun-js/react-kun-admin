@@ -22,6 +22,7 @@ const { Sider } = Layout;
 
 interface SideBarProps {
   collapsed: boolean;
+  showMenuLogo: boolean;
 }
 
 // 菜单项接口，包括子菜单
@@ -49,7 +50,7 @@ type IconMap = {
   [key: string]: React.ComponentType;
 };
 
-const SideBar: React.FC<SideBarProps> = ({ collapsed }) => {
+const SideBar: React.FC<SideBarProps> = ({ collapsed, showMenuLogo }) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const { setDefaultSelectedKey, setDefaultOpenKey } = useMenuStore();
@@ -150,12 +151,14 @@ const SideBar: React.FC<SideBarProps> = ({ collapsed }) => {
       collapsible
       collapsed={collapsed}
     >
-      <div className="logo" onClick={backToDashboard}>
-        <div className="logo-container">
-          <div className="logo-pic"></div>
-          {!collapsed && <span className="logo-text">Kun Admin</span>}
+      {showMenuLogo && (
+        <div className="logo" onClick={backToDashboard}>
+          <div className="logo-container">
+            <div className="logo-pic"></div>
+            {!collapsed && <span className="logo-text">Kun Admin</span>}
+          </div>
         </div>
-      </div>
+      )}
       <Menu
         theme="dark"
         mode="inline"
