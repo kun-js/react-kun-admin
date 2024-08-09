@@ -7,9 +7,15 @@
     }
   }
 
-  .project-item-card {
-    .ant-card-body {
-      padding: 20px;
+  .gutter-row {
+    .ant-card {
+      border-radius: 0;
+    }
+
+    .project-item-card {
+      .ant-card-body {
+        padding: 20px;
+      }
     }
   }
 }

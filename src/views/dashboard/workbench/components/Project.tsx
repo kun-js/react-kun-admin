@@ -71,7 +71,7 @@ const Project: React.FC = () => {
           <Row>
             {projectList.map((item) => (
               <Col className="gutter-row" span={8} key={item.id}>
-                <Card className="project-item-card" bordered={true}>
+                <Card className="project-item-card" bordered={true} hoverable>
                   <div className="project">
                     <div className="project-title">
                       <div className="project-title-icon">

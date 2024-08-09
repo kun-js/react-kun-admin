@@ -1,0 +1,35 @@
+.navigation-container {
+  margin-bottom: 20px;
+
+  .navigation-card {
+    .ant-card-body {
+      padding: 0;
+    }
+  }
+
+  .gutter-row {
+    .ant-card {
+      border-radius: 0;
+    }
+
+    .navigation-item-card {
+      .ant-card-body {
+        padding: 20px;
+      }
+    }
+  }
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+
+  &-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
