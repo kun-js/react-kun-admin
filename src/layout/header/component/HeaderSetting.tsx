@@ -101,7 +101,7 @@ const HeaderSetting: React.FC<HeaderSettingProps> = ({
           <div className="bottom-action">
             <Divider />
             <Button type="primary" danger onClick={ClearCacheAndExit}>
-              清空缓存并退出
+              清空缓存并退出至登录页
             </Button>
           </div>
         </div>

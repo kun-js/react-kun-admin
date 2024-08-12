@@ -1,17 +1,14 @@
-.logo {
+.logo-container {
   display: flex;
-  align-items: center;
   padding: 12px;
-  width: 100%;
-  height: 64px;
   cursor: pointer;
 
-  .logo-container {
+  .logo {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    .logo-pic {
+    &-pic {
       margin-left: 8px;
       width: 40px;
       height: 40px;
@@ -21,7 +18,7 @@
       background-image: url("@/assets/imgs/KunLogo.png");
     }
 
-    .logo-text {
+    &-text {
       overflow: hidden;
       margin-left: 16px;
       font-size: 18px;

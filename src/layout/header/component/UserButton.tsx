@@ -30,10 +30,10 @@ const UserButton: React.FC = () => {
   return (
     <>
       <Popover content={userContent} trigger="hover">
-        <div className="user-button">
+        <Button className="user-button" type="text">
           <Avatar src={userInfo.avatar} />
           <div className="user-name">{userInfo.name}</div>
-        </div>
+        </Button>
       </Popover>
     </>
   );

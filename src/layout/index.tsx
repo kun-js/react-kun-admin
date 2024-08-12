@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import SideBar from "./sidebar";
 import MainHeader from "./header";
 import MainContent from "./main";
-import { Layout, message, Watermark } from "antd";
+import { Layout, message, Watermark, FloatButton } from "antd";
 import useWatermarkStore from "@/store/watermark";
 
 const { Content, Footer } = Layout;
@@ -75,6 +75,7 @@ const MainLayout: React.FC = () => {
               )}
             </Layout>
           </Layout>
+          <FloatButton.BackTop tooltip={<span>回到顶部</span>} />
         </div>
       </Watermark>
     </>

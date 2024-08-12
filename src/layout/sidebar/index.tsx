@@ -152,8 +152,8 @@ const SideBar: React.FC<SideBarProps> = ({ collapsed, showMenuLogo }) => {
       collapsed={collapsed}
     >
       {showMenuLogo && (
-        <div className="logo" onClick={backToDashboard}>
-          <div className="logo-container">
+        <div className="logo-container" onClick={backToDashboard}>
+          <div className="logo">
             <div className="logo-pic"></div>
             {!collapsed && <span className="logo-text">Kun Admin</span>}
           </div>
