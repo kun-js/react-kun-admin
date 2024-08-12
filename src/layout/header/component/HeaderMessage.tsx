@@ -1,5 +1,5 @@
 import { BellOutlined } from "@ant-design/icons";
-import { Button, Popover, Tabs, Tag } from "antd";
+import { Avatar, Button, Popover, Tabs, Tag } from "antd";
 import type { TabsProps } from "antd";
 import { useEffect, useState } from "react";
 import { getMessageList } from "@/api/index";
@@ -7,6 +7,7 @@ import "./HeaderMessage.scss";
 
 interface NoticeListItem {
   id: number;
+  iconColor: string;
   icon: string;
   title: string;
   time: string;
@@ -49,10 +50,29 @@ const HeaderSearch: React.FC = () => {
       {noticeList.map((item) => (
         <div className="notice-container" key={item.id}>
           <div className="icon">
-            <img src={item.icon} alt="" />
+            <Avatar style={{ backgroundColor: item.iconColor }}>{item.icon}</Avatar>
           </div>
           <div className="content">
             <div className="title">{item.title}</div>
+            <div className="time">{item.time}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+
+  const messagePage = (
+    <div>
+      {messageList.map((item) => (
+        <div className="message-container" key={item.id}>
+          <div className="avatar">
+            <Avatar src={item.avatar} />
+          </div>
+          <div className="content">
+            <div className="title">
+              {item.username} {item.type}了你
+            </div>
+            <div className="text">{item.content}</div>
             <div className="time">{item.time}</div>
           </div>
         </div>
@@ -71,25 +91,6 @@ const HeaderSearch: React.FC = () => {
             </div>
           </div>
           <div className="text">{item.description}</div>
-        </div>
-      ))}
-    </div>
-  );
-
-  const messagePage = (
-    <div>
-      {messageList.map((item) => (
-        <div className="message-container" key={item.id}>
-          <div className="avatar">
-            <img src={item.avatar} alt="" />
-          </div>
-          <div className="content">
-            <div className="title">
-              {item.username} {item.type}了你
-            </div>
-            <div className="text">{item.content}</div>
-            <div className="time">{item.time}</div>
-          </div>
         </div>
       ))}
     </div>
