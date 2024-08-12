@@ -8,6 +8,10 @@ interface HeaderSettingProps {
   handleToShowFooter: (value: boolean) => void;
   showMenuLogo: boolean;
   handleToShowMenuLogo: (value: boolean) => void;
+  showBreadcrumb: boolean;
+  handleToShowBreadcrumb: (value: boolean) => void;
+  showBreadcrumbIcon: boolean;
+  handleToShowBreadcrumbIcon: (value: boolean) => void;
 }
 
 const HeaderSetting: React.FC<HeaderSettingProps> = ({
@@ -15,6 +19,10 @@ const HeaderSetting: React.FC<HeaderSettingProps> = ({
   handleToShowFooter,
   showMenuLogo,
   handleToShowMenuLogo,
+  showBreadcrumb,
+  handleToShowBreadcrumb,
+  showBreadcrumbIcon,
+  handleToShowBreadcrumbIcon,
 }) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -40,6 +48,14 @@ const HeaderSetting: React.FC<HeaderSettingProps> = ({
     handleToShowMenuLogo(checked);
   };
 
+  const onClickToShowBreadcrumb = (checked: boolean) => {
+    handleToShowBreadcrumb(checked);
+  };
+
+  const onClickToShowBreadcrumbIcon = (checked: boolean) => {
+    handleToShowBreadcrumbIcon(checked);
+  };
+
   return (
     <>
       <Button className="setting-button" type="text" icon={<SettingOutlined />} onClick={showDrawer} />
@@ -50,16 +66,34 @@ const HeaderSetting: React.FC<HeaderSettingProps> = ({
             <Divider>界面展示</Divider>
             <Flex gap="middle" vertical>
               <div className="top-action-item">
-                <span>页脚</span>{" "}
+                <span>页脚</span>
                 <Switch checkedChildren="开" unCheckedChildren="关" value={showFooter} onClick={onClickToShowFooter} />
               </div>
               <div className="top-action-item">
-                <span>Logo</span>{" "}
+                <span>Logo</span>
                 <Switch
                   checkedChildren="开"
                   unCheckedChildren="关"
                   value={showMenuLogo}
                   onClick={onClickToShowMenuLogo}
+                />
+              </div>
+              <div className="top-action-item">
+                <span>面包屑</span>
+                <Switch
+                  checkedChildren="开"
+                  unCheckedChildren="关"
+                  value={showBreadcrumb}
+                  onClick={onClickToShowBreadcrumb}
+                />
+              </div>
+              <div className="top-action-item">
+                <span>面包屑图标</span>
+                <Switch
+                  checkedChildren="开"
+                  unCheckedChildren="关"
+                  value={showBreadcrumbIcon}
+                  onClick={onClickToShowBreadcrumbIcon}
                 />
               </div>
             </Flex>

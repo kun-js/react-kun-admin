@@ -1,11 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Breadcrumb, Button, Layout } from "antd";
-import { useLocation } from "react-router-dom";
+import React, { useCallback, useRef, useState } from "react";
+import { Button, Layout } from "antd";
 import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
-import { useTranslation } from "react-i18next";
 
 import "./header.scss";
 
+import HeaderBreadcrumb from "./component/HeaderBreadcrumb";
 import HeaderSearch from "./component/HeaderSearch";
 import FullScreen from "./component/FullScreen";
 import Language from "./component/Language";
@@ -15,8 +14,6 @@ import UserButton from "./component/UserButton";
 import HeaderSetting from "./component/HeaderSetting";
 
 const { Header } = Layout;
-
-type TitleObject = { title: string };
 
 interface MainHeaderProps {
   collapsed: boolean;
@@ -35,29 +32,25 @@ const MainHeader: React.FC<MainHeaderProps> = ({
   showMenuLogo,
   handleToShowMenuLogo,
 }) => {
-  const { t } = useTranslation();
   const collapseButtonRef = useRef(null);
   const fullScreenButtonRef = useRef(null);
-  const location = useLocation();
-  const [breadcrumbList, setBreadcrumbList] = useState<TitleObject[]>([]);
 
-  const transformPathToTitleArray = (path: string): TitleObject[] => {
-    let currentPath = path;
-    if (path === "/about/index") {
-      currentPath = "/about";
-    }
-    // 将路径按 '/' 分割成段，并过滤掉空字符串
-    const segments = currentPath.split("/").filter((segment) => segment.length > 0);
-    // 使用 map 函数将每个段转换成一个具有 title 属性的对象
-    const titleArray = segments.map((segment) => ({ title: t(`menu.${segment}`) }));
-    return titleArray;
-  };
+  const [showBreadcrumb, setShowBreadcrumb] = useState(true);
+  const [showBreadcrumbIcon, setShowBreadcrumbIcon] = useState(false);
 
-  useEffect(() => {
-    const path = location.pathname;
-    const titleArray = transformPathToTitleArray(path);
-    setBreadcrumbList(titleArray);
-  }, [location.pathname]);
+  const handleToShowBreadcrumb = useCallback(
+    (value: boolean) => {
+      setShowBreadcrumb(value);
+    },
+    [showBreadcrumb]
+  );
+
+  const handleToShowBreadcrumbIcon = useCallback(
+    (value: boolean) => {
+      setShowBreadcrumbIcon(value);
+    },
+    [showBreadcrumbIcon]
+  );
 
   return (
     <Header
@@ -80,7 +73,7 @@ const MainHeader: React.FC<MainHeaderProps> = ({
           icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
           onClick={handleToCollapse}
         />
-        <Breadcrumb className="breadcrumb" items={breadcrumbList} />
+        <HeaderBreadcrumb showBreadcrumb={showBreadcrumb} showBreadcrumbIcon={showBreadcrumbIcon} />
       </div>
 
       <div className="right-action">
@@ -95,6 +88,10 @@ const MainHeader: React.FC<MainHeaderProps> = ({
           handleToShowFooter={handleToShowFooter}
           showMenuLogo={showMenuLogo}
           handleToShowMenuLogo={handleToShowMenuLogo}
+          showBreadcrumb={showBreadcrumb}
+          handleToShowBreadcrumb={handleToShowBreadcrumb}
+          showBreadcrumbIcon={showBreadcrumbIcon}
+          handleToShowBreadcrumbIcon={handleToShowBreadcrumbIcon}
         />
       </div>
     </Header>
