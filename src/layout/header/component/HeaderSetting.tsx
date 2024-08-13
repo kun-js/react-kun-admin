@@ -1,7 +1,7 @@
 import "./HeaderSetting.scss";
 import { SettingOutlined } from "@ant-design/icons";
 import { Button, Divider, Drawer, Flex, Switch, Typography } from "antd";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import useDarkModeStore from "@/store/dark";
 
 const { Text } = Typography;
@@ -63,6 +63,10 @@ const HeaderSetting: React.FC<HeaderSettingProps> = ({
   const onClickToShowBreadcrumbIcon = (checked: boolean) => {
     handleToShowBreadcrumbIcon(checked);
   };
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", isDarkMode ? "dark" : "light");
+  }, [isDarkMode]);
 
   return (
     <>

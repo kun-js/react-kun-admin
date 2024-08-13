@@ -18,6 +18,7 @@ const TextEditor = lazy(() => import("@/views/feature/text-editor"));
 const JSONEditor = lazy(() => import("@/views/feature/json-editor"));
 const FlowChart = lazy(() => import("@/views/feature/flow-chart"));
 const ImageCropper = lazy(() => import("@/views/feature/image-cropper"));
+const VideoPlayer = lazy(() => import("@/views/feature/video-player"));
 const Debounce = lazy(() => import("@/views/feature/debounce"));
 const Sensitive = lazy(() => import("@/views/feature/sensitive"));
 
@@ -151,6 +152,14 @@ const featureRoutes = [
         element: (
           <Suspense fallback={<LoadingComponent />}>
             <ImageCropper />
+          </Suspense>
+        ),
+      },
+      {
+        path: "video-player",
+        element: (
+          <Suspense fallback={<LoadingComponent />}>
+            <VideoPlayer />
           </Suspense>
         ),
       },

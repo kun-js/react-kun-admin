@@ -178,6 +178,11 @@ export const menuList = Mock.mock({
           routeName: "image-cropper",
         },
         {
+          id: 1317,
+          title: "视频播放器",
+          routeName: "video-player",
+        },
+        {
           id: 1320,
           title: "防抖节流",
           routeName: "debounce",
