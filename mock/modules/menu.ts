@@ -183,6 +183,11 @@ export const menuList = Mock.mock({
           routeName: "video-player",
         },
         {
+          id: 1318,
+          title: "音频播放器",
+          routeName: "music-player",
+        },
+        {
           id: 1320,
           title: "防抖节流",
           routeName: "debounce",
