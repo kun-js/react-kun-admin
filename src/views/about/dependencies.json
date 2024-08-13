@@ -14,6 +14,7 @@
     "@uiw/react-md-editor": "^4.0.4",
     "@wangeditor/editor": "^5.1.23",
     "@wangeditor/editor-for-react": "^1.0.6",
+    "@wavesurfer/react": "^1.0.7",
     "antd": "^5.17.4",
     "axios": "^1.7.2",
     "dayjs": "^1.11.11",
@@ -39,6 +40,7 @@
     "react-router-dom": "^6.23.1",
     "react-signature-canvas": "^1.0.6",
     "react-to-print": "^2.15.1",
+    "rollup-plugin-visualizer": "^5.12.0",
     "sass": "^1.77.3",
     "stylelint": "^16.6.1",
     "stylelint-config-prettier": "^9.0.5",
@@ -47,7 +49,9 @@
     "stylelint-config-standard": "^36.0.1",
     "stylelint-config-standard-scss": "^13.1.0",
     "terser": "^5.31.1",
+    "vite-plugin-compression": "^0.5.1",
     "vite-plugin-mock": "2.9.6",
+    "wavesurfer.js": "^7.8.3",
     "zustand": "^4.5.2"
   },
   "devDependencies": {

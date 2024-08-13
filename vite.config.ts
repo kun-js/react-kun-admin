@@ -2,6 +2,8 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
 import { viteMockServe } from "vite-plugin-mock";
+// import viteCompression from "vite-plugin-compression";
+// import { visualizer } from "rollup-plugin-visualizer";
 import viteImagemin from "vite-plugin-imagemin";
 
 // https://vitejs.dev/config/
@@ -14,6 +16,24 @@ export default defineConfig({
       logger: false, //是否在控制台显示请求日志
       supportTs: true, //打开后，可以读取 ts 文件模块。 请注意，打开后将无法监视.js 文件
     }),
+
+    // viteCompression({
+    //   verbose: true, // 是否在控制台中输出压缩结果
+    //   disable: false,
+    //   threshold: 10240, // 如果体积大于阈值，将被压缩，单位为b，体积过小时请不要压缩，以免适得其反
+    //   algorithm: "gzip", // 压缩算法，可选['gzip'，' brotliccompress '，'deflate '，'deflateRaw']
+    //   ext: ".gz",
+    //   deleteOriginFile: true, // 源文件压缩后是否删除(我为了看压缩后的效果，先选择了true)
+    // }),
+
+    // 打包体积分析
+    // visualizer({
+    //   open: true, // 注意这里要设置为true，否则无效，如果存在本地服务端口，将在打包后自动展示
+    //   gzipSize: true,
+    //   file: "stats.html", //分析图生成的文件名
+    //   brotliSize: true
+    // }),
+
     // 图片资源优化
     viteImagemin({
       gifsicle: {
