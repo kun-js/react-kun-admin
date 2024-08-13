@@ -31,7 +31,7 @@ const ButtonComponent: React.FC = () => {
   return (
     <>
       <div className="button-container">
-        <Card className="card-container" title="按钮组件" bordered={false}>
+        <Card className="card-container" title="按钮组件">
           <Space direction="vertical">
             <div>
               <span style={{ marginRight: "18px" }}>按钮类型:</span>

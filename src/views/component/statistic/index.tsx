@@ -11,7 +11,7 @@ const StatisticComponent: React.FC = () => {
   return (
     <>
       <div className="statistic-container">
-        <Card className="card-container" title="统计组件" bordered={false}>
+        <Card className="card-container" title="统计组件">
           <Row className="statistic-container" gutter={16}>
             <Col className="statistic-item" span={6}>
               <Statistic title="使用人数" value={112893} />

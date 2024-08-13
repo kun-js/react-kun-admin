@@ -10,7 +10,7 @@ const ExcelPreview: React.FC = () => {
   return (
     <>
       <div className="excel-container">
-        <Card className="card-container" title="Excel文件预览功能示例" bordered={false}>
+        <Card className="card-container" title="Excel文件预览功能示例">
           <DocViewer
             config={{
               header: {

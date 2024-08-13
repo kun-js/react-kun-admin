@@ -125,7 +125,7 @@ const AccountManagement: React.FC = () => {
   return (
     <>
       <div className="account-container">
-        <Card className="card-container" title={titleContent} bordered={false}>
+        <Card className="card-container" title={titleContent}>
           <Table
             columns={columns.map((item) => ({ ...item, ellipsis }))}
             dataSource={data}

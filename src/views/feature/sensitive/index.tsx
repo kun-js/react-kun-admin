@@ -18,7 +18,7 @@ const Sensitive: React.FC = () => {
   return (
     <>
       <div className="sensitive-container">
-        <Card className="card-container" title="敏感词过滤功能示例" bordered={false}>
+        <Card className="card-container" title="敏感词过滤功能示例">
           <Flex vertical gap={32}>
             <Text>过滤词(可自定义):脑残,弱智,白痴</Text>
             <TextArea

@@ -1,8 +1,8 @@
-import React, { useCallback, useRef, useState } from "react";
-import { Button, Layout } from "antd";
-import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
-
 import "./header.scss";
+import React, { useCallback, useRef, useState } from "react";
+import { Button, Layout, theme } from "antd";
+import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
+import useDarkModeStore from "@/store/dark";
 
 import HeaderBreadcrumb from "./component/HeaderBreadcrumb";
 import HeaderSearch from "./component/HeaderSearch";
@@ -34,9 +34,13 @@ const MainHeader: React.FC<MainHeaderProps> = ({
 }) => {
   const collapseButtonRef = useRef(null);
   const fullScreenButtonRef = useRef(null);
-
   const [showBreadcrumb, setShowBreadcrumb] = useState(true);
   const [showBreadcrumbIcon, setShowBreadcrumbIcon] = useState(false);
+  const {
+    token: { colorBgContainer },
+  } = theme.useToken();
+
+  const { isDarkMode } = useDarkModeStore();
 
   const handleToShowBreadcrumb = useCallback(
     (value: boolean) => {
@@ -62,7 +66,8 @@ const MainHeader: React.FC<MainHeaderProps> = ({
         zIndex: 10,
         display: "flex",
         alignItems: "center",
-        background: "#fff",
+        background: colorBgContainer,
+        border: isDarkMode ? "1px solid #303030" : "1px solid #f0f0f0",
       }}
     >
       <div className="left-action">

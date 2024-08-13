@@ -29,7 +29,7 @@ const TagComponent: React.FC = () => {
   return (
     <>
       <div className="tag-container">
-        <Card className="card-container" title="标签组件" bordered={false}>
+        <Card className="card-container" title="标签组件">
           <Space direction="vertical">
             <div>
               <span style={{ marginRight: "18px" }}>边框类型:</span>

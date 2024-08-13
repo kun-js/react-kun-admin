@@ -25,6 +25,7 @@ const CollapsePanel: React.FC = () => {
       key: "1",
       label: "这是嵌套进去的折叠面板",
       children: <p>{text}</p>,
+      showArrow: showArrow,
     },
   ];
 
@@ -44,7 +45,17 @@ const CollapsePanel: React.FC = () => {
     {
       key: "3",
       label: "这是面板3的标题(嵌套折叠面板)",
-      children: <Collapse defaultActiveKey="1" items={itemsNest} />,
+      children: (
+        <Collapse
+          defaultActiveKey="1"
+          items={itemsNest}
+          size={size}
+          accordion={accordion}
+          bordered={border}
+          ghost={ghost}
+          expandIconPosition={expandIconPosition}
+        />
+      ),
       showArrow: showArrow,
     },
   ];
@@ -71,7 +82,7 @@ const CollapsePanel: React.FC = () => {
   return (
     <>
       <div className="collapse-panel-container">
-        <Card className="card-container" title="按钮组件" bordered={false}>
+        <Card className="card-container" title="按钮组件">
           <Space direction="vertical">
             <div>
               <span style={{ marginRight: "18px" }}>尺寸大小:</span>

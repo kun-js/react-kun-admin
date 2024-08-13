@@ -1,6 +1,9 @@
 .logo-container {
+  position: fixed;
+  z-index: 999;
   display: flex;
-  padding: 12px;
+  padding: 8px;
+  width: 200px;
   cursor: pointer;
 
   .logo {
@@ -9,9 +12,9 @@
     align-items: center;
 
     &-pic {
-      margin-left: 8px;
-      width: 40px;
-      height: 40px;
+      margin-left: 18px;
+      width: 32px;
+      height: 32px;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -20,10 +23,9 @@
 
     &-text {
       overflow: hidden;
-      margin-left: 16px;
+      margin-left: 18px;
       font-size: 18px;
       white-space: nowrap;
-      color: #fff;
     }
   }
 }

@@ -132,7 +132,7 @@ const DownloadFeature: React.FC = () => {
 
   return (
     <div className="download-container">
-      <Card className="card-container" title="文件下载功能示例" bordered={false}>
+      <Card className="card-container" title="文件下载功能示例">
         <Space direction="vertical">
           <Space>
             <Button type="primary" onClick={handleToDownloadFileBlob}>

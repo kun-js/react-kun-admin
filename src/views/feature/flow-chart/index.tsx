@@ -155,7 +155,7 @@ const FlowChart: React.FC = () => {
   return (
     <>
       <div className="flow-chart-container">
-        <Card className="card-container" title="流程图示例" bordered={false}>
+        <Card className="card-container" title="流程图示例">
           <div id="logicflow" style={{ height: "85vh" }} ref={refContainer} />
         </Card>
       </div>

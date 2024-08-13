@@ -1,6 +1,6 @@
 import "./sidebar.scss";
 import React, { useEffect, useState } from "react";
-import { Layout, Menu } from "antd";
+import { Layout, Menu, Typography, theme } from "antd";
 import { getMenuList } from "@/api/index";
 import {
   HomeOutlined,
@@ -14,10 +14,10 @@ import {
   UserOutlined,
 } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import useMenuStore from "@/store/menu";
 
-import { useTranslation } from "react-i18next";
-
+const { Text } = Typography;
 const { Sider } = Layout;
 
 interface SideBarProps {
@@ -41,7 +41,7 @@ interface SubMenuItem extends MenuItem {}
 interface MenuListItem {
   key: string;
   label: string;
-  icon?: React.ReactElement;
+  icon?: React.ReactElement | null;
   children?: MenuListItem[];
 }
 
@@ -55,6 +55,9 @@ const SideBar: React.FC<SideBarProps> = ({ collapsed, showMenuLogo }) => {
   const navigate = useNavigate();
   const { setDefaultSelectedKey, setDefaultOpenKey } = useMenuStore();
   const [menuList, setMenuList] = useState<MenuListItem[]>([]);
+  const {
+    token: { colorBgContainer },
+  } = theme.useToken();
 
   const iconMap: IconMap = {
     HomeOutlined: HomeOutlined,
@@ -109,8 +112,7 @@ const SideBar: React.FC<SideBarProps> = ({ collapsed, showMenuLogo }) => {
   // 递归转换函数
   const transformMenuItem = (item: MenuItem): MenuListItem => {
     // 确定图标组件是否存在，使用 React.createElement 创建图标元素
-    const iconElement = item.iconName ? React.createElement(iconMap[item.iconName]) : undefined;
-
+    const iconElement = item.iconName ? React.createElement(iconMap[item.iconName]) : null;
     const menu: MenuListItem = {
       key: item.routeName,
       // label: item.title,
@@ -145,22 +147,30 @@ const SideBar: React.FC<SideBarProps> = ({ collapsed, showMenuLogo }) => {
 
   return (
     <Sider
-      style={{ overflow: "auto", height: "100vh", position: "fixed", left: 0, top: 0, bottom: 0 }}
+      style={{
+        overflow: "auto",
+        height: "100vh",
+        position: "fixed",
+        left: 0,
+        top: 0,
+        bottom: 0,
+        background: colorBgContainer,
+      }}
       breakpoint="xs"
       trigger={null}
       collapsible
       collapsed={collapsed}
     >
       {showMenuLogo && (
-        <div className="logo-container" onClick={backToDashboard}>
+        <div className="logo-container" style={{ background: colorBgContainer }} onClick={backToDashboard}>
           <div className="logo">
             <div className="logo-pic"></div>
-            {!collapsed && <span className="logo-text">Kun Admin</span>}
+            {!collapsed && <Text className="logo-text">Kun Admin</Text>}
           </div>
         </div>
       )}
       <Menu
-        theme="dark"
+        style={{ marginTop: "48px" }}
         mode="inline"
         defaultOpenKeys={defaultOpenKey}
         defaultSelectedKeys={defaultSelectedKey}

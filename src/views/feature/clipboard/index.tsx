@@ -35,7 +35,7 @@ const WaterMark: React.FC = () => {
     <>
       {contextHolder}
       <div className="clipboard-container">
-        <Card className="card-container" title="剪贴板功能示例" bordered={false}>
+        <Card className="card-container" title="剪贴板功能示例">
           <Space direction="vertical">
             <div>
               <Input

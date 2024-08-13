@@ -25,7 +25,7 @@ const ColorPickerComponent: React.FC = () => {
   return (
     <>
       <div className="color-picker-container">
-        <Card className="card-container" title="取色器组件" bordered={false}>
+        <Card className="card-container" title="取色器组件">
           <Space direction="vertical">
             <div>
               <span style={{ marginRight: "18px" }}>尺寸大小:</span>

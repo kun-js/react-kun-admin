@@ -43,7 +43,7 @@ const MessageComponent: React.FC = () => {
     <>
       {contextHolder}
       <div className="message-component-container">
-        <Card className="card-container" title="消息提示组件" bordered={false}>
+        <Card className="card-container" title="消息提示组件">
           <Space>
             <Button type="primary" onClick={messageInfo}>
               Info

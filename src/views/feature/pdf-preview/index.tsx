@@ -24,7 +24,7 @@ const PDFPreview: React.FC = () => {
   return (
     <>
       <div className="pdf-container">
-        <Card className="card-container" title="PDF预览功能示例" bordered={false}>
+        <Card className="card-container" title="PDF预览功能示例">
           <Space direction="vertical" style={{ display: "flex", alignItems: "center" }}>
             <Document
               file={PdfUrl}

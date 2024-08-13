@@ -45,7 +45,7 @@ const DescriptionComponent: React.FC = () => {
   return (
     <>
       <div className="description-container">
-        <Card className="card-container" title="描述列表组件" bordered={false}>
+        <Card className="card-container" title="描述列表组件">
           <div>
             <span style={{ marginRight: "18px" }}>尺寸大小(仅在有边框列表生效):</span>
             <Radio.Group onChange={onSizeChange} value={size}>

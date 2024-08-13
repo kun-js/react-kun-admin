@@ -1,7 +1,10 @@
-import { SettingOutlined } from "@ant-design/icons";
-import { Button, Divider, Drawer, Flex, Switch } from "antd";
-import React, { useState } from "react";
 import "./HeaderSetting.scss";
+import { SettingOutlined } from "@ant-design/icons";
+import { Button, Divider, Drawer, Flex, Switch, Typography } from "antd";
+import React, { useState } from "react";
+import useDarkModeStore from "@/store/dark";
+
+const { Text } = Typography;
 
 interface HeaderSettingProps {
   showFooter: boolean;
@@ -25,6 +28,7 @@ const HeaderSetting: React.FC<HeaderSettingProps> = ({
   handleToShowBreadcrumbIcon,
 }) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const { isDarkMode, setDarkMode } = useDarkModeStore();
 
   const showDrawer = () => {
     setDrawerOpen(true);
@@ -38,6 +42,10 @@ const HeaderSetting: React.FC<HeaderSettingProps> = ({
     localStorage.clear();
     sessionStorage.clear();
     window.location.reload();
+  };
+
+  const onClickToSetDarkMode = (checked: boolean) => {
+    setDarkMode(checked);
   };
 
   const onClickToShowFooter = (checked: boolean) => {
@@ -66,11 +74,15 @@ const HeaderSetting: React.FC<HeaderSettingProps> = ({
             <Divider>界面展示</Divider>
             <Flex gap="middle" vertical>
               <div className="top-action-item">
-                <span>页脚</span>
+                <Text>暗黑模式</Text>
+                <Switch checkedChildren="开" unCheckedChildren="关" value={isDarkMode} onClick={onClickToSetDarkMode} />
+              </div>
+              <div className="top-action-item">
+                <Text>页脚</Text>
                 <Switch checkedChildren="开" unCheckedChildren="关" value={showFooter} onClick={onClickToShowFooter} />
               </div>
               <div className="top-action-item">
-                <span>Logo</span>
+                <Text>Logo</Text>
                 <Switch
                   checkedChildren="开"
                   unCheckedChildren="关"
@@ -79,7 +91,7 @@ const HeaderSetting: React.FC<HeaderSettingProps> = ({
                 />
               </div>
               <div className="top-action-item">
-                <span>面包屑</span>
+                <Text>面包屑</Text>
                 <Switch
                   checkedChildren="开"
                   unCheckedChildren="关"
@@ -88,7 +100,7 @@ const HeaderSetting: React.FC<HeaderSettingProps> = ({
                 />
               </div>
               <div className="top-action-item">
-                <span>面包屑图标</span>
+                <Text>面包屑图标</Text>
                 <Switch
                   checkedChildren="开"
                   unCheckedChildren="关"

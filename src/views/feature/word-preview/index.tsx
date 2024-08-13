@@ -9,7 +9,7 @@ const WordPreview: React.FC = () => {
   return (
     <>
       <div className="word-container">
-        <Card className="card-container" title="Word预览功能示例" bordered={false}>
+        <Card className="card-container" title="Word预览功能示例">
           <FileViewer fileType={"docx"} filePath={docxFile} />
         </Card>
       </div>

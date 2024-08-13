@@ -40,7 +40,7 @@ const Signature: React.FC = () => {
   return (
     <>
       <div className="signature-container">
-        <Card className="card-container" title="电子签名功能示例" bordered={false}>
+        <Card className="card-container" title="电子签名功能示例">
           <Space direction="vertical">
             <SignatureCanvas
               ref={signatureRef}

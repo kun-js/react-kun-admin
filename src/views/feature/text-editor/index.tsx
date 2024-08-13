@@ -31,7 +31,7 @@ const TextEditor: React.FC = () => {
 
   return (
     <div className="text-container">
-      <Card className="card-container" title="MarkDown编辑器示例" bordered={false}>
+      <Card className="card-container" title="MarkDown编辑器示例">
         <Toolbar
           editor={editor}
           defaultConfig={toolbarConfig}

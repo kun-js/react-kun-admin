@@ -22,7 +22,7 @@ const Personal: React.FC = () => {
   return (
     <>
       <div className="personal">
-        <Card className="personal-card-container" bordered={false}>
+        <Card className="personal-card-container" style={{ borderRadius: 0 }}>
           <div className="personal-info">
             <div className="left">
               <Avatar size={80} src={userInfo.avatar} />

@@ -80,7 +80,7 @@ const TreeComponent: React.FC = () => {
   return (
     <>
       <div className="tree-container">
-        <Card className="card-container" title="树形组件" bordered={false}>
+        <Card className="card-container" title="树形组件">
           <Tree
             checkable
             onExpand={onExpand}

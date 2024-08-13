@@ -83,7 +83,7 @@ const RoleManagement: React.FC = () => {
   return (
     <>
       <div className="role-container">
-        <Card className="card-container" title="角色管理示例" bordered={false}>
+        <Card className="card-container" title="角色管理示例">
           <Table columns={columns.map((item) => ({ ...item, ellipsis }))} dataSource={data} pagination={false} />
         </Card>
       </div>

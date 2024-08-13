@@ -67,7 +67,7 @@ const Project: React.FC = () => {
   return (
     <>
       <div className="project-container">
-        <Card title="项目" className="project-card" bordered={false}>
+        <Card title="项目" className="project-card">
           <Row>
             {projectList.map((item) => (
               <Col className="gutter-row" span={8} key={item.id}>

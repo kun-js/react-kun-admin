@@ -26,7 +26,7 @@ const NotificationComponent: React.FC = () => {
     <>
       {contextHolder}
       <div className="notification-component-container">
-        <Card className="card-container" title="通知提醒组件" bordered={false}>
+        <Card className="card-container" title="通知提醒组件">
           <div style={{ marginBottom: "18px" }}>
             <span style={{ marginRight: "18px" }}>显示位置:</span>
             <Radio.Group onChange={onPlacementChange} value={placement}>

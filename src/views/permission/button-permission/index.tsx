@@ -47,7 +47,7 @@ const ButtonPermission: React.FC = () => {
   return (
     <>
       <div className="button-permission-container">
-        <Card className="card-container" title="按钮权限示例" bordered={false}>
+        <Card className="card-container" title="按钮权限示例">
           <Space>
             <Button type="primary" onClick={() => togglePermission("admin")} disabled={permissions.admin}>
               切换权限为管理员

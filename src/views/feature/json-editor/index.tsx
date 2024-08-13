@@ -17,7 +17,7 @@ const JsonFile = {
 const JSONEditor: React.FC = () => {
   return (
     <div className="json-container">
-      <Card className="card-container" title="JSON编辑器示例" bordered={false}>
+      <Card className="card-container" title="JSON编辑器示例">
         <ReactJson src={JsonFile} onEdit={() => {}} onAdd={() => {}} onDelete={() => {}} />
       </Card>
     </div>

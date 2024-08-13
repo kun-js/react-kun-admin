@@ -50,7 +50,7 @@ const DraggableFeature: React.FC = () => {
 
   return (
     <div className="draggable-container">
-      <Card className="card-container" title="拖拽功能示例" bordered={false}>
+      <Card className="card-container" title="拖拽功能示例">
         <DragDropContext onDragEnd={onDragEnd}>
           <Droppable droppableId="droppable">
             {(provided) => (

@@ -23,7 +23,7 @@ const Navigation: React.FC = () => {
   return (
     <>
       <div className="navigation-container">
-        <Card title="快捷导航" className="navigation-card" bordered={false}>
+        <Card title="快捷导航" className="navigation-card">
           <Row>
             {navigationList.map((item) => (
               <Col className="gutter-row" span={8} key={item.id}>

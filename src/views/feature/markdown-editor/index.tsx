@@ -8,7 +8,7 @@ const MarkDownEditor: React.FC = () => {
 
   return (
     <div className="markdown-container">
-      <Card className="card-container" title="MarkDown编辑器示例" bordered={false}>
+      <Card className="card-container" title="MarkDown编辑器示例">
         <MDEditor value={value} onChange={setValue as MDEditorProps["onChange"]} height="80vh" visibleDragbar={false} />
       </Card>
     </div>

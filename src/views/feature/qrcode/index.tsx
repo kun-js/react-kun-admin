@@ -7,7 +7,7 @@ const QRcodeFeature: React.FC = () => {
   return (
     <>
       <div className="qrcode-container">
-        <Card className="card-container" title="二维码功能示例" bordered={false}>
+        <Card className="card-container" title="二维码功能示例">
           <Row gutter={[16, 16]}>
             <Col span={8}>
               <Card className="qrcode-item" hoverable>

@@ -7,7 +7,7 @@ const BarcodeFeature: React.FC = () => {
   return (
     <>
       <div className="barcode-container">
-        <Card className="card-container" title="条形码功能示例" bordered={false}>
+        <Card className="card-container" title="条形码功能示例">
           <Row gutter={[16, 16]}>
             <Col span={24}>
               <Card className="barcode-item" hoverable>

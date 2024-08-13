@@ -70,7 +70,7 @@ const About: React.FC = () => {
   return (
     <>
       <div className="about-container">
-        <Card title="关于" bordered={false} style={{ borderRadius: 0 }}>
+        <Card title="关于" style={{ borderRadius: 0 }}>
           <Tag color="processing">react-kun-admin</Tag>是一款基于React18、Ant Design、TypeScript的中后台解决方案。
         </Card>
         <div className="project-info-container">

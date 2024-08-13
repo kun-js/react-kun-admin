@@ -25,7 +25,7 @@ const ImageCropper: React.FC = () => {
 
   return (
     <div className="image-container">
-      <Card className="card-container" title="图片裁剪示例" bordered={false}>
+      <Card className="card-container" title="图片裁剪示例">
         {/* <ReactCrop
           crop={crop}
           onChange={(crop, percentCrop) => {

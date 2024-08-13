@@ -13,7 +13,7 @@ const PrintFeature: React.FC = () => {
   return (
     <>
       <div className="print-container">
-        <Card className="card-container" title="打印功能示例" bordered={false}>
+        <Card className="card-container" title="打印功能示例">
           <div ref={componentRef}>
             <h1>要打印的内容</h1>
             <p>这是一个示例，展示如何使用react-to-print来打印内容。</p>
