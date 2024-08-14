@@ -80,6 +80,12 @@ importers:
       mockjs:
         specifier: ^1.1.0
         version: 1.1.0
+      overlayscrollbars:
+        specifier: ^2.10.0
+        version: 2.10.0
+      overlayscrollbars-react:
+        specifier: ^0.5.6
+        version: 0.5.6(overlayscrollbars@2.10.0)(react@18.3.1)
       postcss-html:
         specifier: ^1.7.0
         version: 1.7.0
@@ -4997,6 +5003,15 @@ packages:
   os-filter-obj@2.0.0:
     resolution: {integrity: sha512-uksVLsqG3pVdzzPvmAHpBK0wKxYItuzZr7SziusRPoz67tGV8rL1szZ6IdeUrbqLjGDwApBtN29eEE3IqGHOjg==}
     engines: {node: '>=4'}
+
+  overlayscrollbars-react@0.5.6:
+    resolution: {integrity: sha512-E5To04bL5brn9GVCZ36SnfGanxa2I2MDkWoa4Cjo5wol7l+diAgi4DBc983V7l2nOk/OLJ6Feg4kySspQEGDBw==}
+    peerDependencies:
+      overlayscrollbars: ^2.0.0
+      react: '>=16.8.0'
+
+  overlayscrollbars@2.10.0:
+    resolution: {integrity: sha512-diNMeEafWTE0A4GJfwRpdBp2rE/BEvrhptBdBcDu8/UeytWcdCy9Td8tZWnztJeJ26f8/uHCWfPnPUC/dtgJdw==}
 
   ow@0.17.0:
     resolution: {integrity: sha512-i3keDzDQP5lWIe4oODyDFey1qVrq2hXKTuTH2VpqwpYtzPiKZt2ziRI4NBQmgW40AnV5Euz17OyWweCb+bNEQA==}
@@ -13307,6 +13322,13 @@ snapshots:
   os-filter-obj@2.0.0:
     dependencies:
       arch: 2.2.0
+
+  overlayscrollbars-react@0.5.6(overlayscrollbars@2.10.0)(react@18.3.1):
+    dependencies:
+      overlayscrollbars: 2.10.0
+      react: 18.3.1
+
+  overlayscrollbars@2.10.0: {}
 
   ow@0.17.0:
     dependencies:

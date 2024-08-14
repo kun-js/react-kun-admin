@@ -10,6 +10,7 @@ const StatisticComponent = lazy(() => import("@/views/component/statistic"));
 const MessageComponent = lazy(() => import("@/views/component/message"));
 const NotificationComponent = lazy(() => import("@/views/component/notification"));
 const TreeComponent = lazy(() => import("@/views/component/tree"));
+const ScrollComponent = lazy(() => import("@/views/component/scroll"));
 const CollapsePanel = lazy(() => import("@/views/component/collapse-panel"));
 const DataPickerComponent = lazy(() => import("@/views/component/date-picker"));
 
@@ -79,6 +80,14 @@ const chartRoutes = [
         element: (
           <Suspense fallback={<LoadingComponent />}>
             <TreeComponent />
+          </Suspense>
+        ),
+      },
+      {
+        path: "scroll",
+        element: (
+          <Suspense fallback={<LoadingComponent />}>
+            <ScrollComponent />
           </Suspense>
         ),
       },
