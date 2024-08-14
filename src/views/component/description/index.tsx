@@ -49,9 +49,9 @@ const DescriptionComponent: React.FC = () => {
           <div>
             <span style={{ marginRight: "18px" }}>尺寸大小(仅在有边框列表生效):</span>
             <Radio.Group onChange={onSizeChange} value={size}>
-              <Radio value={"large"}>大</Radio>
-              <Radio value={"middle"}>中</Radio>
-              <Radio value={"small"}>小</Radio>
+              <Radio.Button value={"large"}>大</Radio.Button>
+              <Radio.Button value={"middle"}>中</Radio.Button>
+              <Radio.Button value={"small"}>小</Radio.Button>
             </Radio.Group>
           </div>
           <Divider />

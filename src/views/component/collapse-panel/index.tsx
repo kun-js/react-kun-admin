@@ -87,44 +87,44 @@ const CollapsePanel: React.FC = () => {
             <div>
               <span style={{ marginRight: "18px" }}>尺寸大小:</span>
               <Radio.Group onChange={onSizeChange} value={size}>
-                <Radio value={"large"}>large</Radio>
-                <Radio value={"middle"}>middle</Radio>
-                <Radio value={"small"}>small</Radio>
+                <Radio.Button value={"large"}>大</Radio.Button>
+                <Radio.Button value={"middle"}>中</Radio.Button>
+                <Radio.Button value={"small"}>小</Radio.Button>
               </Radio.Group>
             </div>
             <div>
               <span style={{ marginRight: "18px" }}>是否为手风琴模式(只展开一个面板):</span>
               <Radio.Group onChange={onAccordionChange} value={accordion}>
-                <Radio value={true}>是</Radio>
-                <Radio value={false}>否</Radio>
+                <Radio.Button value={true}>是</Radio.Button>
+                <Radio.Button value={false}>否</Radio.Button>
               </Radio.Group>
             </div>
             <div>
               <span style={{ marginRight: "18px" }}>是否设置边框:</span>
               <Radio.Group onChange={onBorderChange} value={border}>
-                <Radio value={true}>是</Radio>
-                <Radio value={false}>否</Radio>
+                <Radio.Button value={true}>是</Radio.Button>
+                <Radio.Button value={false}>否</Radio.Button>
               </Radio.Group>
             </div>
             <div>
               <span style={{ marginRight: "18px" }}>是否设置透明(无边框):</span>
               <Radio.Group onChange={onGhostChange} value={ghost}>
-                <Radio value={true}>是</Radio>
-                <Radio value={false}>否</Radio>
+                <Radio.Button value={true}>是</Radio.Button>
+                <Radio.Button value={false}>否</Radio.Button>
               </Radio.Group>
             </div>
             <div>
               <span style={{ marginRight: "18px" }}>展开图标位置:</span>
               <Radio.Group onChange={onExpandIconPositionChange} value={expandIconPosition}>
-                <Radio value={"start"}>左边</Radio>
-                <Radio value={"end"}>右边</Radio>
+                <Radio.Button value={"start"}>左边</Radio.Button>
+                <Radio.Button value={"end"}>右边</Radio.Button>
               </Radio.Group>
             </div>
             <div>
               <span style={{ marginRight: "18px" }}>是否显示展开图标:</span>
               <Radio.Group onChange={onShowArrowChange} value={showArrow}>
-                <Radio value={true}>是</Radio>
-                <Radio value={false}>否</Radio>
+                <Radio.Button value={true}>是</Radio.Button>
+                <Radio.Button value={false}>否</Radio.Button>
               </Radio.Group>
             </div>
           </Space>
