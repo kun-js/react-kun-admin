@@ -24,6 +24,8 @@
     "i18next": "^23.11.5",
     "less": "^4.2.0",
     "mockjs": "^1.1.0",
+    "overlayscrollbars": "^2.10.0",
+    "overlayscrollbars-react": "^0.5.6",
     "postcss-html": "^1.7.0",
     "postcss-scss": "^4.0.9",
     "qrcode.react": "^3.1.0",

@@ -16,6 +16,9 @@ import {
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import useMenuStore from "@/store/menu";
+import useDarkModeStore from "@/store/dark";
+import "overlayscrollbars/overlayscrollbars.css";
+import { OverlayScrollbarsComponent } from "overlayscrollbars-react";
 
 const { Text } = Typography;
 const { Sider } = Layout;
@@ -53,6 +56,7 @@ type IconMap = {
 const SideBar: React.FC<SideBarProps> = ({ collapsed, showMenuLogo }) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const { isDarkMode } = useDarkModeStore();
   const { setDefaultSelectedKey, setDefaultOpenKey } = useMenuStore();
   const [menuList, setMenuList] = useState<MenuListItem[]>([]);
   const {
@@ -169,14 +173,27 @@ const SideBar: React.FC<SideBarProps> = ({ collapsed, showMenuLogo }) => {
           </div>
         </div>
       )}
-      <Menu
-        style={{ marginTop: "48px" }}
-        mode="inline"
-        defaultOpenKeys={defaultOpenKey}
-        defaultSelectedKeys={defaultSelectedKey}
-        onClick={handleMenuClick}
-        items={menuList}
-      />
+      <OverlayScrollbarsComponent
+        element="div"
+        options={{
+          scrollbars: {
+            theme: isDarkMode ? "os-theme-light" : "os-theme-dark",
+            autoHide: "scroll",
+            autoHideDelay: 800,
+          },
+        }}
+        defer
+      >
+        <div style={{ height: "calc(100vh - 48px)" }}>
+          <Menu
+            mode="inline"
+            defaultOpenKeys={defaultOpenKey}
+            defaultSelectedKeys={defaultSelectedKey}
+            onClick={handleMenuClick}
+            items={menuList}
+          />
+        </div>
+      </OverlayScrollbarsComponent>
     </Sider>
   );
 };

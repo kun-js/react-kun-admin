@@ -23,6 +23,10 @@
   --scrollbar-thumb-color-hover: #585a5d; /* 滚动条触碰滑块颜色 */
 }
 
+[data-height="hasFooter"] {
+  --card-height: calc(100vh - 158px);
+}
+
 $sidebar-width: 200px; // 侧边栏宽度
 $sidebar-width-collapsed: 60px; // 侧边栏收缩宽度
 $card-height: calc(100vh - 88px);

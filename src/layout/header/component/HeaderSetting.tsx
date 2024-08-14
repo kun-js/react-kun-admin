@@ -66,7 +66,8 @@ const HeaderSetting: React.FC<HeaderSettingProps> = ({
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", isDarkMode ? "dark" : "light");
-  }, [isDarkMode]);
+    document.documentElement.setAttribute("data-height", showFooter ? "hasFooter" : "noFooter");
+  }, [isDarkMode, showFooter]);
 
   return (
     <>
