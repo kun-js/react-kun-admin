@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Button, Card, Divider, Space } from "antd";
 import usePermissionStore from "@/store/permission";
 import AuthButton from "@/components/AuthButton";
+import { v4 as uuidv4 } from "uuid";
 
 // 定义权限类型接口
 interface PermissionState {
@@ -35,8 +36,8 @@ const ButtonPermission: React.FC = () => {
   const renderAuthButtons = (permissionType: string, type: "primary" | "default", label: string) => {
     return (
       <>
-        {new Array(3).fill(null).map((_, index) => (
-          <AuthButton key={index} requiredPermission={permissionType} type={type}>
+        {new Array(3).fill(null).map(() => (
+          <AuthButton key={uuidv4()} requiredPermission={permissionType} type={type}>
             {label}
           </AuthButton>
         ))}
