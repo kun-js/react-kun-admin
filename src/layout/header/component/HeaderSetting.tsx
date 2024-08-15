@@ -1,7 +1,8 @@
 import "./HeaderSetting.scss";
-import { SettingOutlined } from "@ant-design/icons";
-import { Button, Divider, Drawer, Flex, Switch, Typography } from "antd";
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Button, Divider, Drawer, Flex, Switch, Typography } from "antd";
+import { SettingOutlined } from "@ant-design/icons";
 import useDarkModeStore from "@/store/dark";
 
 const { Text } = Typography;
@@ -29,6 +30,7 @@ const HeaderSetting: React.FC<HeaderSettingProps> = ({
 }) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const { isDarkMode, setDarkMode } = useDarkModeStore();
+  const navigate = useNavigate();
 
   const showDrawer = () => {
     setDrawerOpen(true);
@@ -39,9 +41,9 @@ const HeaderSetting: React.FC<HeaderSettingProps> = ({
   };
 
   const ClearCacheAndExit = () => {
+    navigate("/login");
     localStorage.clear();
     sessionStorage.clear();
-    window.location.reload();
   };
 
   const onClickToSetDarkMode = (checked: boolean) => {

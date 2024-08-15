@@ -1,8 +1,8 @@
-import { FlagOutlined } from "@ant-design/icons";
+import "./HeaderTour.scss";
+import { RefObject, useState } from "react";
 import { Button, Tour } from "antd";
 import type { TourProps } from "antd";
-import { RefObject, useState } from "react";
-import "./HeaderTour.scss";
+import { FlagOutlined } from "@ant-design/icons";
 
 interface HeaderTourProps {
   collapseButtonRef: RefObject<HTMLButtonElement>;

@@ -1,7 +1,7 @@
-import { FullscreenExitOutlined, FullscreenOutlined } from "@ant-design/icons";
-import { Button } from "antd";
-import React, { useState } from "react";
 import "./FullScreen.scss";
+import React, { useState } from "react";
+import { Button } from "antd";
+import { FullscreenExitOutlined, FullscreenOutlined } from "@ant-design/icons";
 
 const HeaderSetting: React.FC = () => {
   const [fullScreen, setFullScreen] = useState(false);

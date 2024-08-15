@@ -1,6 +1,6 @@
-import { Avatar, Button, Popover } from "antd";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Avatar, Button, Popover } from "antd";
 
 interface UserInfo {
   avatar: string;
@@ -12,7 +12,7 @@ const UserButton: React.FC = () => {
   const [userInfo, setUserInfo] = useState<UserInfo>({ avatar: "", name: "" });
 
   const handleToExit = () => {
-    navigate("/");
+    navigate("/login");
     localStorage.removeItem("userStore");
   };
 

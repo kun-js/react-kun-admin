@@ -1,9 +1,9 @@
-import { BellOutlined } from "@ant-design/icons";
+import "./HeaderMessage.scss";
+import { useEffect, useState } from "react";
 import { Avatar, Button, Popover, Tabs, Tag } from "antd";
 import type { TabsProps } from "antd";
-import { useEffect, useState } from "react";
+import { BellOutlined } from "@ant-design/icons";
 import { getMessageList } from "@/api/index";
-import "./HeaderMessage.scss";
 
 interface NoticeListItem {
   id: number;

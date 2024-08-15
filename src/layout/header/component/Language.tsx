@@ -1,8 +1,8 @@
-import { TranslationOutlined } from "@ant-design/icons";
-import { Button, Popover } from "antd";
-import useLanguageStore from "@/store/language";
 import "./Language.scss";
 import { RefObject } from "react";
+import { Button, Popover } from "antd";
+import { TranslationOutlined } from "@ant-design/icons";
+import useLanguageStore from "@/store/language";
 
 interface HeaderLanguageProps {
   fullScreenButtonRef: RefObject<HTMLButtonElement>;
