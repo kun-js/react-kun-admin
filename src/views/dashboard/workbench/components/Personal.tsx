@@ -3,13 +3,13 @@ import "./Personal.scss";
 import { Avatar, Card, Space, Typography } from "antd";
 const { Text } = Typography;
 
-interface UserInfo {
+interface UserInfoType {
   name: string;
   avatar: string;
 }
 
 const Personal: React.FC = () => {
-  const [userInfo, setUserInfo] = useState<UserInfo>({
+  const [userInfo, setUserInfo] = useState<UserInfoType>({
     name: "",
     avatar: "",
   });

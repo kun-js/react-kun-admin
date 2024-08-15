@@ -13,7 +13,7 @@ interface DependencyItem {
 }
 
 const About: React.FC = () => {
-  const [currentTime, setCurrentTIme] = useState("");
+  const [currentTime, setCurrentTIme] = useState<string>("");
   const [dependencies, setDependencies] = useState<DependencyItem[]>([]);
   const [devDependencies, setDevDependencies] = useState<DependencyItem[]>([]);
   const projectInfoItems: DescriptionsProps["items"] = [

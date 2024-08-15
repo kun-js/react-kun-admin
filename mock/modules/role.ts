@@ -1,6 +1,11 @@
 import Mock from "mockjs";
+import { RoleListItemType } from "../../src/types/global";
 
-export const roleList = Mock.mock({
+interface RoleListType {
+  roleList: RoleListItemType[];
+}
+
+export const roleList: RoleListType = Mock.mock({
   roleList: [
     {
       id: 1,

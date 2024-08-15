@@ -5,7 +5,7 @@ import type { TabsProps } from "antd";
 import { BellOutlined } from "@ant-design/icons";
 import { getMessageList } from "@/api/index";
 
-interface NoticeListItem {
+interface NoticeListItemType {
   id: number;
   iconColor: string;
   icon: string;
@@ -13,7 +13,7 @@ interface NoticeListItem {
   time: string;
 }
 
-interface MessageListItem {
+interface MessageListItemType {
   id: number;
   avatar: string;
   username: string;
@@ -22,7 +22,7 @@ interface MessageListItem {
   time: string;
 }
 
-interface TodoListItem {
+interface TodoListItemType {
   id: number;
   title: string;
   description: string;
@@ -30,9 +30,9 @@ interface TodoListItem {
 }
 
 const HeaderSearch: React.FC = () => {
-  const [noticeList, setNoticeList] = useState<NoticeListItem[]>([]);
-  const [messageList, setMessageList] = useState<MessageListItem[]>([]);
-  const [todoList, setTodoList] = useState<TodoListItem[]>([]);
+  const [noticeList, setNoticeList] = useState<NoticeListItemType[]>([]);
+  const [messageList, setMessageList] = useState<MessageListItemType[]>([]);
+  const [todoList, setTodoList] = useState<TodoListItemType[]>([]);
   const [hasMessage, setHasMessage] = useState<boolean>(false);
 
   const getTagType = (status: string) => {
@@ -45,7 +45,7 @@ const HeaderSearch: React.FC = () => {
     return tagTypes[status] || "default";
   };
 
-  const noticePage = (
+  const noticeListPage = (
     <div>
       {noticeList.map((item) => (
         <div className="notice-container" key={item.id}>
@@ -61,7 +61,7 @@ const HeaderSearch: React.FC = () => {
     </div>
   );
 
-  const messagePage = (
+  const messageListPage = (
     <div>
       {messageList.map((item) => (
         <div className="message-container" key={item.id}>
@@ -80,7 +80,7 @@ const HeaderSearch: React.FC = () => {
     </div>
   );
 
-  const todoPage = (
+  const todoListPage = (
     <div>
       {todoList.map((item) => (
         <div className="todo-container" key={item.id}>
@@ -100,17 +100,17 @@ const HeaderSearch: React.FC = () => {
     {
       key: "notice",
       label: "通知" + "(" + noticeList.length + ")",
-      children: noticePage,
+      children: noticeListPage,
     },
     {
       key: "message",
       label: "消息" + "(" + messageList.length + ")",
-      children: messagePage,
+      children: messageListPage,
     },
     {
       key: "todo",
       label: "待办" + "(" + todoList.length + ")",
-      children: todoPage,
+      children: todoListPage,
     },
   ];
 

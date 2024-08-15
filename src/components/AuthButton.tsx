@@ -2,17 +2,15 @@ import React from "react";
 import { Button } from "antd";
 import usePermissionStore from "@/store/permission";
 
-type Permission = string;
-
 interface ButtonProps {
   children: React.ReactNode;
-  requiredPermission: Permission;
+  requiredPermission: string;
   type?: "primary" | "default";
   onClick?: () => void;
   // 其他 Button 支持的 props
 }
 
-const hasPermission = (requiredPermission: Permission) => {
+const hasPermission = (requiredPermission: string) => {
   const { permission } = usePermissionStore.getState();
   return permission === requiredPermission;
 };

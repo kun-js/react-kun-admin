@@ -3,7 +3,13 @@ import React from "react";
 import { Card } from "antd";
 import ReactJson from "react-json-view";
 
-const JsonFile = {
+type JsonValueType = string | number | boolean | undefined | object | Date;
+
+type JsonFileType<T = JsonValueType> = {
+  [key: string]: T;
+};
+
+const JsonFile: JsonFileType = {
   string: "this is a test ...",
   integer: 42,
   array: [1, "two", NaN],

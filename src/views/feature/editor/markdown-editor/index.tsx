@@ -4,7 +4,7 @@ import { Card } from "antd";
 import MDEditor, { MDEditorProps } from "@uiw/react-md-editor";
 
 const MarkDownEditor: React.FC = () => {
-  const [value, setValue] = useState("**Hello world!!!**");
+  const [value, setValue] = useState<string>("**Hello world!!!**");
 
   return (
     <div className="markdown-container">

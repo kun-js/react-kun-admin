@@ -5,7 +5,7 @@ import type { TableProps } from "antd";
 import { getUserList } from "@/api/index";
 
 interface DataType {
-  key: string;
+  id: number;
   name: string;
   age: number;
   tel: string;
@@ -17,32 +17,26 @@ const columns: TableProps<DataType>["columns"] = [
   {
     title: "名字",
     dataIndex: "name",
-    key: "name",
   },
   {
     title: "性别",
     dataIndex: "gender",
-    key: "gender",
   },
   {
     title: "年龄",
     dataIndex: "age",
-    key: "age",
   },
   {
     title: "联系方式",
     dataIndex: "tel",
-    key: "tel",
   },
   {
     title: "邮箱",
     dataIndex: "email",
-    key: "email",
   },
   {
     title: "地址",
     dataIndex: "address",
-    key: "address",
   },
 ];
 
@@ -53,6 +47,7 @@ const List: React.FC = () => {
     try {
       const result = await getUserList();
       const list = result.userList;
+      console.log("list: ", list);
       setData(list);
     } catch (error) {
       console.log("error: ", error);

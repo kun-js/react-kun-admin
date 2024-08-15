@@ -6,14 +6,14 @@ import AuthButton from "@/components/AuthButton";
 import { v4 as uuidv4 } from "uuid";
 
 // 定义权限类型接口
-interface PermissionState {
+interface PermissionStateType {
   admin: boolean;
   user: boolean;
 }
 
 const ButtonPermission: React.FC = () => {
   const { permission, setPermission } = usePermissionStore();
-  const [permissions, setPermissions] = useState<PermissionState>({ admin: false, user: false });
+  const [permissions, setPermissions] = useState<PermissionStateType>({ admin: false, user: false });
 
   const togglePermission = (permissionType: string) => {
     setPermission(permissionType);

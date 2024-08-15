@@ -63,8 +63,8 @@ const columns: TableColumnsType<DataType> = [
 ];
 
 const RoleManagement: React.FC = () => {
-  const [data, setData] = useState([]);
-  const [ellipsis] = useState(true);
+  const [data, setData] = useState<DataType[]>([]);
+  const [ellipsis] = useState<boolean>(true);
 
   const fetchData = async () => {
     try {

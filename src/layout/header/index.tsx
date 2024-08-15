@@ -34,8 +34,8 @@ const MainHeader: React.FC<MainHeaderProps> = ({
 }) => {
   const collapseButtonRef = useRef(null);
   const fullScreenButtonRef = useRef(null);
-  const [showBreadcrumb, setShowBreadcrumb] = useState(true);
-  const [showBreadcrumbIcon, setShowBreadcrumbIcon] = useState(false);
+  const [showBreadcrumb, setShowBreadcrumb] = useState<boolean>(true);
+  const [showBreadcrumbIcon, setShowBreadcrumbIcon] = useState<boolean>(false);
   const {
     token: { colorBgContainer },
   } = theme.useToken();

@@ -4,7 +4,7 @@ import { Button } from "antd";
 import { FullscreenExitOutlined, FullscreenOutlined } from "@ant-design/icons";
 
 const HeaderSetting: React.FC = () => {
-  const [fullScreen, setFullScreen] = useState(false);
+  const [fullScreen, setFullScreen] = useState<boolean>(false);
 
   const handleToFullScreen = () => {
     if (!fullScreen) {

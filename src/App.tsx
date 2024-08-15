@@ -1,7 +1,7 @@
-import "./index.scss";
 import "@/types/declaretions.d.ts";
 import "@/styles/index.scss";
 import "@/locales/index";
+
 import locale from "antd/locale/zh_CN";
 import dayjs from "dayjs";
 import "dayjs/locale/zh-cn";

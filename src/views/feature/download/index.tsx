@@ -5,10 +5,10 @@ import { Button, Card, Space } from "antd";
 const DownloadFeature: React.FC = () => {
   // 文件流下载文件方法
   const handleToDownloadFileBlob = () => {
-    const textContent = "文件流下载!"; // 文本内容
-    const blob = new Blob([textContent], { type: "text/plain" }); // 创建 Blob 对象
-    const url = URL.createObjectURL(blob); // 创建 URL 对象
-    const link = document.createElement("a"); // 创建链接元素
+    const textContent: string = "文件流下载!"; // 文本内容
+    const blob: Blob = new Blob([textContent], { type: "text/plain" }); // 创建 Blob 对象
+    const url: string = URL.createObjectURL(blob); // 创建 URL 对象
+    const link: HTMLAnchorElement = document.createElement("a"); // 创建链接元素
     link.href = url; // 设置链接地址
     link.setAttribute("download", "bolb.txt"); // 设置下载文件名
     document.body.appendChild(link); // 将链接添加到文档中
@@ -19,13 +19,13 @@ const DownloadFeature: React.FC = () => {
 
   // base64下载文件方法
   const handleToDownloadFileBase64 = () => {
-    const textContent = "base64方式下载!"; // 文本内容
+    const textContent: string = "base64方式下载!"; // 文本内容
     // 使用 btoa 方法将字符串转换为 Base64 编码
-    const base64Data = btoa(unescape(encodeURIComponent(textContent)));
+    const base64Data: string = btoa(unescape(encodeURIComponent(textContent)));
     // 构建数据 URL
-    const dataUrl = `data:text/plain;base64,${base64Data}`;
+    const dataUrl: string = `data:text/plain;base64,${base64Data}`;
     // 创建链接元素
-    const link = document.createElement("a");
+    const link: HTMLAnchorElement = document.createElement("a");
     link.href = dataUrl; // 设置链接地址为 Base64 编码的数据 URL
     link.setAttribute("download", "base64.txt"); // 设置下载文件名
     document.body.appendChild(link); // 将链接添加到文档中
@@ -38,9 +38,9 @@ const DownloadFeature: React.FC = () => {
   const handleToDownloadImageBlob = () => {
     const imageUrl: string | undefined = "https://p6.itc.cn/images01/20220603/17f79c3bbbd54b4fafb703a7e8cdce12.jpeg"; // 图片地址
     // 获取图片后缀名
-    const fileExtension = imageUrl.includes(".") ? imageUrl.split(".").pop()!.toLowerCase() : "";
+    const fileExtension: string = imageUrl.includes(".") ? imageUrl.split(".").pop()!.toLowerCase() : "";
     // 创建图片元素
-    const img = document.createElement("img");
+    const img: HTMLImageElement = document.createElement("img");
     img.crossOrigin = "anonymous"; // 设置跨域属性，用于处理跨域图片
     img.src = imageUrl; // 设置图片地址
     // 图片加载完成后绘制到画布上
@@ -101,7 +101,7 @@ const DownloadFeature: React.FC = () => {
   const handleToDownloadImageBase64 = () => {
     const imageUrl: string | undefined = "https://p6.itc.cn/images01/20220603/17f79c3bbbd54b4fafb703a7e8cdce12.jpeg"; // 图片地址
     // 创建图片元素
-    const img = document.createElement("img");
+    const img: HTMLImageElement = document.createElement("img");
     img.crossOrigin = "anonymous"; // 设置跨域属性，用于处理跨域图片
     img.src = imageUrl; // 设置图片地址
     // 图片加载完成后绘制到画布上

@@ -1,16 +1,15 @@
 import "./step-form.scss";
-import { Card, Col, Form, Input, Row, Steps, InputNumber, Radio, Button, Space, Rate, TimePicker } from "antd";
-import type { RadioChangeEvent } from "antd";
-import type { TimePickerProps } from "antd";
 import React, { useState } from "react";
+import { Card, Col, Form, Input, Row, Steps, InputNumber, Radio, Button, Space, Rate, TimePicker } from "antd";
+import type { RadioChangeEvent, TimePickerProps } from "antd";
 import dayjs from "dayjs";
 import customParseFormat from "dayjs/plugin/customParseFormat";
 
 dayjs.extend(customParseFormat);
 
 const StepForm: React.FC = () => {
-  const [currentVal, setCurrentVal] = useState(0);
-  const [gender, setGender] = useState("male");
+  const [currentVal, setCurrentVal] = useState<number>(0);
+  const [gender, setGender] = useState<string>("male");
 
   const onRadioChange = (e: RadioChangeEvent) => {
     console.log("radio checked", e.target.value);

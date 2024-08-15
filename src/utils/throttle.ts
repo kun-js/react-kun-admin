@@ -1,5 +1,3 @@
-// throttle.ts
-
 // 定义throttle函数，接受一个回调函数callback和节流时间limit
 export function throttle<T extends unknown[]>(
   callback: (...args: T) => void, // 回调函数，可以接收任意数量和类型的参数

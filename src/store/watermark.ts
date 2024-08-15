@@ -1,11 +1,11 @@
 import { create } from "zustand";
 
-interface watermarkInfo {
+interface WatermarkType {
   watermarkVisible: boolean;
   setWatermarkVisible: (visible: boolean) => void;
 }
 
-const useWatermarkStore = create<watermarkInfo>()((set) => ({
+const useWatermarkStore = create<WatermarkType>()((set) => ({
   watermarkVisible: false,
   setWatermarkVisible: (visible: boolean) => set({ watermarkVisible: visible }),
 }));

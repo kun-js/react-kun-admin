@@ -28,7 +28,7 @@ const HeaderSetting: React.FC<HeaderSettingProps> = ({
   showBreadcrumbIcon,
   handleToShowBreadcrumbIcon,
 }) => {
-  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState<boolean>(false);
   const { isDarkMode, setDarkMode } = useDarkModeStore();
   const navigate = useNavigate();
 

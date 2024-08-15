@@ -1,4 +1,5 @@
 import Mock from "mockjs";
+import { LoginInfoType } from "../../src/types/global";
 
 export const loginInfo = Mock.mock({
   loginInfo: {
@@ -11,4 +12,4 @@ export const loginInfo = Mock.mock({
     },
     permission: "admin",
   },
-});
+}) as { loginInfo: LoginInfoType };

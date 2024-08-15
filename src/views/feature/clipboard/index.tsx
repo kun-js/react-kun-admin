@@ -5,8 +5,8 @@ import { CopyOutlined, SnippetsOutlined } from "@ant-design/icons";
 
 const WaterMark: React.FC = () => {
   const [messageApi, contextHolder] = message.useMessage();
-  const [copyText, setCopyText] = useState("");
-  const [pasteText, setPasteText] = useState("");
+  const [copyText, setCopyText] = useState<string>("");
+  const [pasteText, setPasteText] = useState<string>("");
 
   const onChange = (e: { target: { value: React.SetStateAction<string> } }) => {
     setCopyText(e.target.value);

@@ -1,6 +1,6 @@
+import "./success.scss";
 import React from "react";
 import { Button, Result } from "antd";
-import "./success.scss";
 
 const SuccessPage: React.FC = () => {
   return (
@@ -8,13 +8,13 @@ const SuccessPage: React.FC = () => {
       <div className="success-container">
         <Result
           status="success"
-          title="Successfully Purchased Cloud Server ECS!"
-          subTitle="Order number: 2017182818828182881 Cloud server configuration takes 1-5 minutes, please wait."
+          title="云服务器ECS购买成功!"
+          subTitle="订单号:2017182818828182881,云服务器配置需要1-5分钟,请稍候。"
           extra={[
             <Button type="primary" key="console">
-              Go Console
+              查看结果
             </Button>,
-            <Button key="buy">Buy Again</Button>,
+            <Button key="buy">再次购买</Button>,
           ]}
         />
       </div>

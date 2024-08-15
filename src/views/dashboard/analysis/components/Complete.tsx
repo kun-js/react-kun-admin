@@ -1,5 +1,5 @@
-import { Card, Space, Progress } from "antd";
 import "./Complete.scss";
+import { Card, Space, Progress } from "antd";
 
 const Complete: React.FC = () => {
   return (

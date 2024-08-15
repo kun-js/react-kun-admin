@@ -1,15 +1,15 @@
 import "./basic-form.scss";
-import { Card, Cascader, Col, Form, Input, Row, Select, DatePicker, Checkbox, Space, Button } from "antd";
 import React from "react";
+import { Card, Cascader, Col, Form, Input, Row, Select, DatePicker, Checkbox, Space, Button } from "antd";
 
 const { Option } = Select;
 const { RangePicker } = DatePicker;
 const { TextArea } = Input;
 
-interface Option {
+interface regionOptionsType {
   value: string;
   label: string;
-  children?: Option[];
+  children?: regionOptionsType[];
   disabled?: boolean;
 }
 
@@ -22,7 +22,7 @@ const BasicForm: React.FC = () => {
     </Select>
   );
 
-  const regionOptions: Option[] = [
+  const regionOptions: regionOptionsType[] = [
     {
       value: "guangdong",
       label: "广东",

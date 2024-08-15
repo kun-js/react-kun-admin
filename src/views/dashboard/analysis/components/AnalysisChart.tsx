@@ -1,7 +1,7 @@
 import "./AnalysisChart.scss";
-import { Card } from "antd";
-import { Tabs } from "antd";
+import { Card, Tabs } from "antd";
 import type { TabsProps } from "antd";
+
 import TrafficChart from "./TrafficChart";
 import VisitChart from "./VisitChart";
 

@@ -1,7 +1,7 @@
-import React from "react";
-import { CloseCircleOutlined } from "@ant-design/icons";
-import { Button, Result, Typography } from "antd";
 import "./fail.scss";
+import React from "react";
+import { Button, Result, Typography } from "antd";
+import { CloseCircleOutlined } from "@ant-design/icons";
 
 const { Paragraph, Text } = Typography;
 
@@ -11,13 +11,13 @@ const FailPage: React.FC = () => {
       <div className="fail-container">
         <Result
           status="error"
-          title="Submission Failed"
-          subTitle="Please check and modify the following information before resubmitting."
+          title="提交失败"
+          subTitle="请在重新提交之前检查并修改以下信息。"
           extra={[
             <Button type="primary" key="console">
-              Go Console
+              查看结果
             </Button>,
-            <Button key="buy">Buy Again</Button>,
+            <Button key="buy">再次购买</Button>,
           ]}
         >
           <div className="desc">
@@ -28,16 +28,16 @@ const FailPage: React.FC = () => {
                   fontSize: 16,
                 }}
               >
-                The content you submitted has the following error:
+                您提交的内容存在以下错误：
               </Text>
             </Paragraph>
             <Paragraph>
-              <CloseCircleOutlined className="site-result-demo-error-icon" /> Your account has been frozen.{" "}
-              <a href="/">Thaw immediately &gt;</a>
+              <CloseCircleOutlined className="site-result-demo-error-icon" /> 您的帐户已被冻结。{" "}
+              <a href="/">立即解冻 &gt;</a>
             </Paragraph>
             <Paragraph>
-              <CloseCircleOutlined className="site-result-demo-error-icon" /> Your account is not yet eligible to apply.{" "}
-              <a href="/">Apply Unlock &gt;</a>
+              <CloseCircleOutlined className="site-result-demo-error-icon" /> 您的帐户还没有资格申请。{" "}
+              <a href="/">申请解锁 &gt;</a>
             </Paragraph>
           </div>
         </Result>

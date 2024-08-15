@@ -1,6 +1,7 @@
+import { Navigate } from "react-router-dom";
+
 import Login from "@/views/login";
 import NotFound from "@/components/NotFound";
-import { Navigate } from "react-router-dom";
 
 const baseRoutes = [
   {

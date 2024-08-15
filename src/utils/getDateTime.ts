@@ -1,5 +1,3 @@
-// 获取当前时间方法
-
 /**
  * getDateTime 方法用于获取当前时间的字符串表示形式。
  * @param params 一个数字参数，指定返回的时间格式。可以是以下值之一：
@@ -45,6 +43,6 @@ export function getDateTime(params: number): string {
     case 7:
       return timestamp.toString(); // 时间戳
     default:
-      return "Invalid params";
+      return "无效参数";
   }
 }

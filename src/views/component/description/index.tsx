@@ -1,8 +1,7 @@
 import "./description.scss";
 import React, { useState } from "react";
 import { Card, Descriptions, Divider, Radio, Space } from "antd";
-import type { RadioChangeEvent } from "antd";
-import type { DescriptionsProps } from "antd";
+import type { RadioChangeEvent, DescriptionsProps } from "antd";
 
 type DescriptionType = "small" | "middle" | "default";
 

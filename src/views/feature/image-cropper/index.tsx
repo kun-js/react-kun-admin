@@ -14,8 +14,8 @@ const src = "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWP
 const ImageCropper: React.FC = () => {
   //   const [crop, setCrop] = useState<Crop>();
 
-  //   const [crop, setCrop] = useState({ x: 0, y: 0 });
-  //   const [zoom, setZoom] = useState(1);
+  // const [crop, setCrop] = useState<{ [key: string]: number }>({ x: 0, y: 0 });
+  // const [zoom, setZoom] = useState<number>(1);
 
   //   const onCropComplete = (croppedArea: any, croppedAreaPixels: any) => {
   //     console.log(croppedArea, croppedAreaPixels);

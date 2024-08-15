@@ -9,7 +9,10 @@ interface UserInfo {
 
 const UserButton: React.FC = () => {
   const navigate = useNavigate();
-  const [userInfo, setUserInfo] = useState<UserInfo>({ avatar: "", name: "" });
+  const [userInfo, setUserInfo] = useState<UserInfo>({
+    avatar: "https://api.dicebear.com/7.x/miniavs/svg?seed=1",
+    name: "昵称",
+  });
 
   const handleToExit = () => {
     navigate("/login");

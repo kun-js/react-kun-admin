@@ -12,9 +12,9 @@ import {
 import type { RadioChangeEvent } from "antd";
 
 const TagComponent: React.FC = () => {
-  const [border, setBorder] = useState(false);
-  const [icon, setIcon] = useState(true);
-  const [closeIcon, setCloseIcon] = useState(false);
+  const [border, setBorder] = useState<boolean>(false);
+  const [icon, setIcon] = useState<boolean>(true);
+  const [closeIcon, setCloseIcon] = useState<boolean>(false);
 
   const onBorderChange = (e: RadioChangeEvent) => {
     setBorder(e.target.value);

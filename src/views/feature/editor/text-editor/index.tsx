@@ -1,13 +1,13 @@
 import "./text.scss";
-import "@wangeditor/editor/dist/css/style.css";
 import React, { useState, useEffect } from "react";
 import { Card } from "antd";
-import { Editor, Toolbar } from "@wangeditor/editor-for-react";
 import { IDomEditor, IEditorConfig, IToolbarConfig } from "@wangeditor/editor";
+import "@wangeditor/editor/dist/css/style.css";
+import { Editor, Toolbar } from "@wangeditor/editor-for-react";
 
 const TextEditor: React.FC = () => {
   const [editor, setEditor] = useState<IDomEditor | null>(null);
-  const [html, setHtml] = useState("<p>hello</p>");
+  const [html, setHtml] = useState<string>("<p>hello</p>");
 
   useEffect(() => {
     setTimeout(() => {

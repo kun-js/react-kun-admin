@@ -1,5 +1,6 @@
 import "./sidebar.scss";
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Layout, Menu, Typography, theme } from "antd";
 import { getMenuList } from "@/api/index";
 import {
@@ -13,7 +14,6 @@ import {
   SettingOutlined,
   UserOutlined,
 } from "@ant-design/icons";
-import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import useMenuStore from "@/store/menu";
 import useDarkModeStore from "@/store/dark";
@@ -45,7 +45,7 @@ interface MenuListItem {
   key: string;
   label: string;
   icon?: React.ReactElement | null;
-  children?: MenuListItem[];
+  children?: MenuListItem[] | null;
 }
 
 // 定义图标映射类型，用于映射图标名称到图标组件

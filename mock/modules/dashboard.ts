@@ -1,6 +1,10 @@
 import Mock from "mockjs";
+import { AnalysisCardItemType } from "../../src/types/global";
+interface AnalysisCardListType {
+  analysisCardList: AnalysisCardItemType[];
+}
 
-export const analysisCardList = Mock.mock({
+export const analysisCardList: AnalysisCardListType = Mock.mock({
   analysisCardList: [
     {
       id: 1,

@@ -1,11 +1,11 @@
 import { create } from "zustand";
 
-interface DarkModeInfo {
+interface DarkModeType {
   isDarkMode: boolean;
   setDarkMode: (checked: boolean) => void;
 }
 
-const useDarkModeStore = create<DarkModeInfo>()((set) => ({
+const useDarkModeStore = create<DarkModeType>()((set) => ({
   isDarkMode: false,
   setDarkMode: (checked) => set({ isDarkMode: checked }),
 }));

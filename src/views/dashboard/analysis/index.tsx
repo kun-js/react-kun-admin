@@ -1,11 +1,12 @@
+import "./analysis.scss";
 import React from "react";
 import { useState, useEffect } from "react";
+import { Col, Row } from "antd";
 import { getAnalysisCardList } from "@/api/index";
+
 import CardDisplay from "./components/CardDisplay";
 import AnalysisChart from "./components/AnalysisChart";
 import Complete from "./components/Complete";
-import { Col, Row } from "antd";
-import "./analysis.scss";
 
 interface AnalysisCard {
   id: number;

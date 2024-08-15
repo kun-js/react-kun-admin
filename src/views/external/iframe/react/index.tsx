@@ -1,6 +1,6 @@
+import "./reactpage.scss";
 import React from "react";
 import { Card } from "antd";
-import "./reactpage.scss";
 
 const ReactPage: React.FC = () => {
   return (

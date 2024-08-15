@@ -1,8 +1,8 @@
 import "./button.scss";
 import React, { useState } from "react";
 import { Card, Button, Divider, Radio, Space } from "antd";
-import { SearchOutlined, DownloadOutlined, PoweroffOutlined } from "@ant-design/icons";
 import type { RadioChangeEvent } from "antd";
+import { SearchOutlined, DownloadOutlined, PoweroffOutlined } from "@ant-design/icons";
 
 type ButtonType = "default" | "link" | "text" | "primary" | "dashed";
 type ButtonSize = "small" | "middle" | "large";

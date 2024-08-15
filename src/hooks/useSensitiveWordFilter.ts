@@ -1,4 +1,3 @@
-// useSensitiveWordFilter.ts
 export const sensitiveWords = ["脑残", "弱智", "白痴"]; // 敏感词列表
 
 const useSensitiveWordFilter = (text: string): string => {

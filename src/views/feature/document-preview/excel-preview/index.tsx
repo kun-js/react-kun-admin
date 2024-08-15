@@ -5,7 +5,7 @@ import DocViewer, { DocViewerRenderers } from "@cyntler/react-doc-viewer";
 import "@cyntler/react-doc-viewer/dist/index.css";
 
 const ExcelPreview: React.FC = () => {
-  const file = [{ uri: "http://static.shanhuxueyuan.com/demo/excel.xlsx" }];
+  const file: { uri: string }[] = [{ uri: "http://static.shanhuxueyuan.com/demo/excel.xlsx" }];
 
   return (
     <>

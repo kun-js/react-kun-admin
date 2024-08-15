@@ -5,7 +5,7 @@ import Download from "@/assets/imgs/Download.png";
 import DealAmount from "@/assets/imgs/DealAmount.png";
 import DealNumber from "@/assets/imgs/DealNumber.png";
 
-type AnalysisCard = {
+type AnalysisCardType = {
   id: number;
   title: string;
   time: string;
@@ -15,11 +15,11 @@ type AnalysisCard = {
   number: string;
 };
 
-interface CardItem {
-  item: AnalysisCard;
+interface CardItemType {
+  item: AnalysisCardType;
 }
 
-const CardDisplay: React.FC<CardItem> = ({ item }) => {
+const CardDisplay: React.FC<CardItemType> = ({ item }) => {
   const images: { [key: string]: string } = {
     "1": VisitNumber,
     "2": Download,

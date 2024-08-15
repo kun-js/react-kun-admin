@@ -1,8 +1,8 @@
-import React from "react";
-import ReactECharts from "echarts-for-react";
-import * as echarts from "echarts";
-import { Card } from "antd";
 import "./pie-chart.scss";
+import React from "react";
+import { Card } from "antd";
+import * as echarts from "echarts";
+import ReactECharts from "echarts-for-react";
 
 const getOption = () => {
   return {

@@ -1,9 +1,10 @@
+import "./workbench.scss";
 import React from "react";
+import { Col, Row } from "antd";
+
 import Personal from "./components/Personal";
 import Project from "./components/Project";
 import Navigation from "./components/Navigation";
-import { Col, Row } from "antd";
-import "./workbench.scss";
 
 const Workbench: React.FC = () => {
   return (

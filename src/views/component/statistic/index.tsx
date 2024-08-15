@@ -6,7 +6,7 @@ import { LikeOutlined } from "@ant-design/icons";
 const { Countdown } = Statistic;
 
 const StatisticComponent: React.FC = () => {
-  const deadline = Date.now() + 1000 * 60 * 60 * 24 * 2;
+  const deadline: number = Date.now() + 1000 * 60 * 60 * 24 * 2;
 
   return (
     <>

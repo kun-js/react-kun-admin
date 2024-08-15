@@ -1,9 +1,9 @@
 import "./login.scss";
 import React from "react";
-import type { FormProps } from "antd";
-import { Card, Button, Form, Input, Space, message } from "antd";
-import { getLoginInfo } from "@/api/index";
 import { useNavigate } from "react-router-dom";
+import { Card, Button, Form, Input, Space, message } from "antd";
+import type { FormProps } from "antd";
+import { getLoginInfo } from "@/api/index";
 import useUserStore from "@/store/user";
 import usePermissionStore from "@/store/permission";
 
@@ -22,10 +22,11 @@ const Login: React.FC = () => {
   const onFinish: FormProps<FieldType>["onFinish"] = async (values) => {
     const result = await getLoginInfo(values.username, values.password);
     if (result) {
+      console.log("result: ", result);
       localStorage.setItem("loginMessage", "Login Successful");
-      setToken(result.token);
-      setUserInfo(result.userInfo);
-      setPermission(result.permission);
+      setToken(result.loginInfo.token);
+      setUserInfo(result.loginInfo.userInfo);
+      setPermission(result.loginInfo.permission);
       navigate("/dashboard/analysis");
     } else {
       messageApi.open({

@@ -1,6 +1,13 @@
 import Mock from "mockjs";
+import { NoticeItemType, MessageItemType, TodoItemType } from "../../src/types/global";
 
-export const messageList = Mock.mock({
+interface MessageListType {
+  noticeList: NoticeItemType[];
+  messageList: MessageItemType[];
+  todoList: TodoItemType[];
+}
+
+export const messageList: MessageListType = Mock.mock({
   "noticeList|15-20": [
     {
       "id|+1": 100,

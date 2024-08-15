@@ -3,7 +3,7 @@ import React from "react";
 import { Card } from "antd";
 import FileViewer from "react-file-viewer";
 
-const docxFile = "http://static.shanhuxueyuan.com/test6.docx";
+const docxFile: string = "http://static.shanhuxueyuan.com/test6.docx";
 
 const WordPreview: React.FC = () => {
   return (

@@ -11,7 +11,7 @@ import {
 } from "react-beautiful-dnd";
 
 // 定义拖拽项的数据类型
-interface DraggableItem {
+interface DraggableItemType {
   id: string;
   content: string;
 }
@@ -27,7 +27,7 @@ const getItemStyle = (isDragging: boolean, draggableStyle?: React.CSSProperties)
 });
 
 const DraggableFeature: React.FC = () => {
-  const [items, setItems] = useState<DraggableItem[]>([
+  const [items, setItems] = useState<DraggableItemType[]>([
     { id: "1", content: "Item 1" },
     { id: "2", content: "Item 2" },
     { id: "3", content: "Item 3" },

@@ -1,14 +1,14 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
-interface MenuState {
+interface MenuStateType {
   defaultSelectedKey: string[];
   defaultOpenKey: string[];
   setDefaultSelectedKey: (path: string[]) => void;
   setDefaultOpenKey: (path: string[]) => void;
 }
 
-const useMenuStore = create<MenuState>()(
+const useMenuStore = create<MenuStateType>()(
   persist(
     (set) => ({
       defaultSelectedKey: [],

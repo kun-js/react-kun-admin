@@ -82,12 +82,12 @@ const columns: TableColumnsType<DataType> = [
 ];
 
 const AccountManagement: React.FC = () => {
-  const [keyWord, setKeyWord] = useState("");
-  const [data, setData] = useState([]);
-  const [ellipsis] = useState(true);
-  const [total, setTotal] = useState();
-  const [page, setPage] = useState(1);
-  const [pageSize, setPageSize] = useState(10);
+  const [keyWord, setKeyWord] = useState<string>("");
+  const [data, setData] = useState<DataType[]>([]);
+  const [ellipsis] = useState<boolean>(true);
+  const [total, setTotal] = useState<number>();
+  const [page, setPage] = useState<number>(1);
+  const [pageSize, setPageSize] = useState<number>(10);
 
   const inputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setKeyWord(e.target.value);

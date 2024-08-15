@@ -3,7 +3,7 @@ import { Card, Col, Row } from "antd";
 import { Icon } from "@iconify/react";
 import "./Project.scss";
 
-interface Project {
+interface ProjectListType {
   id: number;
   icon: string;
   name: string;
@@ -12,7 +12,7 @@ interface Project {
   time: string;
 }
 
-const projectList: Project[] = [
+const projectList: ProjectListType[] = [
   {
     id: 1,
     icon: "logos:vue",

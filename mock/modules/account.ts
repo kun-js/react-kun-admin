@@ -1,6 +1,11 @@
 import Mock from "mockjs";
+import { AccountListItemType } from "../../src/types/global";
 
-export const accountList = Mock.mock({
+interface accountListType {
+  accountList: AccountListItemType[];
+}
+
+export const accountList: accountListType = Mock.mock({
   "accountList|500-2000": [
     {
       "id|+1": 1,

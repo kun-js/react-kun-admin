@@ -1,6 +1,11 @@
 import Mock from "mockjs";
+import { UserListItemType } from "../../src/types/global";
 
-export const userList = Mock.mock({
+interface UserListType {
+  userList: UserListItemType[];
+}
+
+export const userList: UserListType = Mock.mock({
   "userList|10": [
     {
       "id|+1": 100,
@@ -10,14 +15,6 @@ export const userList = Mock.mock({
       email: "@email",
       tel: /^1[3-9]\d{9}$/,
       address: "@county(true)",
-    },
-  ],
-  "cardList|12": [
-    {
-      "id|+1": 200,
-      icon: '@image("30x30","#409eff", "Icon")',
-      title: "@ctitle(3, 6)",
-      content: "@cparagraph(3)",
     },
   ],
 });

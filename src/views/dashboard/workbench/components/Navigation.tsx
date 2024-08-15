@@ -4,13 +4,13 @@ import { Card, Col, Row } from "antd";
 import { Icon } from "@iconify/react";
 import "./Navigation.scss";
 
-interface Navigation {
+interface NavigationListType {
   id: number;
   icon: string;
   name: string;
 }
 
-const navigationList: Navigation[] = [
+const navigationList: NavigationListType[] = [
   { id: 1, icon: "noto:house", name: "首页" },
   { id: 2, icon: "noto:closed-book", name: "组件" },
   { id: 3, icon: "noto:dna", name: "功能" },

@@ -1,12 +1,12 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
-interface userInfo {
+interface PermissionType {
   permission: string;
   setPermission: (permission: string) => void;
 }
 
-const usePermissionStore = create<userInfo>()(
+const usePermissionStore = create<PermissionType>()(
   persist(
     (set) => ({
       permission: "user",
