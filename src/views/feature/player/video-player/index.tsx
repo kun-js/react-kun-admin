@@ -7,7 +7,7 @@ const VideoPlayer: React.FC = () => {
   return (
     <>
       <div className="video-player-container">
-        <Card className="card-container" title="视频播放器功能示例">
+        <Card className="card-container" title="视频播放器功能示例(示例为Youtube视频,若无示例显示可挂梯子查看)">
           <ReactPlayer
             url="https://www.youtube.com/watch?v=LXb3EKWsInQ"
             controls={true}

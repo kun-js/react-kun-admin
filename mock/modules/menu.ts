@@ -35,172 +35,194 @@ export const menuList = Mock.mock({
     },
     {
       id: 1200,
-      title: "组件",
-      iconName: "BookOutlined",
-      routeName: "component",
-      children: [
-        {
-          id: 1201,
-          title: "按钮",
-          routeName: "button",
-        },
-        {
-          id: 1202,
-          title: "标签",
-          routeName: "tag",
-        },
-        {
-          id: 1203,
-          title: "取色器",
-          routeName: "color-picker",
-        },
-        {
-          id: 1204,
-          title: "描述列表",
-          routeName: "description",
-        },
-        {
-          id: 1205,
-          title: "统计组件",
-          routeName: "statistic",
-        },
-        {
-          id: 1206,
-          title: "消息提示",
-          routeName: "message",
-        },
-        {
-          id: 1207,
-          title: "通知提醒",
-          routeName: "notification",
-        },
-        {
-          id: 1208,
-          title: "树形组件",
-          routeName: "tree",
-        },
-        {
-          id: 1209,
-          title: "滚动组件",
-          routeName: "scroll",
-        },
-        {
-          id: 1210,
-          title: "折叠面板",
-          routeName: "collapse-panel",
-        },
-        {
-          id: 1211,
-          title: "时间选择器",
-          routeName: "date-picker",
-        },
-      ],
-    },
-    {
-      id: 1300,
       title: "功能",
       iconName: "NodeIndexOutlined",
       routeName: "feature",
       children: [
         {
-          id: 1301,
+          id: 1201,
           title: "文件下载",
           routeName: "download",
         },
         {
-          id: 1302,
+          id: 1202,
           title: "水印",
           routeName: "watermark",
         },
         {
-          id: 1303,
+          id: 1203,
           title: "剪贴板",
           routeName: "clipboard",
         },
         {
-          id: 1304,
+          id: 1204,
           title: "签名",
           routeName: "signature",
         },
         {
-          id: 1305,
+          id: 1205,
           title: "拖拽",
           routeName: "draggable",
         },
         {
-          id: 1306,
+          id: 1206,
           title: "打印",
           routeName: "print",
         },
         {
-          id: 1307,
+          id: 1207,
           title: "条形码",
           routeName: "barcode",
         },
         {
-          id: 1308,
+          id: 1208,
           title: "二维码",
           routeName: "qrcode",
         },
+
         {
-          id: 1309,
-          title: "PDF预览",
-          routeName: "pdf-preview",
+          id: 1209,
+          title: "文件预览",
+          routeName: "document-preview",
+          children: [
+            {
+              id: 12091,
+              title: "PDF预览",
+              routeName: "pdf-preview",
+            },
+            {
+              id: 12092,
+              title: "Word预览",
+              routeName: "word-preview",
+            },
+            {
+              id: 12093,
+              title: "Excel预览",
+              routeName: "excel-preview",
+            },
+          ],
         },
         {
-          id: 1310,
-          title: "Word预览",
-          routeName: "word-preview",
+          id: 1210,
+          title: "编辑器",
+          routeName: "editor",
+          children: [
+            {
+              id: 12101,
+              title: "MarkDown编辑器",
+              routeName: "markdown-editor",
+            },
+            {
+              id: 12102,
+              title: "文本编辑器",
+              routeName: "text-editor",
+            },
+            {
+              id: 12103,
+              title: "JSON编辑器",
+              routeName: "json-editor",
+            },
+            {
+              id: 12104,
+              title: "流程图",
+              routeName: "flow-chart",
+            },
+          ],
         },
         {
-          id: 1311,
-          title: "Excel预览",
-          routeName: "excel-preview",
-        },
-        {
-          id: 1312,
-          title: "MarkDown编辑器",
-          routeName: "markdown-editor",
-        },
-        {
-          id: 1313,
-          title: "文本编辑器",
-          routeName: "text-editor",
-        },
-        {
-          id: 1314,
-          title: "JSON编辑器",
-          routeName: "json-editor",
-        },
-        {
-          id: 1315,
-          title: "流程图",
-          routeName: "flow-chart",
-        },
-        {
-          id: 1316,
+          id: 1211,
           title: "图片裁剪",
           routeName: "image-cropper",
         },
         {
-          id: 1317,
+          id: 1212,
           title: "视频播放器",
-          routeName: "video-player",
+          routeName: "player",
+          children: [
+            {
+              id: 12121,
+              title: "视频播放器",
+              routeName: "video-player",
+            },
+            {
+              id: 12122,
+              title: "音频播放器",
+              routeName: "music-player",
+            },
+          ],
         },
         {
-          id: 1318,
-          title: "音频播放器",
-          routeName: "music-player",
-        },
-        {
-          id: 1320,
+          id: 1213,
           title: "防抖节流",
           routeName: "debounce",
         },
         {
-          id: 1321,
+          id: 1214,
           title: "敏感词过滤",
           routeName: "sensitive",
+        },
+      ],
+    },
+    {
+      id: 1300,
+      title: "组件",
+      iconName: "BookOutlined",
+      routeName: "component",
+      children: [
+        {
+          id: 1301,
+          title: "按钮",
+          routeName: "button",
+        },
+        {
+          id: 1302,
+          title: "标签",
+          routeName: "tag",
+        },
+        {
+          id: 1303,
+          title: "取色器",
+          routeName: "color-picker",
+        },
+        {
+          id: 1304,
+          title: "描述列表",
+          routeName: "description",
+        },
+        {
+          id: 1305,
+          title: "统计组件",
+          routeName: "statistic",
+        },
+        {
+          id: 1306,
+          title: "消息提示",
+          routeName: "message",
+        },
+        {
+          id: 1307,
+          title: "通知提醒",
+          routeName: "notification",
+        },
+        {
+          id: 1308,
+          title: "树形组件",
+          routeName: "tree",
+        },
+        {
+          id: 1309,
+          title: "滚动组件",
+          routeName: "scroll",
+        },
+        {
+          id: 1310,
+          title: "折叠面板",
+          routeName: "collapse-panel",
+        },
+        {
+          id: 1311,
+          title: "时间选择器",
+          routeName: "date-picker",
         },
       ],
     },

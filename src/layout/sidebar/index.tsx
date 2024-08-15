@@ -152,7 +152,6 @@ const SideBar: React.FC<SideBarProps> = ({ collapsed, showMenuLogo }) => {
   return (
     <Sider
       style={{
-        overflow: "auto",
         height: "100vh",
         position: "fixed",
         left: 0,

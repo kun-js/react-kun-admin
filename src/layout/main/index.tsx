@@ -29,6 +29,7 @@ const MainContent: React.FC<MainContentProps> = ({ showFooter }) => {
       defer
     >
       <div
+        id="layout-container"
         style={{
           width: "100%",
           height: contentHeight,

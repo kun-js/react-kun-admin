@@ -10,16 +10,16 @@ const DraggableFeature = lazy(() => import("@/views/feature/draggable"));
 const PrintFeature = lazy(() => import("@/views/feature/print"));
 const BarcodeFeature = lazy(() => import("@/views/feature/barcode"));
 const QRcodeFeature = lazy(() => import("@/views/feature/qrcode"));
-const PDFPreview = lazy(() => import("@/views/feature/pdf-preview"));
-const WordPreview = lazy(() => import("@/views/feature/word-preview"));
-const ExcelPreview = lazy(() => import("@/views/feature/excel-preview"));
-const MarkDownEditor = lazy(() => import("@/views/feature/markdown-editor"));
-const TextEditor = lazy(() => import("@/views/feature/text-editor"));
-const JSONEditor = lazy(() => import("@/views/feature/json-editor"));
-const FlowChart = lazy(() => import("@/views/feature/flow-chart"));
+const PDFPreview = lazy(() => import("@/views/feature/document-preview/pdf-preview"));
+const WordPreview = lazy(() => import("@/views/feature/document-preview/word-preview"));
+const ExcelPreview = lazy(() => import("@/views/feature/document-preview/excel-preview"));
+const MarkDownEditor = lazy(() => import("@/views/feature/editor/markdown-editor"));
+const TextEditor = lazy(() => import("@/views/feature/editor/text-editor"));
+const JSONEditor = lazy(() => import("@/views/feature/editor/json-editor"));
+const FlowChart = lazy(() => import("@/views/feature/editor/flow-chart"));
 const ImageCropper = lazy(() => import("@/views/feature/image-cropper"));
-const VideoPlayer = lazy(() => import("@/views/feature/video-player"));
-const MusicPlayer = lazy(() => import("@/views/feature/music-player"));
+const VideoPlayer = lazy(() => import("@/views/feature/player/video-player"));
+const MusicPlayer = lazy(() => import("@/views/feature/player/music-player"));
 const Debounce = lazy(() => import("@/views/feature/debounce"));
 const Sensitive = lazy(() => import("@/views/feature/sensitive"));
 
@@ -93,7 +93,7 @@ const featureRoutes = [
         ),
       },
       {
-        path: "pdf-preview",
+        path: "document-preview/pdf-preview",
         element: (
           <Suspense fallback={<LoadingComponent />}>
             <PDFPreview />
@@ -101,7 +101,7 @@ const featureRoutes = [
         ),
       },
       {
-        path: "word-preview",
+        path: "document-preview/word-preview",
         element: (
           <Suspense fallback={<LoadingComponent />}>
             <WordPreview />
@@ -109,7 +109,7 @@ const featureRoutes = [
         ),
       },
       {
-        path: "excel-preview",
+        path: "document-preview/excel-preview",
         element: (
           <Suspense fallback={<LoadingComponent />}>
             <ExcelPreview />
@@ -117,7 +117,7 @@ const featureRoutes = [
         ),
       },
       {
-        path: "markdown-editor",
+        path: "editor/markdown-editor",
         element: (
           <Suspense fallback={<LoadingComponent />}>
             <MarkDownEditor />
@@ -125,7 +125,7 @@ const featureRoutes = [
         ),
       },
       {
-        path: "text-editor",
+        path: "editor/text-editor",
         element: (
           <Suspense fallback={<LoadingComponent />}>
             <TextEditor />
@@ -133,7 +133,7 @@ const featureRoutes = [
         ),
       },
       {
-        path: "json-editor",
+        path: "editor/json-editor",
         element: (
           <Suspense fallback={<LoadingComponent />}>
             <JSONEditor />
@@ -141,7 +141,7 @@ const featureRoutes = [
         ),
       },
       {
-        path: "flow-chart",
+        path: "editor/flow-chart",
         element: (
           <Suspense fallback={<LoadingComponent />}>
             <FlowChart />
@@ -157,7 +157,7 @@ const featureRoutes = [
         ),
       },
       {
-        path: "video-player",
+        path: "player/video-player",
         element: (
           <Suspense fallback={<LoadingComponent />}>
             <VideoPlayer />
@@ -165,7 +165,7 @@ const featureRoutes = [
         ),
       },
       {
-        path: "music-player",
+        path: "player/music-player",
         element: (
           <Suspense fallback={<LoadingComponent />}>
             <MusicPlayer />

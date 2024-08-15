@@ -20,7 +20,7 @@ const ExcelPreview: React.FC = () => {
             }}
             documents={file}
             pluginRenderers={DocViewerRenderers}
-            style={{ height: "85vh" }}
+            style={{ height: "80vh" }}
           />
         </Card>
       </div>
