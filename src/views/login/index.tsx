@@ -5,6 +5,7 @@ import { Card, Button, Form, Input, Space, message } from "antd";
 import type { FormProps } from "antd";
 import { getLoginInfo } from "@/api/index";
 import useUserStore from "@/store/user";
+import useMenuStore from "@/store/menu";
 import usePermissionStore from "@/store/permission";
 
 type FieldType = {
@@ -16,6 +17,7 @@ const Login: React.FC = () => {
   const [form] = Form.useForm();
   const [messageApi, contextHolder] = message.useMessage();
   const { setToken, setUserInfo } = useUserStore();
+  const { setDefaultSelectedKey, setDefaultOpenKey } = useMenuStore();
   const { setPermission } = usePermissionStore();
   const navigate = useNavigate();
 
@@ -27,6 +29,8 @@ const Login: React.FC = () => {
       setToken(result.loginInfo.token);
       setUserInfo(result.loginInfo.userInfo);
       setPermission(result.loginInfo.permission);
+      setDefaultSelectedKey(["analysis"]);
+      setDefaultOpenKey(["dashboard"]);
       navigate("/dashboard/analysis");
     } else {
       messageApi.open({
@@ -56,11 +60,9 @@ const Login: React.FC = () => {
             <Form.Item<FieldType> label="用户名" name="username" rules={[{ required: true, message: "请输入用户名!" }]}>
               <Input />
             </Form.Item>
-
             <Form.Item<FieldType> label="密码" name="password" rules={[{ required: true, message: "请输入密码!" }]}>
               <Input.Password />
             </Form.Item>
-
             <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
               <Space>
                 <Button type="primary" htmlType="submit">

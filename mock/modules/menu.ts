@@ -1,11 +1,6 @@
 import Mock from "mockjs";
-import { MenuListType } from "../../src/types/global";
 
-interface MenuList {
-  menus: MenuListType[];
-}
-
-export const menuList: MenuList = Mock.mock({
+export const menuList = Mock.mock({
   menus: [
     {
       id: 1000,

@@ -1,11 +1,7 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import i18n from "@/locales/index";
-
-interface LanguageType {
-  lang: string;
-  changeLanguage: (lang: string) => void;
-}
+import { LanguageType } from "@/types/store";
 
 const useLanguageStore = create<LanguageType>()(
   persist(

@@ -1,6 +1,6 @@
 import { Spin } from "antd";
 
-const LoadingComponent = () => (
+const LoadingComponent: React.FC = () => (
   <div
     style={{
       display: "flex",

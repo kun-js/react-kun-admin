@@ -1,4 +1,5 @@
 import { Suspense, lazy } from "react";
+import { RouteItemType } from "@/types/route";
 
 import MainLayout from "@/layout";
 import LoadingComponent from "@/components/LoadingComponent";
@@ -13,7 +14,7 @@ const Page403 = lazy(() => import("@/views/page/exception/403"));
 const Page404 = lazy(() => import("@/views/page/exception/404"));
 const Page500 = lazy(() => import("@/views/page/exception/500"));
 
-const pageRoutes = [
+const pageRoutes: RouteItemType[] = [
   {
     path: "/page",
     element: <MainLayout />,

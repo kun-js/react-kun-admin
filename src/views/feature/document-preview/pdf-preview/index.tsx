@@ -32,21 +32,19 @@ const PDFPreview: React.FC = () => {
               error="加载预览PDF文件失败"
               loading={<Spin />}
             >
-              <Page scale={1.2} pageNumber={pageNumber} />
+              <Page scale={0.9} pageNumber={pageNumber} />
             </Document>
-            <div>
-              <Space>
-                <div>
-                  当前页: {pageNumber} 总页数: {numPages}
-                </div>
-                <Button onClick={() => changePage(-1)} disabled={pageNumber === 1}>
-                  上一页
-                </Button>
-                <Button type="primary" onClick={() => changePage(1)} disabled={pageNumber === numPages}>
-                  下一页
-                </Button>
-              </Space>
-            </div>
+            <Space>
+              <span>
+                当前页: {pageNumber} 总页数: {numPages}
+              </span>
+              <Button onClick={() => changePage(-1)} disabled={pageNumber === 1}>
+                上一页
+              </Button>
+              <Button type="primary" onClick={() => changePage(1)} disabled={pageNumber === numPages}>
+                下一页
+              </Button>
+            </Space>
           </Space>
         </Card>
       </div>

@@ -1,10 +1,12 @@
+import { RouteItemType } from "@/types/route";
+
 import MainLayout from "@/layout/index";
 import PrivateRoute from "@/components/PrivateRoute";
 
 import Analysis from "@/views/dashboard/analysis/index";
 import Workbench from "@/views/dashboard/workbench/index";
 
-const dashboardRoutes = [
+const dashboardRoutes: RouteItemType[] = [
   {
     path: "/dashboard",
     element: (

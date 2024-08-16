@@ -5,16 +5,29 @@ import zh from "./lang/zh.json";
 //英文语言包
 import en from "./lang/en.json";
 
-const lng = localStorage.getItem("languageStore")
-  ? JSON.parse(localStorage.getItem("languageStore")!).state.lang
-  : "zh";
+interface LangResource {
+  [key: string]: {
+    [key: string]: string;
+  };
+}
 
-const resources = {
+// 定义资源对象类型
+type Resources = {
+  [lang: string]: {
+    translation: LangResource;
+  };
+};
+
+const lng = (
+  localStorage.getItem("languageStore") ? JSON.parse(localStorage.getItem("languageStore")!).state.lang : "zh"
+) as "zh" | "en";
+
+const resources: Resources = {
   en: {
-    translation: en,
+    translation: en as LangResource,
   },
   zh: {
-    translation: zh,
+    translation: zh as LangResource,
   },
 };
 

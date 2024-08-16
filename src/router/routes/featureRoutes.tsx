@@ -1,4 +1,5 @@
 import { Suspense, lazy } from "react";
+import { RouteItemType } from "@/types/route";
 
 import MainLayout from "@/layout";
 import LoadingComponent from "@/components/LoadingComponent";
@@ -24,7 +25,7 @@ const MusicPlayer = lazy(() => import("@/views/feature/player/music-player"));
 const Debounce = lazy(() => import("@/views/feature/debounce"));
 const Sensitive = lazy(() => import("@/views/feature/sensitive"));
 
-const featureRoutes = [
+const featureRoutes: RouteItemType[] = [
   {
     path: "/feature",
     element: <MainLayout />,

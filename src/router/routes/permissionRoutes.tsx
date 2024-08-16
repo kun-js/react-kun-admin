@@ -1,11 +1,12 @@
 import { Suspense, lazy } from "react";
+import { RouteItemType } from "@/types/route";
 
 import MainLayout from "@/layout";
 import LoadingComponent from "../../components/LoadingComponent";
 
 const ButtonPermission = lazy(() => import("@/views/permission/button-permission"));
 
-const permissionRoutes = [
+const permissionRoutes: RouteItemType[] = [
   {
     path: "/permission",
     element: <MainLayout />,

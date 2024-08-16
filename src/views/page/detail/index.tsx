@@ -53,7 +53,7 @@ const Detail: React.FC = () => {
     <>
       <div className="detail-container">
         <Card className="card-container" title="详情页示例" bordered={true}>
-          <Descriptions title="用户信息" bordered items={userInfo} />
+          <Descriptions title="用户信息" bordered={true} items={userInfo} />
           <Descriptions style={{ marginTop: "20px " }} title="订单信息" bordered items={orderInfo} />
         </Card>
       </div>

@@ -1,4 +1,5 @@
 import { Suspense, lazy } from "react";
+import { RouteItemType } from "@/types/route";
 
 import MainLayout from "@/layout";
 import LoadingComponent from "@/components/LoadingComponent";
@@ -7,7 +8,7 @@ import ExternalLink from "@/components/ExternalLink";
 const AntdPage = lazy(() => import("@/views/external/iframe/antd"));
 const ReactPage = lazy(() => import("@/views/external/iframe/react"));
 
-const externalRoutes = [
+const externalRoutes: RouteItemType[] = [
   {
     path: "/external",
     element: <MainLayout />,

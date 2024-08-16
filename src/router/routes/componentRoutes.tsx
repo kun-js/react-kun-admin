@@ -1,4 +1,5 @@
 import { Suspense, lazy } from "react";
+import { RouteItemType } from "@/types/route";
 
 import MainLayout from "@/layout";
 import LoadingComponent from "@/components/LoadingComponent";
@@ -15,7 +16,7 @@ const ScrollComponent = lazy(() => import("@/views/component/scroll"));
 const CollapsePanel = lazy(() => import("@/views/component/collapse-panel"));
 const DataPickerComponent = lazy(() => import("@/views/component/date-picker"));
 
-const chartRoutes = [
+const chartRoutes: RouteItemType[] = [
   {
     path: "/component",
     element: <MainLayout />,

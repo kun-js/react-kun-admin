@@ -3,8 +3,13 @@
 
   .card-container {
     // height: var(--card-height);
+
     .ant-card-body {
       padding: 0 0 20px;
     }
   }
+}
+
+.hiddenCanvasElement {
+  display: none;
 }

@@ -1,8 +1,10 @@
+// 定义用户信息接口类型
 export interface UserInfoType {
     avatar: string;
     name: string;
 }
 
+// 定义登录信息接口类型
 export interface LoginInfoType {
     username: string;
     password: string;
@@ -11,6 +13,7 @@ export interface LoginInfoType {
     permission: string;
 }
 
+// 定义菜单列表接口类型
 export interface MenuListType {
     id: number;
     title: string;
@@ -19,6 +22,7 @@ export interface MenuListType {
     children?: MenuListType[];
 }
 
+// 定义分析页卡片列表类型
 export interface AnalysisCardItemType {
     id: number;
     title: string;
@@ -29,6 +33,7 @@ export interface AnalysisCardItemType {
     number: string;
 }
 
+// 定义用户列表类型
 export interface UserListItemType {
     id: number;
     name: string;
@@ -39,6 +44,7 @@ export interface UserListItemType {
     address: string;
 }
 
+// 定义通知列表类型
 interface NoticeItemType {
     id: number;
     title: string;
@@ -47,6 +53,7 @@ interface NoticeItemType {
     icon: string;
 }
 
+// 定义消息列表类型
 interface MessageItemType {
     id: number;
     avatar: string;
@@ -56,6 +63,7 @@ interface MessageItemType {
     time: string;
 }
 
+// 定义代办事项列表类型
 interface TodoItemType {
     id: number;
     title: string;
@@ -63,6 +71,7 @@ interface TodoItemType {
     status: string;
 }
 
+// 定义账号列表类型
 export type AccountRoleType = "超级管理员" | "管理员" | "普通用户";
 export type AccountDepartmentType = "技术部" | "人事部" | "财务部" | "市场部" | "销售部";
 
@@ -78,6 +87,7 @@ export interface AccountListItemType {
     remark: string;
 }
 
+// 定义角色列表类型
 interface RoleListItemType {
     id: number;
     role: string;

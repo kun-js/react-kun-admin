@@ -8,6 +8,7 @@ import {
   AccountListResponseType,
   RoleListResponseType,
 } from "@/api/types";
+import { AccountListItemType } from "@/types/api";
 
 const Api: { [key: string]: string } = {
   loginInfo: "/api/login",
@@ -60,15 +61,15 @@ export const getAccountList = async (
     },
   });
 
-  let filteredData = data.accountList;
+  let filteredData: AccountListItemType[] = data.accountList;
   if (typeof keyword === "string" && keyword.trim() !== "") {
     filteredData = filteredData.filter((account: { name: string | string[] }) => account.name.includes(keyword.trim()));
   }
 
-  const start = (page - 1) * pageSize;
-  const end = start + pageSize;
-  const slicedData = filteredData.slice(start, end);
-  const total = filteredData.length;
+  const start: number = (page - 1) * pageSize;
+  const end: number = start + pageSize;
+  const slicedData: AccountListItemType[] = filteredData.slice(start, end);
+  const total: number = filteredData.length;
   return {
     accountList: slicedData,
     total: total,

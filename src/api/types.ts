@@ -9,7 +9,7 @@ import {
   MessageItemType,
   TodoItemType,
   RoleListItemType,
-} from "@/types/global";
+} from "@/types/api";
 
 export interface LoginInfoResponseType {
   loginInfo: LoginInfoType;

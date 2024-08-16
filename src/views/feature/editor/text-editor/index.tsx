@@ -31,7 +31,7 @@ const TextEditor: React.FC = () => {
 
   return (
     <div className="text-container">
-      <Card className="card-container" title="MarkDown编辑器示例">
+      <Card className="card-container" title="文本编辑器示例">
         <Toolbar
           editor={editor}
           defaultConfig={toolbarConfig}
@@ -44,7 +44,7 @@ const TextEditor: React.FC = () => {
           onCreated={setEditor}
           onChange={(editor) => setHtml(editor.getHtml())}
           mode="default"
-          style={{ height: "80vh", overflowY: "hidden", zIndex: "100" }}
+          style={{ height: "75vh", overflowY: "hidden", zIndex: "100" }}
         />
       </Card>
     </div>

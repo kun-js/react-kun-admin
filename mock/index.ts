@@ -7,14 +7,14 @@ import { accountList } from "./modules/account";
 import { roleList } from "./modules/role";
 
 // 定义API响应类型
-interface ApiResponse {
+interface ApiResponseType {
   url: string;
   method: "get" | "post";
   response: () => unknown;
 }
 
 // 定义API路由数组类型
-type ApiRouteList = ApiResponse[];
+type ApiRouteListType = ApiResponseType[];
 
 export default [
   {
@@ -66,4 +66,4 @@ export default [
       return roleList;
     },
   },
-] as ApiRouteList;
+] as ApiRouteListType;

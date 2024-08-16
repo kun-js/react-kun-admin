@@ -1,8 +1,8 @@
-import React from "react";
-import { Button, Result } from "antd";
-import { useNavigate } from "react-router-dom";
-import useMenuStore from "@/store/menu";
 import "./page500.scss";
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { Button, Result } from "antd";
+import useMenuStore from "@/store/menu";
 
 const Page500: React.FC = () => {
   const navigate = useNavigate();

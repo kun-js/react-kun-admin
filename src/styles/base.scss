@@ -20,23 +20,3 @@ li {
   margin: 0;
   list-style: none;
 }
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-a,
-a:focus,
-a:hover {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-}
-
-a:focus,
-a:active,
-div:focus {
-  outline: none;
-}
