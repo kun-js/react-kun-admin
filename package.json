@@ -92,6 +92,8 @@
     "stylelint-config-standard": "^36.0.1",
     "stylelint-config-standard-scss": "^13.1.0",
     "terser": "^5.31.1",
+    "timeago.js": "^4.0.2",
+    "use-debounce": "^10.0.3",
     "uuid": "^10.0.0",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-mock": "2.9.6",

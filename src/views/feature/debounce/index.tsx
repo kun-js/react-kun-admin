@@ -2,19 +2,20 @@ import "./debounce.scss";
 import React from "react";
 import { Button, Card, Space, Typography, message } from "antd";
 
-import { debounce } from "@/utils/debounce";
-import { throttle } from "@/utils/throttle";
+import { useDebouncedCallback, useThrottledCallback } from "use-debounce";
+// import { debounce } from "@/utils/debounce";
+// import { throttle } from "@/utils/throttle";
 
 const { Text } = Typography;
 
 const Debounce: React.FC = () => {
   const [messageApi, contextHolder] = message.useMessage();
 
-  const clickEventDebounce = debounce(() => {
+  const clickEventDebounce = useDebouncedCallback(() => {
     messageApi.success("防抖");
   }, 1000);
 
-  const clickEventThrottle = throttle(() => {
+  const clickEventThrottle = useThrottledCallback(() => {
     messageApi.success("节流");
   }, 1000);
 

@@ -79,7 +79,6 @@ export const menuList = Mock.mock({
           title: "二维码",
           routeName: "qrcode",
         },
-
         {
           id: 1209,
           title: "文件预览",
@@ -223,6 +222,11 @@ export const menuList = Mock.mock({
           id: 1311,
           title: "时间选择器",
           routeName: "date-picker",
+        },
+        {
+          id: 1312,
+          title: "相对时间",
+          routeName: "timestamp",
         },
       ],
     },

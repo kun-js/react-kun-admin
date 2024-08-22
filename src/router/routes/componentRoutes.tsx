@@ -15,6 +15,7 @@ const TreeComponent = lazy(() => import("@/views/component/tree"));
 const ScrollComponent = lazy(() => import("@/views/component/scroll"));
 const CollapsePanel = lazy(() => import("@/views/component/collapse-panel"));
 const DataPickerComponent = lazy(() => import("@/views/component/date-picker"));
+const Timestamp = lazy(() => import("@/views/component/timestamp"));
 
 const chartRoutes: RouteItemType[] = [
   {
@@ -106,6 +107,14 @@ const chartRoutes: RouteItemType[] = [
         element: (
           <Suspense fallback={<LoadingComponent />}>
             <DataPickerComponent />
+          </Suspense>
+        ),
+      },
+      {
+        path: "timestamp",
+        element: (
+          <Suspense fallback={<LoadingComponent />}>
+            <Timestamp />
           </Suspense>
         ),
       },
